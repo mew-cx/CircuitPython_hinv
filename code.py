@@ -1,16 +1,17 @@
 help("modules")
 
 import os
-print("dir(os) : ", dir(os))
-print("os.uname() : ", os.uname())
+#print("\ndir(os) : ", dir(os))
+print("\nos.uname() : ", os.uname())
 
 import board
-print("dir(board) : ", dir(board))
+print("\ndir(board) : ", dir(board))
+print("\nboard.board_id : ", board.board_id)
 
 import supervisor
-print("dir(supervisor) : ", dir(supervisor))
+#print("\ndir(supervisor) : ", dir(supervisor))
 
 import microcontroller
-print("dir(microcontroller) : ", dir(microcontroller))
-print("dir(microcontroller.pin) : ", dir(microcontroller.pin))
+print("\ndir(microcontroller) : ", dir(microcontroller))
+print("\ndir(microcontroller.pin) : ", dir(microcontroller.pin))
 
