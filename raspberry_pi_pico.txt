@@ -1,0 +1,31 @@
+code.py output:
+__future__        bitops            microcontroller   sharpdisplay
+__main__          board             micropython       storage
+_bleio            builtins          msgpack           struct
+_eve              busio             neopixel_write    supervisor
+adafruit_bus_device                 collections       onewireio         synthio
+adafruit_pixelbuf countio           os                sys
+aesio             digitalio         paralleldisplay   terminalio
+alarm             displayio         pulseio           time
+analogio          errno             pwmio             touchio
+array             fontio            qrio              traceback
+atexit            framebufferio     rainbowio         ulab
+audiobusio        gc                random            usb_cdc
+audiocore         getpass           re                usb_hid
+audiomixer        gifio             rgbmatrix         usb_midi
+audiomp3          imagecapture      rotaryio          uselect
+audiopwmio        io                rp2pio            vectorio
+binascii          json              rtc               watchdog
+bitbangio         keypad            sdcardio
+bitmaptools       math              select
+Plus any modules on the filesystem
+
+os.uname() :  (sysname='rp2040', nodename='rp2040', release='7.2.5', version='7.2.5 on 2022-04-06', machine='Raspberry Pi Pico with rp2040')
+
+dir(board) :  ['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'GP0', 'GP1', 'GP10', 'GP11', 'GP12', 'GP13', 'GP14', 'GP15', 'GP16', 'GP17', 'GP18', 'GP19', 'GP2', 'GP20', 'GP21', 'GP22', 'GP23', 'GP24', 'GP25', 'GP26', 'GP26_A0', 'GP27', 'GP27_A1', 'GP28', 'GP28_A2', 'GP3', 'GP4', 'GP5', 'GP6', 'GP7', 'GP8', 'GP9', 'LED', 'SMPS_MODE', 'VBUS_SENSE', 'VOLTAGE_MONITOR', 'board_id']
+
+board.board_id :  raspberry_pi_pico
+
+dir(microcontroller) :  ['__class__', '__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'cpus', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
+
+dir(microcontroller.pin) :  ['__class__', 'GPIO0', 'GPIO1', 'GPIO10', 'GPIO11', 'GPIO12', 'GPIO13', 'GPIO14', 'GPIO15', 'GPIO16', 'GPIO17', 'GPIO18', 'GPIO19', 'GPIO2', 'GPIO20', 'GPIO21', 'GPIO22', 'GPIO23', 'GPIO24', 'GPIO25', 'GPIO26', 'GPIO27', 'GPIO28', 'GPIO29', 'GPIO3', 'GPIO4', 'GPIO5', 'GPIO6', 'GPIO7', 'GPIO8', 'GPIO9']
