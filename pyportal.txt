@@ -1,6 +1,6 @@
 board.board_id : pyportal
 dir(board) : ['__class__', '__name__', 'A0', 'A1', 'A2', 'A4', 'AUDIO_OUT', 'D13', 'D3', 'D4', 'DISPLAY', 'ESP_BUSY', 'ESP_CS', 'ESP_GPIO0', 'ESP_RESET', 'ESP_RTS', 'ESP_RX', 'ESP_TX', 'I2C', 'L', 'LCD_DATA0', 'LCD_DATA1', 'LCD_DATA2', 'LCD_DATA3', 'LCD_DATA4', 'LCD_DATA5', 'LCD_DATA6', 'LCD_DATA7', 'LED', 'LIGHT', 'MISO', 'MOSI', 'NEOPIXEL', 'SCK', 'SCL', 'SDA', 'SD_CARD_DETECT', 'SD_CS', 'SPEAKER', 'SPEAKER_ENABLE', 'SPI', 'STEMMA_I2C', 'TFT_BACKLIGHT', 'TFT_CS', 'TFT_DC', 'TFT_RD', 'TFT_RESET', 'TFT_RS', 'TFT_TE', 'TFT_WR', 'TOUCH_XL', 'TOUCH_XR', 'TOUCH_YD', 'TOUCH_YU', 'board_id']
-os.uname() : (sysname='samd51', nodename='samd51', release='7.2.5', version='7.2.5 on 2022-04-06', machine='Adafruit PyPortal with samd51j20')
+os.uname() : (sysname='samd51', nodename='samd51', release='7.3.0', version='7.3.0 on 2022-05-23', machine='Adafruit PyPortal with samd51j20')
 
 dir(microcontroller) : ['__class__', '__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
 dir(microcontroller.pin) : ['__class__', 'PA00', 'PA01', 'PA02', 'PA03', 'PA04', 'PA05', 'PA06', 'PA07', 'PA08', 'PA09', 'PA10', 'PA11', 'PA12', 'PA13', 'PA14', 'PA15', 'PA16', 'PA17', 'PA18', 'PA19', 'PA20', 'PA21', 'PA22', 'PA23', 'PA27', 'PA30', 'PA31', 'PB00', 'PB01', 'PB02', 'PB03', 'PB04', 'PB05', 'PB06', 'PB07', 'PB08', 'PB09', 'PB10', 'PB11', 'PB12', 'PB13', 'PB14', 'PB15', 'PB16', 'PB17', 'PB22', 'PB23', 'PB30', 'PB31']
@@ -8,32 +8,36 @@ dir(microcontroller.pin) : ['__class__', 'PA00', 'PA01', 'PA02', 'PA03', 'PA04',
 dir(sys) : ['__class__', '__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
 sys.version : 3.4.0
 sys.platform : MicroChip SAMD51
-sys.implementation : (name='circuitpython', version=(7, 2, 5), mpy=517)
+sys.implementation : (name='circuitpython', version=(7, 3, 0), mpy=517)
 sys.path : ['', '/', '.frozen', '/lib']
 
 help('modules') {
-__future__        aesio             frequencyio       rgbmatrix
-__main__          alarm             gc                rotaryio
-_bleio            analogio          getpass           rtc
-adafruit_bus_device                 array             gifio             samd
-adafruit_display_text/__init__      atexit            i2cperipheral     sdcardio
-adafruit_display_text/bitmap_label  audiobusio        io                select
-adafruit_display_text/label         audiocore         json              sharpdisplay
-adafruit_display_text/scrolling_label                 audioio           keypad            storage
-adafruit_esp32spi/PWMOut            audiomixer        math              struct
-adafruit_esp32spi/__init__          audiomp3          microcontroller   supervisor
-adafruit_esp32spi/adafruit_esp32spi binascii          micropython       synthio
-adafruit_esp32spi/adafruit_esp32spi_socket            bitbangio         msgpack           sys
-adafruit_esp32spi/adafruit_esp32spi_wifimanager       bitmaptools       neopixel          terminalio
-adafruit_esp32spi/adafruit_esp32spi_wsgiserver        board             neopixel_write    time
-adafruit_esp32spi/digitalio         builtins          onewireio         touchio
-adafruit_fakerequests               busio             os                traceback
-adafruit_pixelbuf collections       paralleldisplay   ulab
-adafruit_portalbase/__init__        countio           ps2io             usb_cdc
-adafruit_portalbase/graphics        digitalio         pulseio           usb_hid
-adafruit_portalbase/network         displayio         pwmio             usb_midi
-adafruit_portalbase/wifi_coprocessor                  errno             rainbowio         uselect
-adafruit_portalbase/wifi_esp32s2    fontio            random            vectorio
-adafruit_requests framebufferio     re                watchdog
+__future__        alarm             i2cperipheral     struct
+__main__          analogio          io                supervisor
+_asyncio          array             json              synthio
+_bleio            atexit            keypad            sys
+adafruit_bus_device                 audiobusio        math              terminalio
+adafruit_bus_device.i2c_device      audiocore         microcontroller   time
+adafruit_bus_device.spi_device      audioio           micropython       touchio
+adafruit_display_text/__init__      audiomixer        msgpack           traceback
+adafruit_display_text/bitmap_label  audiomp3          neopixel          ulab
+adafruit_display_text/label         binascii          neopixel_write    ulab
+adafruit_display_text/scrolling_label                 bitbangio         onewireio         ulab.fft
+adafruit_esp32spi/PWMOut            bitmaptools       os                ulab.linalg
+adafruit_esp32spi/__init__          board             paralleldisplay   ulab.numpy
+adafruit_esp32spi/adafruit_esp32spi builtins          ps2io             ulab.scipy
+adafruit_esp32spi/adafruit_esp32spi_socket            busio             pulseio           ulab.scipy.linalg
+adafruit_esp32spi/adafruit_esp32spi_wifimanager       collections       pwmio             ulab.scipy.optimize
+adafruit_esp32spi/adafruit_esp32spi_wsgiserver        countio           rainbowio         ulab.scipy.signal
+adafruit_esp32spi/digitalio         digitalio         random            ulab.scipy.special
+adafruit_fakerequests               displayio         re                ulab.utils
+adafruit_pixelbuf errno             rgbmatrix         usb_cdc
+adafruit_portalbase/__init__        floppyio          rotaryio          usb_hid
+adafruit_portalbase/graphics        fontio            rtc               usb_midi
+adafruit_portalbase/network         framebufferio     samd              uselect
+adafruit_portalbase/wifi_coprocessor                  frequencyio       sdcardio          vectorio
+adafruit_portalbase/wifi_esp32s2    gc                select            watchdog
+adafruit_requests getpass           sharpdisplay      zlib
+aesio             gifio             storage
 Plus any modules on the filesystem
 }
