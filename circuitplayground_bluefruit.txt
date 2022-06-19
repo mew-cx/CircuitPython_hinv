@@ -35,3 +35,25 @@ bitbangio         msgpack           terminalio        zlib
 bitmaptools       neopixel_write    time
 Plus any modules on the filesystem
 }
+board.A1 board.D6 board.SCK
+board.A2 board.D9 board.MISO
+board.A3 board.D10 board.MOSI
+board.A4 board.D3 board.SCL
+board.A5 board.D2 board.SDA
+board.A6 board.D0 board.RX
+board.A8 board.LIGHT
+board.A9 board.TEMPERATURE
+board.ACCELEROMETER_INTERRUPT
+board.ACCELEROMETER_SCL
+board.ACCELEROMETER_SDA
+board.AUDIO board.D12 board.SPEAKER
+board.BUTTON_A board.D4
+board.BUTTON_B board.D5
+board.D1 board.TX
+board.D13 board.L board.LED
+board.D35 board.POWER_SWITCH
+board.D7 board.SLIDE_SWITCH
+board.D8 board.NEOPIXEL
+board.MICROPHONE_CLOCK
+board.MICROPHONE_DATA
+board.SPEAKER_ENABLE
