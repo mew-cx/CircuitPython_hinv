@@ -31,4 +31,6 @@ import micropython
 print("\nhelp('modules') {")
 help('modules')
 print("}")
+
+import pin_map
 print("==========================")
