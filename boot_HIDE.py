@@ -19,9 +19,14 @@ supervisor.set_rgb_status_brightness(100)
 #print("errorcode", errno.errcode)
 
 print("uname", os.uname())
+
 print("uid", repr(microcontroller.cpu.uid))
 #print("uid0", microcontroller.cpus[0].uid)
 #print("uid1", microcontroller.cpus[1].uid)
+
+print("".join("%02x" % i for i in microcontroller.cpu.uid))
+print("".join("{:02x}".format(i) for i in microcontroller.cpu.uid))
+
 print("getcwd", os.getcwd())
 
 #storage.remount("/", readonly=False) # CPy writable
