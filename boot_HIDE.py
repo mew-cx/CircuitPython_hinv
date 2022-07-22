@@ -6,37 +6,33 @@ import supervisor
 import board
 #import errno
 
+def Filename() :
+    uid = "".join("{:02x}".format(i) for i in microcontroller.cpu.uid)
+    return "{}_{}.txt".format(board.board_id, uid)
+
 print("board_id", board.board_id)
-print(sys.implementation)
-print(sys.modules)
-print(sys.path)
-print(sys.platform)
-print(sys.version)
-print(sys.version_info)
+print("implementation", sys.implementation)
+print("modules", sys.modules)
+print("path", sys.path)
+print("platform", sys.platform)
+print("version", sys.version)
+print("version_info", sys.version_info)
 
-supervisor.set_rgb_status_brightness(100)
+#supervisor.set_rgb_status_brightness(100)
 
-#print("errorcode", errno.errcode)
-
+print("Filename", Filename())
+print("errorcode", errno.errcode)
 print("uname", os.uname())
-
 print("uid", repr(microcontroller.cpu.uid))
-#print("uid0", microcontroller.cpus[0].uid)
-#print("uid1", microcontroller.cpus[1].uid)
+print("uid0", microcontroller.cpus[0].uid)
+print("uid1", microcontroller.cpus[1].uid)
 
-print("".join("%02x" % i for i in microcontroller.cpu.uid))
-print("".join("{:02x}".format(i) for i in microcontroller.cpu.uid))
+print("uidX", "".join("%02x" % i for i in microcontroller.cpu.uid))
+print("uidY", "".join("{:02x}".format(i) for i in microcontroller.cpu.uid))
 
-print("getcwd", os.getcwd())
-
+#print("getcwd", os.getcwd())
 #storage.remount("/", readonly=False) # CPy writable
 #storage.remount("/", readonly=True)  # CPy readonly
-
-#print("mkdir", os.mkdir("/a"))
-#print("mkdir", os.mkdir("/a"))
-#print("remove", os.remove("/nothing"))
-
-print("listdir /", os.listdir("/"))
 
 print("statvfs /", os.statvfs("/"))
 print("stat code.py", os.stat("/code.py"))
@@ -49,7 +45,6 @@ print("sep", os.sep)
 
 #os.rename("/boot.py", "/boot.bak")
 
-os.sync()
 os.sync()
 
 print("all done")
