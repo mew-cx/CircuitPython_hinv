@@ -17,19 +17,21 @@ def Filename():
 
 def PinMap():
     """CircuitPython Essentials Pin Map Script"""
-    board_pins = []
+    uc_pins = []
     for ucpin in dir(microcontroller.pin):
-        if isinstance(getattr(microcontroller.pin, ucpin), microcontroller.Pin):
-            pins = [ucpin]
-            for alias in dir(board):
-                if getattr(board, alias) is getattr(microcontroller.pin, ucpin):
-                    pins.append("board.{}".format(alias))
+        uc_attr = getattr(microcontroller.pin, ucpin)
+        #print(repr(uc_attr))
+        if isinstance(uc_attr, microcontroller.Pin):
+            b_pins = [ucpin]
+            for bpin in dir(board):
+                if getattr(board, bpin) is uc_attr:
+                    b_pins.append("board.{}".format(bpin))
 
-            if len(pins) > 0:
-                board_pins.append("\t".join(pins))
+            if len(b_pins) > 1:
+                uc_pins.append("\t".join(b_pins))
 
-    for pins in sorted(board_pins):
-        print(pins)
+    for i in sorted(uc_pins):
+        print(i)
 
 #############################################################################
 
