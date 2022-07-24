@@ -1,0 +1,78 @@
+Filename() : raspberry_pi_pico__e6611cb697619e28.txt
+board.board_id : raspberry_pi_pico
+uid : e6611cb697619e28
+len(cpus) : 2
+sys.implementation : (name='circuitpython', version=(7, 3, 1), mpy=517)
+sys.modules : {}
+sys.path : ['', '/', '/lib']
+sys.platform : RP2040
+sys.version : 3.4.0
+sys.version_info : (3, 4, 0)
+os.uname() : (sysname='rp2040', nodename='rp2040', release='7.3.1', version='7.3.1 on 2022-06-22', machine='Raspberry Pi Pico with rp2040')
+os.statvfs(/) : (512, 512, 2008, 1950, 1950, 0, 0, 0, 0, 255)
+os.stat(/code.py) : (32768, 0, 0, 0, 0, 0, 3739, 1658639268, 1658639268, 1658639268)
+os.sep : /
+
+dir(microcontroller.pin) :
+['__class__', 'GPIO0', 'GPIO1', 'GPIO10', 'GPIO11', 'GPIO12', 'GPIO13', 'GPIO14', 'GPIO15', 'GPIO16', 'GPIO17', 'GPIO18', 'GPIO19', 'GPIO2', 'GPIO20', 'GPIO21', 'GPIO22', 'GPIO23', 'GPIO24', 'GPIO25', 'GPIO26', 'GPIO27', 'GPIO28', 'GPIO29', 'GPIO3', 'GPIO4', 'GPIO5', 'GPIO6', 'GPIO7', 'GPIO8', 'GPIO9']
+
+dir(board) :
+['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'GP0', 'GP1', 'GP10', 'GP11', 'GP12', 'GP13', 'GP14', 'GP15', 'GP16', 'GP17', 'GP18', 'GP19', 'GP2', 'GP20', 'GP21', 'GP22', 'GP23', 'GP24', 'GP25', 'GP26', 'GP26_A0', 'GP27', 'GP27_A1', 'GP28', 'GP28_A2', 'GP3', 'GP4', 'GP5', 'GP6', 'GP7', 'GP8', 'GP9', 'LED', 'SMPS_MODE', 'VBUS_SENSE', 'VOLTAGE_MONITOR', 'board_id']
+
+dir(microcontroller) :
+['__class__', '__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'cpus', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
+
+dir(storage) :
+['__class__', '__name__', 'VfsFat', 'disable_usb_drive', 'enable_usb_drive', 'erase_filesystem', 'getmount', 'mount', 'remount', 'umount']
+
+dir(os) :
+['__class__', '__name__', 'remove', 'sep', 'chdir', 'getcwd', 'listdir', 'mkdir', 'rename', 'rmdir', 'stat', 'statvfs', 'sync', 'uname', 'unlink', 'urandom']
+
+dir(sys) :
+['__class__', '__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
+
+dir(supervisor) :
+['__class__', '__name__', 'RunReason', 'disable_autoreload', 'disable_ble_workflow', 'enable_autoreload', 'get_previous_traceback', 'reload', 'reset_terminal', 'runtime', 'set_next_code_file', 'set_next_stack_limit', 'set_rgb_status_brightness', 'ticks_ms']
+
+dir(micropython) :
+['__class__', '__name__', 'const', 'heap_lock', 'heap_unlock', 'kbd_intr', 'opt_level', 'pystack_use']
+
+dir(errno) :
+['__class__', '__name__', 'EACCES', 'EADDRINUSE', 'EAGAIN', 'EALREADY', 'EBADF', 'ECONNABORTED', 'ECONNREFUSED', 'ECONNRESET', 'EEXIST', 'EHOSTUNREACH', 'EINPROGRESS', 'EINVAL', 'EIO', 'EISDIR', 'ENOBUFS', 'ENODEV', 'ENOENT', 'ENOMEM', 'ENOTCONN', 'EOPNOTSUPP', 'EPERM', 'ETIMEDOUT', 'errorcode']
+
+dir(errno.errorcode) :
+{1: 'EPERM', 2: 'ENOENT', 5: 'EIO', 9: 'EBADF', 11: 'EAGAIN', 12: 'ENOMEM', 13: 'EACCES', 17: 'EEXIST', 19: 'ENODEV', 21: 'EISDIR', 22: 'EINVAL', 95: 'EOPNOTSUPP', 112: 'EADDRINUSE', 113: 'ECONNABORTED', 104: 'ECONNRESET', 105: 'ENOBUFS', 128: 'ENOTCONN', 116: 'ETIMEDOUT', 111: 'ECONNREFUSED', 118: 'EHOSTUNREACH', 120: 'EALREADY', 119: 'EINPROGRESS'}
+
+
+PinMap() {
+GPIO0	board.GP0
+GPIO1	board.GP1
+GPIO10	board.GP10
+GPIO11	board.GP11
+GPIO12	board.GP12
+GPIO13	board.GP13
+GPIO14	board.GP14
+GPIO15	board.GP15
+GPIO16	board.GP16
+GPIO17	board.GP17
+GPIO18	board.GP18
+GPIO19	board.GP19
+GPIO2	board.GP2
+GPIO20	board.GP20
+GPIO21	board.GP21
+GPIO22	board.GP22
+GPIO23	board.GP23	board.SMPS_MODE
+GPIO24	board.GP24	board.VBUS_SENSE
+GPIO25	board.GP25	board.LED
+GPIO26	board.A0	board.GP26	board.GP26_A0
+GPIO27	board.A1	board.GP27	board.GP27_A1
+GPIO28	board.A2	board.GP28	board.GP28_A2
+GPIO29	board.A3	board.VOLTAGE_MONITOR
+GPIO3	board.GP3
+GPIO4	board.GP4
+GPIO5	board.GP5
+GPIO6	board.GP6
+GPIO7	board.GP7
+GPIO8	board.GP8
+GPIO9	board.GP9
+}
