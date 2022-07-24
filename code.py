@@ -1,4 +1,4 @@
-# sysinfo.py http://mew.cx/  2022-07-22
+# sysinfo.py http://mew.cx/  2022-07-24
 # SPDX
 # TODO: other errors:
 #       28 full filesystem
@@ -88,20 +88,17 @@ def main():
         print(i)
     print("}")
 
-    os.sync()
-
 # make it so ################################################################
 
-storage.remount("/", readonly=False) # CPy writable
 with open(Filename(), "w") as f:
-    save = sys.stdout
     sys.stdout = f
     main()
-    sys.stdout = save
-storage.remount("/", readonly=True)  # CPy readonly
+os.sync()
+microcontroller.reset()
 
 # future ####################################################################
-#microcontroller.reset()
+#storage.remount("/", readonly=False) # CPy writable
+#storage.remount("/", readonly=True)  # CPy readonly
 #print("os.stat foo", os.stat("/foo.py"))
 #print("os.getcwd", os.getcwd())
 #with open("/tmp.txt", "a") as fp:
