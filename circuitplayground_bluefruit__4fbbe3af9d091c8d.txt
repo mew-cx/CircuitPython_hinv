@@ -1,0 +1,71 @@
+Filename() : circuitplayground_bluefruit__4fbbe3af9d091c8d.txt
+board.board_id : circuitplayground_bluefruit
+uid : 4fbbe3af9d091c8d
+sys.implementation : (name='circuitpython', version=(7, 3, 1), mpy=517)
+sys.modules : {}
+sys.path : ['', '/', '/lib']
+sys.platform : nRF52840
+sys.version : 3.4.0
+sys.version_info : (3, 4, 0)
+os.uname() : (sysname='nrf52', nodename='nrf52', release='7.3.1', version='7.3.1 on 2022-06-22', machine='Adafruit Circuit Playground Bluefruit with nRF52840')
+os.statvfs(/) : (1024, 1024, 2024, 1977, 1977, 0, 0, 0, 0, 255)
+os.stat(/code.py) : (32768, 0, 0, 0, 0, 0, 3697, 1658682466, 1658682466, 1658682466)
+os.sep : /
+
+dir(microcontroller.pin) :
+['__class__', 'P0_00', 'P0_01', 'P0_02', 'P0_03', 'P0_04', 'P0_05', 'P0_06', 'P0_07', 'P0_08', 'P0_09', 'P0_10', 'P0_11', 'P0_12', 'P0_13', 'P0_14', 'P0_15', 'P0_16', 'P0_17', 'P0_18', 'P0_19', 'P0_20', 'P0_21', 'P0_22', 'P0_23', 'P0_24', 'P0_25', 'P0_26', 'P0_27', 'P0_28', 'P0_29', 'P0_30', 'P0_31', 'P1_00', 'P1_01', 'P1_02', 'P1_03', 'P1_04', 'P1_05', 'P1_06', 'P1_07', 'P1_08', 'P1_09', 'P1_10', 'P1_11', 'P1_12', 'P1_13', 'P1_14', 'P1_15']
+
+dir(board) :
+['__class__', '__name__', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A8', 'A9', 'ACCELEROMETER_INTERRUPT', 'ACCELEROMETER_SCL', 'ACCELEROMETER_SDA', 'AUDIO', 'BUTTON_A', 'BUTTON_B', 'D0', 'D1', 'D10', 'D12', 'D13', 'D2', 'D3', 'D35', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'I2C', 'L', 'LED', 'LIGHT', 'MICROPHONE_CLOCK', 'MICROPHONE_DATA', 'MISO', 'MOSI', 'NEOPIXEL', 'POWER_SWITCH', 'RX', 'SCK', 'SCL', 'SDA', 'SLIDE_SWITCH', 'SPEAKER', 'SPEAKER_ENABLE', 'SPI', 'TEMPERATURE', 'TX', 'UART', 'board_id']
+
+dir(microcontroller) :
+['__class__', '__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
+
+dir(storage) :
+['__class__', '__name__', 'VfsFat', 'disable_usb_drive', 'enable_usb_drive', 'erase_filesystem', 'getmount', 'mount', 'remount', 'umount']
+
+dir(os) :
+['__class__', '__name__', 'remove', 'sep', 'chdir', 'getcwd', 'listdir', 'mkdir', 'rename', 'rmdir', 'stat', 'statvfs', 'sync', 'uname', 'unlink', 'urandom']
+
+dir(sys) :
+['__class__', '__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
+
+dir(supervisor) :
+['__class__', '__name__', 'RunReason', 'disable_autoreload', 'disable_ble_workflow', 'enable_autoreload', 'get_previous_traceback', 'reload', 'reset_terminal', 'runtime', 'set_next_code_file', 'set_next_stack_limit', 'set_rgb_status_brightness', 'ticks_ms']
+
+dir(micropython) :
+['__class__', '__name__', 'const', 'heap_lock', 'heap_unlock', 'kbd_intr', 'opt_level', 'pystack_use']
+
+dir(errno) :
+['__class__', '__name__', 'EACCES', 'EADDRINUSE', 'EAGAIN', 'EALREADY', 'EBADF', 'ECONNABORTED', 'ECONNREFUSED', 'ECONNRESET', 'EEXIST', 'EHOSTUNREACH', 'EINPROGRESS', 'EINVAL', 'EIO', 'EISDIR', 'ENOBUFS', 'ENODEV', 'ENOENT', 'ENOMEM', 'ENOTCONN', 'EOPNOTSUPP', 'EPERM', 'ETIMEDOUT', 'errorcode']
+
+dir(errno.errorcode) :
+{1: 'EPERM', 2: 'ENOENT', 5: 'EIO', 9: 'EBADF', 11: 'EAGAIN', 12: 'ENOMEM', 13: 'EACCES', 17: 'EEXIST', 19: 'ENODEV', 21: 'EISDIR', 22: 'EINVAL', 95: 'EOPNOTSUPP', 112: 'EADDRINUSE', 113: 'ECONNABORTED', 104: 'ECONNRESET', 105: 'ENOBUFS', 128: 'ENOTCONN', 116: 'ETIMEDOUT', 111: 'ECONNREFUSED', 118: 'EHOSTUNREACH', 120: 'EALREADY', 119: 'EINPROGRESS'}
+
+
+PinMap() {
+P0_02	board.A1	board.D6	board.SCK
+P0_03	board.A3	board.D10	board.MOSI
+P0_04	board.A4	board.D3	board.SCL
+P0_05	board.A5	board.D2	board.SDA
+P0_06	board.D35	board.POWER_SWITCH
+P0_13	board.D8	board.NEOPIXEL
+P0_14	board.D1	board.TX
+P0_16	board.MICROPHONE_DATA
+P0_17	board.MICROPHONE_CLOCK
+P0_26	board.AUDIO	board.D12	board.SPEAKER
+P0_28	board.A8	board.LIGHT
+P0_29	board.A2	board.D9	board.MISO
+P0_30	board.A6	board.D0	board.RX
+P0_31	board.A9	board.TEMPERATURE
+P1_02	board.BUTTON_A	board.D4
+P1_04	board.SPEAKER_ENABLE
+P1_06	board.D7	board.SLIDE_SWITCH
+P1_10	board.ACCELEROMETER_SDA
+P1_12	board.ACCELEROMETER_SCL
+P1_13	board.ACCELEROMETER_INTERRUPT
+P1_14	board.D13	board.L	board.LED
+P1_15	board.BUTTON_B	board.D5
+}
+help('modules') {
+}
