@@ -1,5 +1,8 @@
 # sysinfo.py http://mew.cx/  2022-07-22
 # SPDX
+# TODO: other errors:
+#       28 full filesystem
+#       30 readonly filesystem
 
 import board
 import microcontroller
@@ -42,24 +45,26 @@ def PinMap():
 #############################################################################
 
 def main():
-    print("Filename() : ", Filename())
+    print("Filename() :", Filename())
 
-    print("board.board_id : ", board.board_id)
-    print("uid : ", repr(microcontroller.cpu.uid))
-    #print("uid0 : ", microcontroller.cpus[0].uid)
-    #print("uid1 : ", microcontroller.cpus[1].uid)
+    print("board.board_id :", board.board_id)
+    print("uid :", HexifyByteArray(microcontroller.cpu.uid))
 
-    print("sys.implementation : ", sys.implementation)
-    print("sys.modules : ", sys.modules)
-    print("sys.path : ", sys.path)
-    print("sys.platform : ", sys.platform)
-    print("sys.version : ", sys.version)
-    print("sys.version_info : ", sys.version_info)
+    #print("uid() :", microcontroller.cpus)
+    #for cpu in microcontroller.cpus:
+    #    print("cpu :", HexifyByteArray(cpu.uid))
+
+    print("sys.implementation :", sys.implementation)
+    print("sys.modules :", sys.modules)
+    print("sys.path :", sys.path)
+    print("sys.platform :", sys.platform)
+    print("sys.version :", sys.version)
+    print("sys.version_info :", sys.version_info)
     print("os.uname() :", os.uname())
 
-    print("os.statvfs(/) : ", os.statvfs("/"))
-    print("os.stat(/code.py) : ", os.stat("/code.py"))
-    print("os.sep : ", os.sep)
+    print("os.statvfs(/) :", os.statvfs("/"))
+    print("os.stat(/code.py) :", os.stat("/code.py"))
+    print("os.sep :", os.sep)
 
     print("\ndir(microcontroller.pin) :", dir(microcontroller.pin))
 
@@ -72,24 +77,28 @@ def main():
     print("\ndir(supervisor) :", dir(supervisor))
     print("\ndir(micropython) :", dir(micropython))
     print("\ndir(errno) :", dir(errno))
+    print("\ndir(errno.errorcode) :", errno.errorcode)
 
     print("\nhelp('modules') {")
-    help('modules')
+    #help('modules')
     print("}")
 
     print("\nPinMap() {")
     for i in PinMap():
         print(i)
     print("}")
-    print("done =====================")
 
     os.sync()
 
 # make it so ################################################################
 
-#storage.remount("/", readonly=False) # CPy writable
-main()
-#storage.remount("/", readonly=True)  # CPy readonly
+storage.remount("/", readonly=False) # CPy writable
+with open(Filename(), "w") as f:
+    save = sys.stdout
+    sys.stdout = f
+    main()
+    sys.stdout = save
+storage.remount("/", readonly=True)  # CPy readonly
 
 # future ####################################################################
 #microcontroller.reset()
