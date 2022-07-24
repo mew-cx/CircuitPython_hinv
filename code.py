@@ -91,10 +91,10 @@ def main():
 # make it so ################################################################
 
 with open(Filename(), "w") as f:
-    sys.stdout = f
-    main()
+#    sys.stdout = f
+    main(f)
 os.sync()
-microcontroller.reset()
+#microcontroller.reset()
 
 # future ####################################################################
 #storage.remount("/", readonly=False) # CPy writable
