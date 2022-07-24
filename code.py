@@ -50,7 +50,7 @@ def main(out):
     out.write("board.board_id : {}\n".format(board.board_id))
     out.write("uid : {}\n".format(HexifyByteArray(microcontroller.cpu.uid)))
 
-    out.write("len(cpus) : {}\n".format(len(microcontroller.cpus)))
+    #out.write("len(cpus) : {}\n".format(len(microcontroller.cpus)))
     #for cpu in microcontroller.cpus:
     #    print("cpu :", HexifyByteArray(cpu.uid))
 
@@ -81,21 +81,19 @@ def main(out):
     out.write("dir(errno.errorcode) :\n{}\n\n".format(errno.errorcode))
     out.write("\n")
 
-    #out.write("help('modules') {\n")
-    #help('modules')
-    #out.write("}\n")
-
     out.write("PinMap() {\n")
     for i in PinMap():
         out.write("{}\n".format(i))
     out.write("}\n")
 
+    out.write("help('modules') {\n")
+    help('modules')
+    out.write("}\n")
+
 # make it so ################################################################
 
 with open(Filename(), "w") as f:
-    #sys.stdout = f
     main(f)
-#main(sys.stdout)
 os.sync()
 microcontroller.reset()
 
