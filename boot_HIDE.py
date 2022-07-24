@@ -37,7 +37,7 @@ def PinMap():
                     b_pins.append("board.{}".format(bpin))
             if len(b_pins) > 1:
                 uc_pins.append("\t".join(b_pins))
-    return sorted(uc_pins):
+    return sorted(uc_pins)
 
 #############################################################################
 
