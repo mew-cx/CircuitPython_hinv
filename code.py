@@ -97,7 +97,7 @@ with open(Filename(), "w") as f:
     main(f)
 #main(sys.stdout)
 os.sync()
-#microcontroller.reset()
+microcontroller.reset()
 
 # future ####################################################################
 #storage.remount("/", readonly=False) # CPy writable
