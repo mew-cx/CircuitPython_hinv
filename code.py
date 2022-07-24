@@ -44,55 +44,58 @@ def PinMap():
 
 #############################################################################
 
-def main():
-    print("Filename() :", Filename())
+def main(out):
+    out.write("Filename() : {}\n".format(Filename()))
 
-    print("board.board_id :", board.board_id)
-    print("uid :", HexifyByteArray(microcontroller.cpu.uid))
+    out.write("board.board_id : {}\n".format(board.board_id))
+    out.write("uid : {}\n".format(HexifyByteArray(microcontroller.cpu.uid)))
 
-    #print("uid() :", microcontroller.cpus)
+    out.write("len(cpus) : {}\n".format(len(microcontroller.cpus)))
     #for cpu in microcontroller.cpus:
     #    print("cpu :", HexifyByteArray(cpu.uid))
 
-    print("sys.implementation :", sys.implementation)
-    print("sys.modules :", sys.modules)
-    print("sys.path :", sys.path)
-    print("sys.platform :", sys.platform)
-    print("sys.version :", sys.version)
-    print("sys.version_info :", sys.version_info)
-    print("os.uname() :", os.uname())
+    out.write("sys.implementation : {}\n".format(sys.implementation))
+    out.write("sys.modules : {}\n".format(sys.modules))
+    out.write("sys.path : {}\n".format(sys.path))
+    out.write("sys.platform : {}\n".format(sys.platform))
+    out.write("sys.version : {}\n".format(sys.version))
+    out.write("sys.version_info : {}\n".format(sys.version_info))
+    out.write("os.uname() : {}\n".format(os.uname()))
 
-    print("os.statvfs(/) :", os.statvfs("/"))
-    print("os.stat(/code.py) :", os.stat("/code.py"))
-    print("os.sep :", os.sep)
+    out.write("os.statvfs(/) : {}\n".format(os.statvfs("/")))
+    out.write("os.stat(/code.py) : {}\n".format(os.stat("/code.py")))
+    out.write("os.sep : {}\n".format(os.sep))
+    out.write("\n")
 
-    print("\ndir(microcontroller.pin) :", dir(microcontroller.pin))
+    out.write("dir(microcontroller.pin) :\n{}\n\n".format(dir(microcontroller.pin)))
 
-    print("\ndir(board) :", dir(board))
-    print("\ndir(microcontroller) :", dir(microcontroller))
-    print("\ndir(storage) :", dir(storage))
-    print("\ndir(os) :", dir(os))
-    print("\ndir(sys) :", dir(sys))
+    out.write("dir(board) :\n{}\n\n".format(dir(board)))
+    out.write("dir(microcontroller) :\n{}\n\n".format(dir(microcontroller)))
+    out.write("dir(storage) :\n{}\n\n".format(dir(storage)))
+    out.write("dir(os) :\n{}\n\n".format(dir(os)))
+    out.write("dir(sys) :\n{}\n\n".format(dir(sys)))
 
-    print("\ndir(supervisor) :", dir(supervisor))
-    print("\ndir(micropython) :", dir(micropython))
-    print("\ndir(errno) :", dir(errno))
-    print("\ndir(errno.errorcode) :", errno.errorcode)
+    out.write("dir(supervisor) :\n{}\n\n".format(dir(supervisor)))
+    out.write("dir(micropython) :\n{}\n\n".format(dir(micropython)))
+    out.write("dir(errno) :\n{}\n\n".format(dir(errno)))
+    out.write("dir(errno.errorcode) :\n{}\n\n".format(errno.errorcode))
+    out.write("\n")
 
-    print("\nhelp('modules') {")
+    #out.write("help('modules') {\n")
     #help('modules')
-    print("}")
+    #out.write("}\n")
 
-    print("\nPinMap() {")
+    out.write("PinMap() {\n")
     for i in PinMap():
-        print(i)
-    print("}")
+        out.write("{}\n".format(i))
+    out.write("}\n")
 
 # make it so ################################################################
 
 with open(Filename(), "w") as f:
-#    sys.stdout = f
+    #sys.stdout = f
     main(f)
+#main(sys.stdout)
 os.sync()
 #microcontroller.reset()
 
