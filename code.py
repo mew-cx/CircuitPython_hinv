@@ -12,7 +12,6 @@ import os
 import sys
 
 import supervisor
-import micropython
 
 __version__ = "0.0.0.0"
 __repo__    = "todo"
@@ -76,7 +75,6 @@ def main(out):
     out.write("dir(sys) :\n{}\n\n".format(dir(sys)))
 
     out.write("dir(supervisor) :\n{}\n\n".format(dir(supervisor)))
-    out.write("dir(micropython) :\n{}\n\n".format(dir(micropython)))
     out.write("\n")
 
     out.write("PinMap() {\n")
