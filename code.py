@@ -13,7 +13,6 @@ import sys
 
 import supervisor
 import micropython
-import errno
 
 __version__ = "0.0.0.0"
 __repo__    = "todo"
@@ -78,8 +77,6 @@ def main(out):
 
     out.write("dir(supervisor) :\n{}\n\n".format(dir(supervisor)))
     out.write("dir(micropython) :\n{}\n\n".format(dir(micropython)))
-    out.write("dir(errno) :\n{}\n\n".format(dir(errno)))
-    out.write("dir(errno.errorcode) :\n{}\n\n".format(errno.errorcode))
     out.write("\n")
 
     out.write("PinMap() {\n")
