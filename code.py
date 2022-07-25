@@ -1,8 +1,9 @@
 # sysinfo.py http://mew.cx/  2022-07-24
 # SPDX
-# TODO: other errors:
-#       28 full filesystem
-#       30 readonly filesystem
+# TODO:
+# - see 'errno -l' for full list of error codes.
+# - put 'try' around 'microcontroller.cpus'
+# - use statvfs() to compute storage capacity.
 
 import board
 import microcontroller
