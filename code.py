@@ -2,7 +2,6 @@
 # SPDX
 # TODO:
 # - see 'errno -l' for full list of error codes.
-# - put 'try' around 'microcontroller.cpus'
 # - use statvfs() to compute storage capacity.
 
 import board
@@ -48,11 +47,15 @@ def main(out):
     out.write("Filename() : {}\n".format(Filename()))
 
     out.write("board.board_id : {}\n".format(board.board_id))
-    out.write("uid : {}\n".format(HexifyByteArray(microcontroller.cpu.uid)))
+    out.write("uid : {}\n".format(Hexify(microcontroller.cpu.uid)))
 
-    #out.write("len(cpus) : {}\n".format(len(microcontroller.cpus)))
-    #for cpu in microcontroller.cpus:
-    #    print("cpu :", HexifyByteArray(cpu.uid))
+    try:
+        cpus = microcontroller.cpus
+        out.write("len(cpus) : {} (".format(len(cpus)))
+        out.write(" ".join("{}".format(Hexify(cpu.uid)) for cpu in cpus))
+        out.write(")\n")
+    except:
+        pass
 
     out.write("sys.implementation : {}\n".format(sys.implementation))
     out.write("sys.modules : {}\n".format(sys.modules))
