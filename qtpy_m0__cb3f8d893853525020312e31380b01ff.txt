@@ -1,0 +1,60 @@
+board.board_id : qtpy_m0
+uid : cb3f8d893853525020312e31380b01ff
+sys.implementation : (name='circuitpython', version=(7, 3, 1), mpy=517)
+sys.modules : {}
+sys.path : ['', '/', '/lib']
+sys.platform : Atmel SAMD21
+sys.version : 3.4.0
+sys.version_info : (3, 4, 0)
+os.uname() : (sysname='samd21', nodename='samd21', release='7.3.1', version='7.3.1 on 2022-06-22', machine='Adafruit QT Py M0 with samd21e18')
+os.statvfs(/) : (512, 512, 94, 75, 75, 0, 0, 0, 0, 255)
+os.stat(/code.py) : (32768, 0, 0, 0, 0, 0, 3505, 946684800, 946684800, 946684800)
+os.sep : /
+
+dir(microcontroller.pin) :
+['PA02', 'PA03', 'PA04', 'PA05', 'PA06', 'PA07', 'PA08', 'PA09', 'PA10', 'PA11', 'PA15', 'PA16', 'PA17', 'PA18', 'PA19', 'PA22', 'PA23']
+
+dir(board) :
+['__name__', 'A0', 'A1', 'A10', 'A2', 'A3', 'A6', 'A7', 'A8', 'A9', 'D0', 'D1', 'D10', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'I2C', 'MISO', 'MOSI', 'NEOPIXEL', 'NEOPIXEL_POWER', 'RX', 'SCK', 'SCL', 'SDA', 'SPI', 'STEMMA_I2C', 'TX', 'UART', 'board_id']
+
+dir(microcontroller) :
+['__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
+
+dir(storage) :
+['__name__', 'VfsFat', 'disable_usb_drive', 'enable_usb_drive', 'erase_filesystem', 'getmount', 'mount', 'remount', 'umount']
+
+dir(os) :
+['__name__', 'remove', 'sep', 'chdir', 'getcwd', 'listdir', 'mkdir', 'rename', 'rmdir', 'stat', 'statvfs', 'sync', 'uname', 'unlink', 'urandom']
+
+dir(sys) :
+['__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
+
+dir(supervisor) :
+['__name__', 'RunReason', 'disable_autoreload', 'disable_ble_workflow', 'enable_autoreload', 'get_previous_traceback', 'reload', 'reset_terminal', 'runtime', 'set_next_code_file', 'set_next_stack_limit', 'set_rgb_status_brightness', 'ticks_ms']
+
+PinMap() {
+PA02	board.A0	board.D0
+PA03	board.A1	board.D1
+PA04	board.A2	board.D2
+PA05	board.A3	board.D3
+PA06	board.A6	board.D6	board.TX
+PA07	board.A7	board.D7	board.RX
+PA09	board.A9	board.D9	board.MISO
+PA10	board.A10	board.D10	board.MOSI
+PA11	board.A8	board.D8	board.SCK
+PA15	board.NEOPIXEL_POWER
+PA16	board.D4	board.SDA
+PA17	board.D5	board.SCL
+PA18	board.NEOPIXEL
+}
+help('modules') {
+__future__        digitalio         rainbowio         time
+__main__          gc                random            touchio
+analogio          math              rotaryio          usb_cdc
+array             microcontroller   rtc               usb_hid
+board             micropython       storage           usb_midi
+builtins          neopixel_write    struct
+busio             os                supervisor
+collections       pwmio             sys
+Plus any modules on the filesystem
+}
