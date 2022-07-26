@@ -1,0 +1,82 @@
+board.board_id : itsybitsy_m4_express
+uid : 7d02f9483143375320202039184511ff
+sys.implementation : (name='circuitpython', version=(7, 2, 5), mpy=517)
+sys.modules : {}
+sys.path : ['', '/', '.frozen', '/lib']
+sys.platform : MicroChip SAMD51
+sys.version : 3.4.0
+sys.version_info : (3, 4, 0)
+os.uname() : (sysname='samd51', nodename='samd51', release='7.2.5', version='7.2.5 on 2022-04-06', machine='Adafruit ItsyBitsy M4 Express with samd51g19')
+os.statvfs(/) : (1024, 1024, 2024, 1357, 1357, 0, 0, 0, 0, 255)
+os.stat(/code.py) : (32768, 0, 0, 0, 0, 0, 3505, 1658856372, 1658856372, 1658856372)
+os.sep : /
+
+dir(microcontroller.pin) :
+['__class__', 'PA00', 'PA01', 'PA02', 'PA03', 'PA04', 'PA05', 'PA06', 'PA07', 'PA08', 'PA09', 'PA10', 'PA11', 'PA12', 'PA13', 'PA14', 'PA15', 'PA16', 'PA17', 'PA18', 'PA19', 'PA20', 'PA21', 'PA22', 'PA23', 'PA27', 'PA30', 'PA31', 'PB02', 'PB03', 'PB08', 'PB09', 'PB10', 'PB11', 'PB22', 'PB23']
+
+dir(board) :
+['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'APA102_MOSI', 'APA102_SCK', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D2', 'D3', 'D4', 'D5', 'D7', 'D9', 'DOTSTAR_CLOCK', 'DOTSTAR_DATA', 'I2C', 'LED', 'MISO', 'MOSI', 'RX', 'SCK', 'SCL', 'SDA', 'SPI', 'TX', 'UART', 'board_id']
+
+dir(microcontroller) :
+['__class__', '__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
+
+dir(storage) :
+['__class__', '__name__', 'VfsFat', 'disable_usb_drive', 'enable_usb_drive', 'erase_filesystem', 'getmount', 'mount', 'remount', 'umount']
+
+dir(os) :
+['__class__', '__name__', 'remove', 'sep', 'chdir', 'getcwd', 'listdir', 'mkdir', 'rename', 'rmdir', 'stat', 'statvfs', 'sync', 'uname', 'unlink', 'urandom']
+
+dir(sys) :
+['__class__', '__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
+
+dir(supervisor) :
+['__class__', '__name__', 'RunReason', 'disable_autoreload', 'disable_ble_workflow', 'enable_autoreload', 'get_previous_traceback', 'reload', 'reset_terminal', 'runtime', 'set_next_code_file', 'set_next_stack_limit', 'set_rgb_status_brightness', 'ticks_ms']
+
+PinMap() {
+PA00	board.MOSI
+PA01	board.SCK
+PA02	board.A0
+PA04	board.A4
+PA05	board.A1
+PA06	board.A5
+PA07	board.D2
+PA12	board.SDA
+PA13	board.SCL
+PA14	board.D4
+PA15	board.D5
+PA16	board.D0	board.RX
+PA17	board.D1	board.TX
+PA18	board.D7
+PA19	board.D9
+PA20	board.D10
+PA21	board.D11
+PA22	board.D13	board.LED
+PA23	board.D12
+PB02	board.APA102_SCK	board.DOTSTAR_CLOCK
+PB03	board.APA102_MOSI	board.DOTSTAR_DATA
+PB08	board.A2
+PB09	board.A3
+PB22	board.D3
+PB23	board.MISO
+}
+help('modules') {
+__future__        builtins          microcontroller   select
+__main__          busio             micropython       sharpdisplay
+_bleio            collections       msgpack           storage
+adafruit_bus_device                 countio           neopixel_write    struct
+adafruit_pixelbuf digitalio         onewireio         supervisor
+aesio             displayio         os                synthio
+alarm             errno             paralleldisplay   sys
+analogio          fontio            ps2io             terminalio
+array             framebufferio     pulseio           time
+atexit            frequencyio       pwmio             touchio
+audiocore         gc                rainbowio         traceback
+audioio           getpass           random            ulab
+audiomixer        gifio             re                usb_cdc
+audiomp3          i2cperipheral     rgbmatrix         usb_hid
+binascii          io                rotaryio          usb_midi
+bitbangio         json              rtc               uselect
+bitmaptools       keypad            samd              vectorio
+board             math              sdcardio          watchdog
+Plus any modules on the filesystem
+}
