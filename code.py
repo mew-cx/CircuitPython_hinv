@@ -3,6 +3,8 @@
 # TODO:
 # - see 'errno -l' for full list of error codes.
 # - use statvfs() to compute storage capacity.
+# - put 'try' around 'import wiki' and print of its contents.
+# - any reason to keep 'import supervisor'?
 
 import board
 import microcontroller
@@ -44,8 +46,6 @@ def PinMap():
 #############################################################################
 
 def main(out):
-    out.write("Filename() : {}\n".format(Filename()))
-
     out.write("board.board_id : {}\n".format(board.board_id))
     out.write("uid : {}\n".format(Hexify(microcontroller.cpu.uid)))
 
@@ -79,7 +79,6 @@ def main(out):
     out.write("dir(sys) :\n{}\n\n".format(dir(sys)))
 
     out.write("dir(supervisor) :\n{}\n\n".format(dir(supervisor)))
-    out.write("\n")
 
     out.write("PinMap() {\n")
     for i in PinMap():
