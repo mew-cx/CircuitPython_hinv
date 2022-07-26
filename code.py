@@ -18,14 +18,15 @@ __repo__    = "todo"
 
 # functions #################################################################
 
-def HexifyByteArray(data):
+def Hexify(data):
+    "return a bytearray's hexadecimal ASCII text"
     #return "".join("%02x" % i for i in data)
     return "".join("{:02x}".format(i) for i in data)
 
 def Filename():
     return "{}__{}.txt".format(
         board.board_id,
-        HexifyByteArray(microcontroller.cpu.uid))
+        Hexify(microcontroller.cpu.uid))
 
 def PinMap():
     """CircuitPython Essentials Pin Map Script"""
