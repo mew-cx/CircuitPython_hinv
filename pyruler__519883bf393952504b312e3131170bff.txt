@@ -1,0 +1,63 @@
+board.board_id : pyruler
+uid : 519883bf393952504b312e3131170bff
+sys.implementation : (name='circuitpython', version=(7, 2, 5), mpy=517)
+sys.modules : {}
+sys.path : ['', '/', '.frozen', '/lib']
+sys.platform : Atmel SAMD21
+sys.version : 3.4.0
+sys.version_info : (3, 4, 0)
+os.uname() : (sysname='samd21', nodename='samd21', release='7.2.5', version='7.2.5 on 2022-04-06', machine='Adafruit PyRuler with samd21e18')
+os.statvfs(/) : (512, 512, 94, 52, 52, 0, 0, 0, 0, 255)
+os.stat(/code.py) : (32768, 0, 0, 0, 0, 0, 3505, 946684800, 946684800, 946684800)
+os.sep : /
+
+dir(microcontroller.pin) :
+['PA00', 'PA01', 'PA02', 'PA03', 'PA04', 'PA05', 'PA06', 'PA07', 'PA08', 'PA09', 'PA10', 'PA11', 'PA14', 'PA15', 'PA27', 'PA28']
+
+dir(board) :
+['__name__', 'A0', 'A1', 'A2', 'A3', 'A4', 'APA102_MOSI', 'APA102_SCK', 'CAP0', 'CAP1', 'CAP2', 'CAP3', 'D0', 'D1', 'D13', 'D2', 'D3', 'D4', 'DOTSTAR_CLOCK', 'DOTSTAR_DATA', 'I2C', 'LED4', 'LED5', 'LED6', 'LED7', 'MISO', 'MOSI', 'RX', 'SCK', 'SCL', 'SDA', 'SPI', 'TX', 'UART', 'board_id']
+
+dir(microcontroller) :
+['__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
+
+dir(storage) :
+['__name__', 'VfsFat', 'disable_usb_drive', 'enable_usb_drive', 'erase_filesystem', 'getmount', 'mount', 'remount', 'umount']
+
+dir(os) :
+['__name__', 'remove', 'sep', 'chdir', 'getcwd', 'listdir', 'mkdir', 'rename', 'rmdir', 'stat', 'statvfs', 'sync', 'uname', 'unlink', 'urandom']
+
+dir(sys) :
+['__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
+
+dir(supervisor) :
+['__name__', 'RunReason', 'disable_autoreload', 'disable_ble_workflow', 'enable_autoreload', 'get_previous_traceback', 'reload', 'reset_terminal', 'runtime', 'set_next_code_file', 'set_next_stack_limit', 'set_rgb_status_brightness', 'ticks_ms']
+
+PinMap() {
+PA00	board.APA102_MOSI	board.DOTSTAR_DATA
+PA01	board.APA102_SCK	board.DOTSTAR_CLOCK
+PA02	board.A0	board.D1
+PA03	board.CAP3
+PA04	board.CAP2
+PA05	board.CAP1
+PA06	board.A2	board.D4	board.MOSI	board.TX
+PA07	board.A3	board.D3	board.RX	board.SCK
+PA08	board.A4	board.D0	board.SDA
+PA09	board.A1	board.D2	board.MISO	board.SCL
+PA10	board.D13
+PA11	board.CAP0
+PA14	board.LED5
+PA15	board.LED4
+PA27	board.LED7
+PA28	board.LED6
+}
+help('modules') {
+__future__        digitalio         rainbowio         time
+__main__          gc                random            touchio
+analogio          math              rotaryio          usb_cdc
+array             microcontroller   rtc               usb_hid
+board             micropython       storage           usb_midi
+builtins          neopixel_write    struct
+busio             os                supervisor
+collections       pwmio             sys
+Plus any modules on the filesystem
+}
