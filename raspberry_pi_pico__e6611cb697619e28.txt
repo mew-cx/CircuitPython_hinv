@@ -1,7 +1,6 @@
-Filename() : raspberry_pi_pico__e6611cb697619e28.txt
 board.board_id : raspberry_pi_pico
 uid : e6611cb697619e28
-len(cpus) : 2
+len(cpus) : 2 (e6611cb697619e28 e6611cb697619e28)
 sys.implementation : (name='circuitpython', version=(7, 3, 1), mpy=517)
 sys.modules : {}
 sys.path : ['', '/', '/lib']
@@ -9,8 +8,8 @@ sys.platform : RP2040
 sys.version : 3.4.0
 sys.version_info : (3, 4, 0)
 os.uname() : (sysname='rp2040', nodename='rp2040', release='7.3.1', version='7.3.1 on 2022-06-22', machine='Raspberry Pi Pico with rp2040')
-os.statvfs(/) : (512, 512, 2008, 1950, 1950, 0, 0, 0, 0, 255)
-os.stat(/code.py) : (32768, 0, 0, 0, 0, 0, 3739, 1658639268, 1658639268, 1658639268)
+os.statvfs(/) : (512, 512, 2008, 1939, 1939, 0, 0, 0, 0, 255)
+os.stat(/code.py) : (32768, 0, 0, 0, 0, 0, 3525, 1658850788, 1658850788, 1658850788)
 os.sep : /
 
 dir(microcontroller.pin) :
@@ -33,15 +32,6 @@ dir(sys) :
 
 dir(supervisor) :
 ['__class__', '__name__', 'RunReason', 'disable_autoreload', 'disable_ble_workflow', 'enable_autoreload', 'get_previous_traceback', 'reload', 'reset_terminal', 'runtime', 'set_next_code_file', 'set_next_stack_limit', 'set_rgb_status_brightness', 'ticks_ms']
-
-dir(micropython) :
-['__class__', '__name__', 'const', 'heap_lock', 'heap_unlock', 'kbd_intr', 'opt_level', 'pystack_use']
-
-dir(errno) :
-['__class__', '__name__', 'EACCES', 'EADDRINUSE', 'EAGAIN', 'EALREADY', 'EBADF', 'ECONNABORTED', 'ECONNREFUSED', 'ECONNRESET', 'EEXIST', 'EHOSTUNREACH', 'EINPROGRESS', 'EINVAL', 'EIO', 'EISDIR', 'ENOBUFS', 'ENODEV', 'ENOENT', 'ENOMEM', 'ENOTCONN', 'EOPNOTSUPP', 'EPERM', 'ETIMEDOUT', 'errorcode']
-
-dir(errno.errorcode) :
-{1: 'EPERM', 2: 'ENOENT', 5: 'EIO', 9: 'EBADF', 11: 'EAGAIN', 12: 'ENOMEM', 13: 'EACCES', 17: 'EEXIST', 19: 'ENODEV', 21: 'EISDIR', 22: 'EINVAL', 95: 'EOPNOTSUPP', 112: 'EADDRINUSE', 113: 'ECONNABORTED', 104: 'ECONNRESET', 105: 'ENOBUFS', 128: 'ENOTCONN', 116: 'ETIMEDOUT', 111: 'ECONNREFUSED', 118: 'EHOSTUNREACH', 120: 'EALREADY', 119: 'EINPROGRESS'}
 
 
 PinMap() {
@@ -75,4 +65,30 @@ GPIO6	board.GP6
 GPIO7	board.GP7
 GPIO8	board.GP8
 GPIO9	board.GP9
+}
+help('modules') {
+__future__        board             onewireio         touchio
+__main__          builtins          os                traceback
+_asyncio          busio             paralleldisplay   ulab
+_bleio            collections       pulseio           ulab
+_eve              countio           pwmio             ulab.fft
+adafruit_bus_device                 digitalio         qrio              ulab.linalg
+adafruit_bus_device.i2c_device      displayio         rainbowio         ulab.numpy
+adafruit_bus_device.spi_device      errno             random            ulab.scipy
+adafruit_pixelbuf floppyio          re                ulab.scipy.linalg
+aesio             fontio            rgbmatrix         ulab.scipy.optimize
+alarm             framebufferio     rotaryio          ulab.scipy.signal
+analogio          gc                rp2pio            ulab.scipy.special
+array             getpass           rtc               ulab.utils
+atexit            gifio             sdcardio          usb_cdc
+audiobusio        imagecapture      select            usb_hid
+audiocore         io                sharpdisplay      usb_midi
+audiomixer        json              storage           uselect
+audiomp3          keypad            struct            vectorio
+audiopwmio        math              supervisor        watchdog
+binascii          microcontroller   synthio           zlib
+bitbangio         micropython       sys
+bitmaptools       msgpack           terminalio
+bitops            neopixel_write    time
+Plus any modules on the filesystem
 }
