@@ -1,7 +1,5 @@
 # sysinfo.py http://mew.cx/  2022-07-24
 # SPDX
-# TODO:
-# - see 'errno -l' for full list of error codes.
 
 import board
 import microcontroller as soc
@@ -14,14 +12,12 @@ __repo__    = "todo"
 # functions #################################################################
 
 def Hexify(data):
-    "return a bytearray's hexadecimal ASCII text"
+    "Return a bytearray's hexadecimal ASCII text"
     #return "".join("%02x" % i for i in data)
     return "".join("{:02x}".format(i) for i in data)
 
 def Filename():
-    return "{}__{}.txt".format(
-        board.board_id,
-        Hexify(soc.cpu.uid))
+    return "{}__{}.txt".format(board.board_id, Hexify(soc.cpu.uid))
 
 def PinMap():
     """CircuitPython Essentials Pin Map Script"""
