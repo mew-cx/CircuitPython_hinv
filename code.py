@@ -9,11 +9,6 @@ import microcontroller as soc
 import storage
 import os
 import sys
-try:
-    import wifi
-except:
-    pass
-
 
 __version__ = "0.0.0.0"
 __repo__    = "todo"
@@ -69,7 +64,11 @@ def main(out):
     out.write("\n")
     out.write("dir(board) :\n{}\n".format(dir(board)))
     out.write("\n")
-    # TODO print wifi stuff?
+    try:
+        import wifi
+        # TODO print stuff
+    except:
+        pass
 
     out.write("PinMap() {\n")
     for i in PinMap():
