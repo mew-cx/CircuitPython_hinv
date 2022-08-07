@@ -20,18 +20,19 @@ def Filename():
     return "{}__{}.txt".format(board.board_id, Hexify(soc.cpu.uid))
 
 def PinMap():
-    """CircuitPython Essentials Pin Map Script"""
-    uc_pins = []
-    for ucpin in dir(soc.pin):
-        uc_attr = getattr(soc.pin, ucpin)
-        if isinstance(uc_attr, soc.Pin):
-            b_pins = [ucpin]
+    """Derived from:
+    https://github.com/adafruit/Adafruit_Learning_System_Guides/tree/main/CircuitPython_Essentials/Pin_Map_Script
+    """
+    pinlist = []
+    for spin in dir(soc.pin):
+        pin_attr = getattr(soc.pin, spin)
+        if isinstance(pin_attr, soc.Pin):
+            pins = ["soc.{}".format(spin)]
             for bpin in dir(board):
-                if getattr(board, bpin) is uc_attr:
-                    b_pins.append("board.{}".format(bpin))
-            if len(b_pins) > 1:
-                uc_pins.append("\t".join(b_pins))
-    return sorted(uc_pins)
+                if getattr(board, bpin) is pin_attr:
+                    pins.append("board.{}".format(bpin))
+            pinlist.append("\t".join(pins))
+    return sorted(pinlist)
 
 def VfsInfo(statvfs_info):
 
