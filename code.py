@@ -52,6 +52,7 @@ def main(out):
 
     try:
         cpus = soc.cpus
+        #assert(cpus[0].uid == cpus[1].uid)
         out.write("len(cpus) : {} (".format(len(cpus)))
         out.write(" ".join("{}".format(Hexify(cpu.uid)) for cpu in cpus))
         out.write(")\n")
