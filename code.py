@@ -42,7 +42,9 @@ def FsInfo(statvfs_info):
     #assert(f_bsize == f_frsize)
     #assert(f_bfree == f_bavail)
     #assert(f_ffree == f_favail)
-    return (f_blocks*f_frsize, f_bfree*f_frsize)
+    sizeof_full = f_blocks * f_frsize
+    sizeof_free = f_bfree * f_frsize
+    return (sizeof_full, sizeof_free)
 
 #############################################################################
 
@@ -64,7 +66,13 @@ def main(out):
     out.write("sys.platform : {}\n".format(sys.platform))
     out.write("sys.version_info : {}\n".format(sys.version_info))
     out.write("os.uname() : {}\n".format(os.uname()))
-    out.write("os.statvfs(/) : {}\n".format(os.statvfs("/")))
+
+    statvfs_info = os.statvfs('/')
+    sizeof_full, sizeof_free = FsInfo(statvfs_info)
+    out.write("os.statvfs('/') : {} {} of {} ({}\%) free\n".format(
+        statvfs_info, sizeof_free, sizeof_full,
+        100.0 * sizeof_free / sizeof_full)
+
     out.write("\n")
     out.write("dir(microcontroller.pin) :\n{}\n".format(dir(soc.pin)))
     out.write("\n")
