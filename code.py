@@ -16,9 +16,6 @@ def Hexify(data):
     #return "".join("%02x" % i for i in data)
     return "".join("{:02x}".format(i) for i in data)
 
-def Filename():
-    return "{}__{}.txt".format(board.board_id, Hexify(soc.cpu.uid))
-
 def PinMap():
     """Derived from:
     https://github.com/adafruit/Adafruit_Learning_System_Guides/tree/main/CircuitPython_Essentials/Pin_Map_Script
@@ -94,6 +91,9 @@ def main(out):
     out.write("}\n")
 
 # make it so ################################################################
+
+def Filename():
+    return "{}__{}.txt".format(board.board_id, Hexify(soc.cpu.uid))
 
 with open(Filename(), "w") as fh:
     main(fh)
