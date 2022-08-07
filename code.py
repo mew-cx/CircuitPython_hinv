@@ -34,32 +34,15 @@ def PinMap():
             pinlist.append("\t".join(pins))
     return sorted(pinlist)
 
-def VfsInfo(statvfs_info):
-
-
-f_bsize,
-f_frsize,
-f_blocks,
-f_bfree,
-f_bavail,
-f_files,
-f_ffree,
-f_favail,
-f_flag,
-f_namemax
-
-
-f_bsize – file system block size
-f_frsize – fragment size
-f_blocks – size of fs in f_frsize units
-f_bfree – number of free blocks
-f_bavail – number of free blocks for unprivileged users
-f_files – number of inodes
-f_ffree – number of free inodes
-f_favail – number of free inodes for unprivileged users
-f_flag – mount flags
-f_namemax – maximum filename length
-
+def FsInfo(statvfs_info):
+    """Return filesystem capacity and availability in bytes.
+    https://docs.circuitpython.org/en/latest/shared-bindings/os/#os.statvfs
+    """
+    f_bsize, f_frsize, f_blocks, f_bfree, f_bavail = statvfs_info
+    #assert(f_bsize == f_frsize)
+    #assert(f_bfree == f_bavail)
+    #assert(f_ffree == f_favail)
+    return (f_blocks*f_frsize, f_bfree*f_frsize)
 
 #############################################################################
 
@@ -122,23 +105,3 @@ soc.reset()
 #out.write("sys.modules : {}\n".format(sys.modules))
 
 # eof
-https://docs.circuitpython.org/en/latest/shared-bindings/os/#os.statvfs
-
-os.statvfs(path: str) → Tuple[int, int, int, int, int, int, int, int, int, int]
-Get the status of a filesystem.
-Returns a tuple with the filesystem information in the following order:
-
-f_bsize – file system block size
-f_frsize – fragment size
-f_blocks – size of fs in f_frsize units
-f_bfree – number of free blocks
-f_bavail – number of free blocks for unprivileged users
-f_files – number of inodes
-f_ffree – number of free inodes
-f_favail – number of free inodes for unprivileged users
-f_flag – mount flags
-f_namemax – maximum filename length
-
-Parameters related to inodes: f_files, f_ffree, f_avail and the f_flags
-parameter may return 0 as they can be unavailable in a port-specific
-implementation.
