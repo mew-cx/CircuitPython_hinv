@@ -70,6 +70,11 @@ def main(out):
         statvfs_info, sizeof_free, sizeof_full,
         100.0 * sizeof_free / sizeof_full)
 
+    if soc.nvm:
+        out.write("len(nvm) : {} (".format(len(soc.nvm)))
+        out.write("{}\n".format(Hexify(soc.nvm)))
+        out.write(")\n")
+
     out.write("\n")
     out.write("dir(microcontroller.pin) :\n{}\n".format(dir(soc.pin)))
     out.write("\n")
