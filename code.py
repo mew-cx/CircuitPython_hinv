@@ -2,11 +2,9 @@
 # SPDX
 # TODO:
 # - see 'errno -l' for full list of error codes.
-# - use statvfs() to compute storage capacity.
 
 import board
 import microcontroller as soc
-import storage
 import os
 import sys
 
@@ -38,6 +36,33 @@ def PinMap():
             if len(b_pins) > 1:
                 uc_pins.append("\t".join(b_pins))
     return sorted(uc_pins)
+
+def VfsInfo(statvfs_info):
+
+
+f_bsize,
+f_frsize,
+f_blocks,
+f_bfree,
+f_bavail,
+f_files,
+f_ffree,
+f_favail,
+f_flag,
+f_namemax
+
+
+f_bsize – file system block size
+f_frsize – fragment size
+f_blocks – size of fs in f_frsize units
+f_bfree – number of free blocks
+f_bavail – number of free blocks for unprivileged users
+f_files – number of inodes
+f_ffree – number of free inodes
+f_favail – number of free inodes for unprivileged users
+f_flag – mount flags
+f_namemax – maximum filename length
+
 
 #############################################################################
 
