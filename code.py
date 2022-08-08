@@ -71,9 +71,9 @@ def main(out):
         100.0 * sizeof_free / sizeof_full)
 
     if soc.nvm:
-        out.write("len(nvm) : {} (".format(len(soc.nvm)))
-        out.write("{}\n".format(Hexify(soc.nvm)))
-        out.write(")\n")
+        out.write("len(nvm) : {}".format(len(soc.nvm)))
+        #out.write(" ({})\n".format(Hexify(soc.nvm)))
+        out.write("\n")
 
     out.write("\n")
     out.write("dir(microcontroller.pin) :\n{}\n".format(dir(soc.pin)))
