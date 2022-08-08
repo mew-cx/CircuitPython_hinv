@@ -35,7 +35,7 @@ def FsInfo(statvfs_info):
     """Return filesystem capacity and availability in bytes.
     https://docs.circuitpython.org/en/latest/shared-bindings/os/#os.statvfs
     """
-    f_bsize, f_frsize, f_blocks, f_bfree, f_bavail = statvfs_info
+    f_bsize, f_frsize, f_blocks, f_bfree, f_bavail, _, _, _, _, _ = statvfs_info
     #assert(f_bsize == f_frsize)
     #assert(f_bfree == f_bavail)
     #assert(f_ffree == f_favail)
@@ -68,7 +68,7 @@ def main(out):
     sizeof_full, sizeof_free = FsInfo(statvfs_info)
     out.write("os.statvfs('/') : {} {} of {} ({}\%) free\n".format(
         statvfs_info, sizeof_free, sizeof_full,
-        100.0 * sizeof_free / sizeof_full)
+        100.0 * sizeof_free / sizeof_full))
 
     if soc.nvm:
         out.write("len(nvm) : {}".format(len(soc.nvm)))
