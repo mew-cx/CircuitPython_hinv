@@ -97,13 +97,15 @@ def main(out):
 
 # make it so ################################################################
 
-def Filename():
-    return "{}__{}.txt".format(board.board_id, Hexify(soc.cpu.uid))
+filename = "{}__{}.txt".format(board.board_id, Hexify(soc.cpu.uid))
 
-with open(Filename(), "w") as fh:
-    main(fh)
-os.sync()
-soc.reset()
+if True:
+    with open(filename, "w") as fh:
+        main(fh)
+    os.sync()
+    soc.reset()
+else:
+    main(sys.stdout)
 
 # reference #################################################################
 #storage.remount("/", readonly=False) # CPy writable
