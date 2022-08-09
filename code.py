@@ -32,16 +32,16 @@ def PinMap():
     return sorted(pinlist)
 
 def FsInfo(statvfs_info):
-    """Return filesystem capacity and availability in bytes.
+    """Return filesystem capacity and availability in KB.
     https://docs.circuitpython.org/en/latest/shared-bindings/os/#os.statvfs
     """
     f_bsize, f_frsize, f_blocks, f_bfree, f_bavail, _, _, _, _, _ = statvfs_info
     #assert(f_bsize == f_frsize)
     #assert(f_bfree == f_bavail)
     #assert(f_ffree == f_favail)
-    sizeof_full = f_blocks * f_frsize
-    sizeof_free = f_bfree * f_frsize
-    return (sizeof_full, sizeof_free)
+    KBfull = f_blocks * f_frsize / 1000.0
+    KBfree = f_bfree * f_frsize / 1000.0
+    return (KBfull, KBfree)
 
 #############################################################################
 
@@ -65,10 +65,10 @@ def main(out):
     out.write("os.uname() : {}\n".format(os.uname()))
 
     statvfs_info = os.statvfs('/')
-    sizeof_full, sizeof_free = FsInfo(statvfs_info)
-    out.write("os.statvfs('/') : {} {} of {} ({}\%) free\n".format(
-        statvfs_info, sizeof_free, sizeof_full,
-        100.0 * sizeof_free / sizeof_full))
+    KBfull, KBfree = FsInfo(statvfs_info)
+    out.write("os.statvfs('/') : {} {.1}KB of {.1}KB ({.1}%) free\n".format(
+        statvfs_info, KBfree, KBfull,
+        100.0 * KBfree / KBfull))
 
     if soc.nvm:
         out.write("len(nvm) : {}".format(len(soc.nvm)))
