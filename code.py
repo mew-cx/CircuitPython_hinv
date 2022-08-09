@@ -43,22 +43,20 @@ def FsInfo(statvfs_info):
     KBfree = f_bfree * f_frsize / 1000.0
     return (KBfull, KBfree)
 
-#############################################################################
-
-def main(out):
+def GenerateResults(out):
     out.write("board.board_id : {}\n".format(board.board_id))
     out.write("uid : {}\n".format(Hexify(soc.cpu.uid)))
 
     try:
         cpus = soc.cpus
         #assert(cpus[0].uid == cpus[1].uid)
-        out.write("len(cpus) : {} (".format(len(cpus)))
+        out.write("len(cpus) : {:d} (".format(len(cpus)))
         out.write(" ".join("{}".format(Hexify(cpu.uid)) for cpu in cpus))
         out.write(")\n")
     except:
         pass
 
-    out.write("sys.implementation : {} MPY_VERSION={} flags=0x{:02x}\n".format(
+    out.write("sys.implementation : {} MPY_VERSION={:d} flags=0x{:02x}\n".format(
         sys.implementation, sys.implementation[2] & 0xff,
         (sys.implementation[2] >> 8) & 0xff))
 
@@ -69,11 +67,11 @@ def main(out):
 
     statvfs_info = os.statvfs('/')
     KBfull, KBfree = FsInfo(statvfs_info)
-    out.write("os.statvfs('/') : {} {:.1}KB of {:.1}KB ({:.1}%) free\n".format(
+    out.write("os.statvfs('/') : {} {:.1f}KB of {:.1f}KB ({:.1f}%) free\n".format(
         statvfs_info, KBfree, KBfull, KBfree / KBfull * 100.0))
 
     if soc.nvm:
-        out.write("len(nvm) : {}".format(len(soc.nvm)))
+        out.write("len(nvm) : {:d}".format(len(soc.nvm)))
         #out.write(" ({})\n".format(Hexify(soc.nvm)))
         out.write("\n")
 
@@ -96,17 +94,21 @@ def main(out):
     help('modules')
     out.write("}\n")
 
+def main():
+    try:
+        # write results to writable file, then reboot to read-only.
+        filename = "{}__{}.txt".format(board.board_id, Hexify(soc.cpu.uid))
+        with open(filename, "w") as fh:
+            GenerateResults(fh)
+        os.sync()
+        soc.reset()
+    except:
+        # write results to stdout
+        GenerateResults(sys.stdout)
+
 # make it so ################################################################
 
-filename = "{}__{}.txt".format(board.board_id, Hexify(soc.cpu.uid))
-
-try:
-    with open(filename, "w") as fh:
-        main(fh)
-    os.sync()
-    soc.reset()
-except:
-    main(sys.stdout)
+main()
 
 # reference #################################################################
 #storage.remount("/", readonly=False) # CPy writable
