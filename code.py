@@ -61,7 +61,7 @@ def main(out):
     out.write("sys.implementation : {}\n".format(sys.implementation))
     out.write("sys.path : {}\n".format(sys.path))
     out.write("sys.platform : {}\n".format(sys.platform))
-    out.write("sys.version_info : {}\n".format(sys.version_info))
+    out.write("sys.version : {}\n".format(sys.version))
     out.write("os.uname() : {}\n".format(os.uname()))
 
     statvfs_info = os.statvfs('/')
