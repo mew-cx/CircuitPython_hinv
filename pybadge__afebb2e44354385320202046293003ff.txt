@@ -1,11 +1,11 @@
 board.board_id : pybadge
 uid : afebb2e44354385320202046293003ff
-sys.implementation : (name='circuitpython', version=(7, 3, 1), mpy=517)
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
 sys.path : ['', '/', '.frozen', '/lib']
 sys.platform : MicroChip SAMD51
-sys.version_info : (3, 4, 0)
-os.uname() : (sysname='samd51', nodename='samd51', release='7.3.1', version='7.3.1 on 2022-06-22', machine='Adafruit Pybadge with samd51j19')
-os.statvfs('/') : (1024, 1024, 2024, 2013, 2013, 0, 0, 0, 0, 255) 2061312 of 2072576 (99.4565\%) free
+sys.version : 3.4.0
+os.uname() : (sysname='samd51', nodename='samd51', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit Pybadge with samd51j19')
+os.statvfs('/') : (1024, 1024, 2024, 2012, 2012, 0, 0, 0, 0, 255) 2060.3KB of 2072.6KB (99.4%) free
 len(nvm) : 8192
 
 dir(microcontroller.pin) :
