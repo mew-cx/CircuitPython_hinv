@@ -58,7 +58,10 @@ def main(out):
     except:
         pass
 
-    out.write("sys.implementation : {}\n".format(sys.implementation))
+    out.write("sys.implementation : {} MPY_VERSION={} flags=0x{:02x}\n".format(
+        sys.implementation, sys.implementation[2] & 0xff,
+        (sys.implementation[2] >> 8) & 0xff))
+
     out.write("sys.path : {}\n".format(sys.path))
     out.write("sys.platform : {}\n".format(sys.platform))
     out.write("sys.version : {}\n".format(sys.version))
