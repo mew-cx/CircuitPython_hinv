@@ -97,12 +97,12 @@ def main(out):
 
 filename = "{}__{}.txt".format(board.board_id, Hexify(soc.cpu.uid))
 
-if True:
+try:
     with open(filename, "w") as fh:
         main(fh)
     os.sync()
     soc.reset()
-else:
+except:
     main(sys.stdout)
 
 # reference #################################################################
