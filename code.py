@@ -75,13 +75,12 @@ def main(out):
         out.write("\n")
 
     out.write("\n")
-    out.write("dir(microcontroller.pin) :\n{}\n".format(dir(soc.pin)))
-    out.write("\n")
-    out.write("dir(board) :\n{}\n".format(dir(board)))
-    out.write("\n")
+    out.write("dir(microcontroller.pin) :\n{}\n\n".format(dir(soc.pin)))
+    out.write("dir(board) :\n{}\n\n".format(dir(board)))
+
     try:
         import wifi
-        # TODO print stuff
+        out.write("dir(wifi) :\n{}\n\n".format(dir(wifi)))
     except:
         pass
 
