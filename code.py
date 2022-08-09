@@ -66,9 +66,8 @@ def main(out):
 
     statvfs_info = os.statvfs('/')
     KBfull, KBfree = FsInfo(statvfs_info)
-    out.write("os.statvfs('/') : {} {.1}KB of {.1}KB ({.1}%) free\n".format(
-        statvfs_info, KBfree, KBfull,
-        100.0 * KBfree / KBfull))
+    out.write("os.statvfs('/') : {} {:.1}KB of {:.1}KB ({:.1}%) free\n".format(
+        statvfs_info, KBfree, KBfull, KBfree / KBfull * 100.0))
 
     if soc.nvm:
         out.write("len(nvm) : {}".format(len(soc.nvm)))
