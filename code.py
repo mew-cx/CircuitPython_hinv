@@ -108,14 +108,12 @@ soc.reset()
 # reference #################################################################
 #storage.remount("/", readonly=False) # CPy writable
 #storage.remount("/", readonly=True)  # CPy readonly
-#print("os.stat foo", os.stat("/foo.py"))
-#out.write("os.stat(/code.py) : {}\n".format(os.stat("/code.py")))
-#out.write("os.sep : {}\n".format(os.sep))
-#print("os.getcwd", os.getcwd())
-#with open("/tmp.txt", "a") as fp:
-#    fp.write("hello, world!")
 #os.rename("/boot.py", "/boot.bak")
+#print("os.getcwd", os.getcwd())
+#print("os.stat code.py", os.stat("/code.py"))
 #out.write("sys.version : {}\n".format(sys.version))
 #out.write("sys.modules : {}\n".format(sys.modules))
+#out.write("os.stat(/code.py) : {}\n".format(os.stat("/code.py")))
+#out.write("os.sep : {}\n".format(os.sep))
 
 # eof
