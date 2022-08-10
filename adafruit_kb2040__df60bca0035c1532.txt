@@ -1,0 +1,71 @@
+board.board_id : adafruit_kb2040
+uid : df60bca0035c1532
+len(cpus) : 2 (df60bca0035c1532 df60bca0035c1532)
+sys.implementation : (name='circuitpython', version=(7, 2, 5), mpy=517) MPY_VERSION=5 flags=0x02
+sys.path : ['', '/', '.frozen', '/lib']
+sys.platform : RP2040
+sys.version : 3.4.0
+os.uname() : (sysname='rp2040', nodename='rp2040', release='7.2.5', version='7.2.5 on 2022-04-06', machine='Adafruit KB2040 with rp2040')
+os.statvfs('/') : (1024, 1024, 7137, 7126, 7126, 0, 0, 0, 0, 255) 7297.0KB of 7308.3KB (99.8%) free
+len(nvm) : 4096
+
+dir(microcontroller.pin) :
+['__class__', 'GPIO0', 'GPIO1', 'GPIO10', 'GPIO11', 'GPIO12', 'GPIO13', 'GPIO14', 'GPIO15', 'GPIO16', 'GPIO17', 'GPIO18', 'GPIO19', 'GPIO2', 'GPIO20', 'GPIO21', 'GPIO22', 'GPIO23', 'GPIO24', 'GPIO25', 'GPIO26', 'GPIO27', 'GPIO28', 'GPIO29', 'GPIO3', 'GPIO4', 'GPIO5', 'GPIO6', 'GPIO7', 'GPIO8', 'GPIO9']
+
+dir(board) :
+['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'BUTTON', 'CLK', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'I2C', 'MISO', 'MOSI', 'NEOPIXEL', 'RX', 'SCK', 'SCL', 'SDA', 'SPI', 'STEMMA_I2C', 'TX', 'UART', 'board_id']
+
+PinMap() {
+soc.GPIO0	board.D0	board.TX
+soc.GPIO1	board.D1	board.RX
+soc.GPIO10	board.D10
+soc.GPIO11	board.BUTTON	board.D11
+soc.GPIO12	board.D12	board.SDA
+soc.GPIO13	board.D13	board.SCL
+soc.GPIO14
+soc.GPIO15
+soc.GPIO16
+soc.GPIO17	board.NEOPIXEL
+soc.GPIO18	board.CLK	board.SCK
+soc.GPIO19	board.MOSI
+soc.GPIO2	board.D2
+soc.GPIO20	board.MISO
+soc.GPIO21
+soc.GPIO22
+soc.GPIO23
+soc.GPIO24
+soc.GPIO25
+soc.GPIO26	board.A0
+soc.GPIO27	board.A1
+soc.GPIO28	board.A2
+soc.GPIO29	board.A3
+soc.GPIO3	board.D3
+soc.GPIO4	board.D4
+soc.GPIO5	board.D5
+soc.GPIO6	board.D6
+soc.GPIO7	board.D7
+soc.GPIO8	board.D8
+soc.GPIO9	board.D9
+}
+help('modules') {
+__future__        board             micropython       storage
+__main__          builtins          msgpack           struct
+_bleio            busio             neopixel_write    supervisor
+adafruit_bus_device                 collections       onewireio         synthio
+adafruit_pixelbuf countio           os                sys
+aesio             digitalio         paralleldisplay   terminalio
+alarm             displayio         pulseio           time
+analogio          errno             pwmio             touchio
+array             fontio            qrio              traceback
+atexit            framebufferio     rainbowio         ulab
+audiobusio        gc                random            usb_cdc
+audiocore         getpass           re                usb_hid
+audiomixer        gifio             rgbmatrix         usb_midi
+audiomp3          imagecapture      rotaryio          uselect
+audiopwmio        io                rp2pio            vectorio
+binascii          json              rtc               watchdog
+bitbangio         keypad            sdcardio
+bitmaptools       math              select
+bitops            microcontroller   sharpdisplay
+Plus any modules on the filesystem
+}
