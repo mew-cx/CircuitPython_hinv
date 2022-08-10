@@ -1,16 +1,13 @@
 board.board_id : adafruit_itsybitsy_rp2040
 uid : df609c80676e3326
 len(cpus) : 2 (df609c80676e3326 df609c80676e3326)
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517)
-sys.modules : {}
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
 sys.path : ['', '/', '/lib']
 sys.platform : RP2040
 sys.version : 3.4.0
-sys.version_info : (3, 4, 0)
 os.uname() : (sysname='rp2040', nodename='rp2040', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit ItsyBitsy RP2040 with rp2040')
-os.statvfs(/) : (1024, 1024, 7137, 7125, 7125, 0, 0, 0, 0, 255)
-os.stat(/code.py) : (32768, 0, 0, 0, 0, 0, 3505, 1658858468, 1658858468, 1658858468)
-os.sep : /
+os.statvfs('/') : (1024, 1024, 7137, 7127, 7127, 0, 0, 0, 0, 255) 7298.0KB of 7308.3KB (99.9%) free
+len(nvm) : 4096
 
 dir(microcontroller.pin) :
 ['__class__', 'GPIO0', 'GPIO1', 'GPIO10', 'GPIO11', 'GPIO12', 'GPIO13', 'GPIO14', 'GPIO15', 'GPIO16', 'GPIO17', 'GPIO18', 'GPIO19', 'GPIO2', 'GPIO20', 'GPIO21', 'GPIO22', 'GPIO23', 'GPIO24', 'GPIO25', 'GPIO26', 'GPIO27', 'GPIO28', 'GPIO29', 'GPIO3', 'GPIO4', 'GPIO5', 'GPIO6', 'GPIO7', 'GPIO8', 'GPIO9']
@@ -18,48 +15,37 @@ dir(microcontroller.pin) :
 dir(board) :
 ['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'BUTTON', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D2', 'D24', 'D25', 'D3', 'D4', 'D5', 'D7', 'D9', 'I2C', 'LED', 'MISO', 'MOSI', 'NEOPIXEL', 'NEOPIXEL_POWER', 'RX', 'SCK', 'SCL', 'SDA', 'SPI', 'TX', 'UART', 'board_id']
 
-dir(microcontroller) :
-['__class__', '__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'cpus', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
-
-dir(storage) :
-['__class__', '__name__', 'VfsFat', 'disable_usb_drive', 'enable_usb_drive', 'erase_filesystem', 'getmount', 'mount', 'remount', 'umount']
-
-dir(os) :
-['__class__', '__name__', 'remove', 'sep', 'chdir', 'getcwd', 'listdir', 'mkdir', 'rename', 'rmdir', 'stat', 'statvfs', 'sync', 'uname', 'unlink', 'urandom']
-
-dir(sys) :
-['__class__', '__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
-
-dir(supervisor) :
-['__class__', '__name__', 'RunReason', 'disable_autoreload', 'disable_ble_workflow', 'enable_autoreload', 'get_previous_traceback', 'reload', 'reset_terminal', 'runtime', 'set_next_code_file', 'set_next_stack_limit', 'set_rgb_status_brightness', 'ticks_ms']
-
 PinMap() {
-GPIO0	board.D1	board.TX
-GPIO1	board.D0	board.RX
-GPIO10	board.D12
-GPIO11	board.D13	board.LED
-GPIO12	board.D2
-GPIO13	board.BUTTON
-GPIO14	board.D5
-GPIO16	board.NEOPIXEL_POWER
-GPIO17	board.NEOPIXEL
-GPIO18	board.SCK
-GPIO19	board.MOSI
-GPIO2	board.SDA
-GPIO20	board.MISO
-GPIO24	board.D24
-GPIO25	board.D25
-GPIO26	board.A0
-GPIO27	board.A1
-GPIO28	board.A2
-GPIO29	board.A3
-GPIO3	board.SCL
-GPIO4	board.D4
-GPIO5	board.D3
-GPIO6	board.D7
-GPIO7	board.D9
-GPIO8	board.D10
-GPIO9	board.D11
+soc.GPIO0	board.D1	board.TX
+soc.GPIO1	board.D0	board.RX
+soc.GPIO10	board.D12
+soc.GPIO11	board.D13	board.LED
+soc.GPIO12	board.D2
+soc.GPIO13	board.BUTTON
+soc.GPIO14	board.D5
+soc.GPIO15
+soc.GPIO16	board.NEOPIXEL_POWER
+soc.GPIO17	board.NEOPIXEL
+soc.GPIO18	board.SCK
+soc.GPIO19	board.MOSI
+soc.GPIO2	board.SDA
+soc.GPIO20	board.MISO
+soc.GPIO21
+soc.GPIO22
+soc.GPIO23
+soc.GPIO24	board.D24
+soc.GPIO25	board.D25
+soc.GPIO26	board.A0
+soc.GPIO27	board.A1
+soc.GPIO28	board.A2
+soc.GPIO29	board.A3
+soc.GPIO3	board.SCL
+soc.GPIO4	board.D4
+soc.GPIO5	board.D3
+soc.GPIO6	board.D7
+soc.GPIO7	board.D9
+soc.GPIO8	board.D10
+soc.GPIO9	board.D11
 }
 help('modules') {
 __future__        board             neopixel_write    terminalio
