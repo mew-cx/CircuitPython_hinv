@@ -1,10 +1,10 @@
 board.board_id : itsybitsy_m4_express
 uid : 7d02f9483143375320202039184511ff
-sys.implementation : (name='circuitpython', version=(7, 2, 5), mpy=517) MPY_VERSION=5 flags=0x02
-sys.path : ['', '/', '.frozen', '/lib']
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.path : ['', '/', '/lib']
 sys.platform : MicroChip SAMD51
 sys.version : 3.4.0
-os.uname() : (sysname='samd51', nodename='samd51', release='7.2.5', version='7.2.5 on 2022-04-06', machine='Adafruit ItsyBitsy M4 Express with samd51g19')
+os.uname() : (sysname='samd51', nodename='samd51', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit ItsyBitsy M4 Express with samd51g19')
 os.statvfs('/') : (1024, 1024, 2024, 2013, 2013, 0, 0, 0, 0, 255) 2061.3KB of 2072.6KB (99.5%) free
 len(nvm) : 8192
 
@@ -52,23 +52,27 @@ soc.PB22	board.D3
 soc.PB23	board.MISO
 }
 help('modules') {
-__future__        builtins          microcontroller   select
-__main__          busio             micropython       sharpdisplay
-_bleio            collections       msgpack           storage
-adafruit_bus_device                 countio           neopixel_write    struct
-adafruit_pixelbuf digitalio         onewireio         supervisor
-aesio             displayio         os                synthio
-alarm             errno             paralleldisplay   sys
-analogio          fontio            ps2io             terminalio
-array             framebufferio     pulseio           time
-atexit            frequencyio       pwmio             touchio
-audiocore         gc                rainbowio         traceback
-audioio           getpass           random            ulab
-audiomixer        gifio             re                usb_cdc
-audiomp3          i2cperipheral     rgbmatrix         usb_hid
-binascii          io                rotaryio          usb_midi
-bitbangio         json              rtc               uselect
-bitmaptools       keypad            samd              vectorio
-board             math              sdcardio          watchdog
-Plus any modules on the filesystem
+ __future__        busio             onewireio         time
+ __main__          collections       os                touchio
+ _asyncio          countio           paralleldisplay   traceback
+ _bleio            digitalio         ps2io             ulab
+ adafruit_bus_device                 displayio         pulseio           ulab
+ adafruit_bus_device.i2c_device      errno             pwmio             ulab.fft
+ adafruit_bus_device.spi_device      floppyio          rainbowio         ulab.linalg
+ adafruit_pixelbuf fontio            random            ulab.numpy
+ aesio             framebufferio     re                ulab.scipy
+ alarm             frequencyio       rgbmatrix         ulab.scipy.linalg
+ analogio          gc                rotaryio          ulab.scipy.optimize
+ array             getpass           rtc               ulab.scipy.signal
+ atexit            gifio             samd              ulab.scipy.special
+ audiocore         i2cperipheral     sdcardio          ulab.utils
+ audioio           io                select            usb_cdc
+ audiomixer        json              sharpdisplay      usb_hid
+ audiomp3          keypad            storage           usb_midi
+ binascii          math              struct            uselect
+ bitbangio         microcontroller   supervisor        vectorio
+ bitmaptools       micropython       synthio           watchdog
+ board             msgpack           sys               zlib
+ builtins          neopixel_write    terminalio
+ Plus any modules on the filesystem
 }
