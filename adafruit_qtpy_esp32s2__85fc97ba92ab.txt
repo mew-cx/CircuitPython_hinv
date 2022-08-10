@@ -1,15 +1,12 @@
 board.board_id : adafruit_qtpy_esp32s2
 uid : 85fc97ba92ab
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517)
-sys.modules : {}
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
 sys.path : ['', '/', '/lib']
 sys.platform : Espressif
 sys.version : 3.4.0
-sys.version_info : (3, 4, 0)
 os.uname() : (sysname='ESP32S2', nodename='ESP32S2', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit QT Py ESP32S2 with ESP32S2')
-os.statvfs(/) : (512, 512, 1881, 1866, 1866, 0, 0, 0, 0, 255)
-os.stat(/code.py) : (32768, 0, 0, 0, 0, 0, 3505, 1658859046, 1658859046, 1658859046)
-os.sep : /
+os.statvfs('/') : (512, 512, 1881, 1864, 1864, 0, 0, 0, 0, 255) 954.4KB of 963.1KB (99.1%) free
+len(nvm) : 8192
 
 dir(microcontroller.pin) :
 ['__class__', 'GPIO0', 'GPIO1', 'GPIO10', 'GPIO11', 'GPIO12', 'GPIO13', 'GPIO14', 'GPIO15', 'GPIO16', 'GPIO17', 'GPIO18', 'GPIO19', 'GPIO2', 'GPIO20', 'GPIO21', 'GPIO26', 'GPIO27', 'GPIO28', 'GPIO29', 'GPIO3', 'GPIO30', 'GPIO31', 'GPIO32', 'GPIO33', 'GPIO34', 'GPIO35', 'GPIO36', 'GPIO37', 'GPIO38', 'GPIO39', 'GPIO4', 'GPIO40', 'GPIO41', 'GPIO42', 'GPIO43', 'GPIO44', 'GPIO45', 'GPIO46', 'GPIO5', 'GPIO6', 'GPIO7', 'GPIO8', 'GPIO9']
@@ -17,38 +14,53 @@ dir(microcontroller.pin) :
 dir(board) :
 ['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'BOOT0', 'BUTTON', 'D0', 'D16', 'D17', 'D18', 'D35', 'D36', 'D37', 'D40', 'D41', 'D5', 'D6', 'D7', 'D8', 'D9', 'I2C', 'MISO', 'MOSI', 'NEOPIXEL', 'NEOPIXEL_POWER', 'RX', 'SCK', 'SCL', 'SCL1', 'SDA', 'SDA1', 'SPI', 'STEMMA_I2C', 'TX', 'UART', 'board_id']
 
-dir(microcontroller) :
-['__class__', '__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
-
-dir(storage) :
-['__class__', '__name__', 'VfsFat', 'disable_usb_drive', 'enable_usb_drive', 'erase_filesystem', 'getmount', 'mount', 'remount', 'umount']
-
-dir(os) :
-['__class__', '__name__', 'remove', 'sep', 'chdir', 'getcwd', 'listdir', 'mkdir', 'rename', 'rmdir', 'stat', 'statvfs', 'sync', 'uname', 'unlink', 'urandom']
-
-dir(sys) :
-['__class__', '__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
-
-dir(supervisor) :
-['__class__', '__name__', 'RunReason', 'disable_autoreload', 'disable_ble_workflow', 'enable_autoreload', 'get_previous_traceback', 'reload', 'reset_terminal', 'runtime', 'set_next_code_file', 'set_next_stack_limit', 'set_rgb_status_brightness', 'ticks_ms']
+dir(wifi) :
+['__class__', '__init__', '__name__', 'AuthMode', 'Monitor', 'Network', 'Packet', 'Radio', 'radio']
 
 PinMap() {
-GPIO0	board.BOOT0	board.BUTTON	board.D0
-GPIO16	board.A7	board.D16	board.RX
-GPIO17	board.A1	board.D17
-GPIO18	board.A0	board.D18
-GPIO35	board.D35	board.MOSI
-GPIO36	board.D36	board.SCK
-GPIO37	board.D37	board.MISO
-GPIO38	board.NEOPIXEL_POWER
-GPIO39	board.NEOPIXEL
-GPIO40	board.D40	board.SCL1
-GPIO41	board.D41	board.SDA1
-GPIO5	board.A6	board.D5	board.TX
-GPIO6	board.A5	board.D6	board.SCL
-GPIO7	board.A4	board.D7	board.SDA
-GPIO8	board.A3	board.D8
-GPIO9	board.A2	board.D9
+soc.GPIO0	board.BOOT0	board.BUTTON	board.D0
+soc.GPIO1
+soc.GPIO10
+soc.GPIO11
+soc.GPIO12
+soc.GPIO13
+soc.GPIO14
+soc.GPIO15
+soc.GPIO16	board.A7	board.D16	board.RX
+soc.GPIO17	board.A1	board.D17
+soc.GPIO18	board.A0	board.D18
+soc.GPIO19
+soc.GPIO2
+soc.GPIO20
+soc.GPIO21
+soc.GPIO26
+soc.GPIO27
+soc.GPIO28
+soc.GPIO29
+soc.GPIO3
+soc.GPIO30
+soc.GPIO31
+soc.GPIO32
+soc.GPIO33
+soc.GPIO34
+soc.GPIO35	board.D35	board.MOSI
+soc.GPIO36	board.D36	board.SCK
+soc.GPIO37	board.D37	board.MISO
+soc.GPIO38	board.NEOPIXEL_POWER
+soc.GPIO39	board.NEOPIXEL
+soc.GPIO4
+soc.GPIO40	board.D40	board.SCL1
+soc.GPIO41	board.D41	board.SDA1
+soc.GPIO42
+soc.GPIO43
+soc.GPIO44
+soc.GPIO45
+soc.GPIO46
+soc.GPIO5	board.A6	board.D5	board.TX
+soc.GPIO6	board.A5	board.D6	board.SCL
+soc.GPIO7	board.A4	board.D7	board.SDA
+soc.GPIO8	board.A3	board.D8
+soc.GPIO9	board.A2	board.D9
 }
 help('modules') {
 __future__        digitalio         os                touchio
