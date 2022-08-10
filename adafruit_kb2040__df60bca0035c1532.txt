@@ -1,11 +1,11 @@
 board.board_id : adafruit_kb2040
 uid : df60bca0035c1532
 len(cpus) : 2 (df60bca0035c1532 df60bca0035c1532)
-sys.implementation : (name='circuitpython', version=(7, 2, 5), mpy=517) MPY_VERSION=5 flags=0x02
-sys.path : ['', '/', '.frozen', '/lib']
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.path : ['', '/', '/lib']
 sys.platform : RP2040
 sys.version : 3.4.0
-os.uname() : (sysname='rp2040', nodename='rp2040', release='7.2.5', version='7.2.5 on 2022-04-06', machine='Adafruit KB2040 with rp2040')
+os.uname() : (sysname='rp2040', nodename='rp2040', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit KB2040 with rp2040')
 os.statvfs('/') : (1024, 1024, 7137, 7126, 7126, 0, 0, 0, 0, 255) 7297.0KB of 7308.3KB (99.8%) free
 len(nvm) : 4096
 
@@ -48,24 +48,27 @@ soc.GPIO8	board.D8
 soc.GPIO9	board.D9
 }
 help('modules') {
-__future__        board             micropython       storage
-__main__          builtins          msgpack           struct
-_bleio            busio             neopixel_write    supervisor
-adafruit_bus_device                 collections       onewireio         synthio
-adafruit_pixelbuf countio           os                sys
-aesio             digitalio         paralleldisplay   terminalio
-alarm             displayio         pulseio           time
-analogio          errno             pwmio             touchio
-array             fontio            qrio              traceback
-atexit            framebufferio     rainbowio         ulab
-audiobusio        gc                random            usb_cdc
-audiocore         getpass           re                usb_hid
-audiomixer        gifio             rgbmatrix         usb_midi
-audiomp3          imagecapture      rotaryio          uselect
-audiopwmio        io                rp2pio            vectorio
-binascii          json              rtc               watchdog
-bitbangio         keypad            sdcardio
-bitmaptools       math              select
-bitops            microcontroller   sharpdisplay
+__future__        board             neopixel_write    terminalio
+__main__          builtins          onewireio         time
+_asyncio          busio             os                touchio
+_bleio            collections       paralleldisplay   traceback
+adafruit_bus_device                 countio           pulseio           ulab
+adafruit_bus_device.i2c_device      digitalio         pwmio             ulab
+adafruit_bus_device.spi_device      displayio         qrio              ulab.fft
+adafruit_pixelbuf errno             rainbowio         ulab.linalg
+aesio             floppyio          random            ulab.numpy
+alarm             fontio            re                ulab.scipy
+analogio          framebufferio     rgbmatrix         ulab.scipy.linalg
+array             gc                rotaryio          ulab.scipy.optimize
+atexit            getpass           rp2pio            ulab.scipy.signal
+audiobusio        gifio             rtc               ulab.scipy.special
+audiocore         imagecapture      sdcardio          ulab.utils
+audiomixer        io                select            usb_cdc
+audiomp3          json              sharpdisplay      usb_hid
+audiopwmio        keypad            storage           usb_midi
+binascii          math              struct            uselect
+bitbangio         microcontroller   supervisor        vectorio
+bitmaptools       micropython       synthio           watchdog
+bitops            msgpack           sys               zlib
 Plus any modules on the filesystem
 }
