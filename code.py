@@ -1,12 +1,12 @@
 # sysinfo.py http://mew.cx/  2022-07-24
-# SPDX
+# SPDX TODO
 
 import board
-import microcontroller as soc
 import os
 import sys
+import microcontroller as soc
 
-__version__ = "0.0.0.0"
+__version__ = "0.0.1.0"
 __repo__    = "todo"
 
 # functions #################################################################
@@ -91,19 +91,19 @@ def GenerateResults(out):
     out.write("}\n")
 
     out.write("help('modules') {\n")
-    help('modules')
+    help('modules')     # TODO how to redirect to output handle?
     out.write("}\n")
 
 def main():
     try:
-        # write results to writable file, then reboot to read-only.
+        # if flash is writable, send results to file then reboot
         filename = "{}__{}.txt".format(board.board_id, Hexify(soc.cpu.uid))
         with open(filename, "w") as fh:
             GenerateResults(fh)
         os.sync()
         soc.reset()
     except:
-        # write results to stdout
+        # if flash is read-only, send results to stdout
         GenerateResults(sys.stdout)
 
 # make it so ################################################################
