@@ -1,3 +1,4 @@
+hinv version : 0.0.3.0
 board.board_id : adafruit_qtpy_esp32s2
 uid : 85fc97ba92ab
 sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
@@ -5,11 +6,8 @@ sys.path : ['', '/', '/lib']
 sys.platform : Espressif
 sys.version : 3.4.0
 os.uname() : (sysname='ESP32S2', nodename='ESP32S2', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit QT Py ESP32S2 with ESP32S2')
-os.statvfs('/') : (512, 512, 1881, 1864, 1864, 0, 0, 0, 0, 255) 954.4KB of 963.1KB (99.1%) free
+os.statvfs('/') : (512, 512, 1881, 1861, 1861, 0, 0, 0, 0, 255) 952.8KB of 963.1KB (98.9%) free
 len(nvm) : 8192
-
-dir(microcontroller.pin) :
-['__class__', 'GPIO0', 'GPIO1', 'GPIO10', 'GPIO11', 'GPIO12', 'GPIO13', 'GPIO14', 'GPIO15', 'GPIO16', 'GPIO17', 'GPIO18', 'GPIO19', 'GPIO2', 'GPIO20', 'GPIO21', 'GPIO26', 'GPIO27', 'GPIO28', 'GPIO29', 'GPIO3', 'GPIO30', 'GPIO31', 'GPIO32', 'GPIO33', 'GPIO34', 'GPIO35', 'GPIO36', 'GPIO37', 'GPIO38', 'GPIO39', 'GPIO4', 'GPIO40', 'GPIO41', 'GPIO42', 'GPIO43', 'GPIO44', 'GPIO45', 'GPIO46', 'GPIO5', 'GPIO6', 'GPIO7', 'GPIO8', 'GPIO9']
 
 dir(board) :
 ['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'BOOT0', 'BUTTON', 'D0', 'D16', 'D17', 'D18', 'D35', 'D36', 'D37', 'D40', 'D41', 'D5', 'D6', 'D7', 'D8', 'D9', 'I2C', 'MISO', 'MOSI', 'NEOPIXEL', 'NEOPIXEL_POWER', 'RX', 'SCK', 'SCL', 'SCL1', 'SDA', 'SDA1', 'SPI', 'STEMMA_I2C', 'TX', 'UART', 'board_id']
@@ -18,49 +16,49 @@ dir(wifi) :
 ['__class__', '__init__', '__name__', 'AuthMode', 'Monitor', 'Network', 'Packet', 'Radio', 'radio']
 
 PinMap() {
-soc.GPIO0	board.BOOT0	board.BUTTON	board.D0
-soc.GPIO1
-soc.GPIO10
-soc.GPIO11
-soc.GPIO12
-soc.GPIO13
-soc.GPIO14
-soc.GPIO15
-soc.GPIO16	board.A7	board.D16	board.RX
-soc.GPIO17	board.A1	board.D17
-soc.GPIO18	board.A0	board.D18
-soc.GPIO19
-soc.GPIO2
-soc.GPIO20
-soc.GPIO21
-soc.GPIO26
-soc.GPIO27
-soc.GPIO28
-soc.GPIO29
-soc.GPIO3
-soc.GPIO30
-soc.GPIO31
-soc.GPIO32
-soc.GPIO33
-soc.GPIO34
-soc.GPIO35	board.D35	board.MOSI
-soc.GPIO36	board.D36	board.SCK
-soc.GPIO37	board.D37	board.MISO
-soc.GPIO38	board.NEOPIXEL_POWER
-soc.GPIO39	board.NEOPIXEL
-soc.GPIO4
-soc.GPIO40	board.D40	board.SCL1
-soc.GPIO41	board.D41	board.SDA1
-soc.GPIO42
-soc.GPIO43
-soc.GPIO44
-soc.GPIO45
-soc.GPIO46
-soc.GPIO5	board.A6	board.D5	board.TX
-soc.GPIO6	board.A5	board.D6	board.SCL
-soc.GPIO7	board.A4	board.D7	board.SDA
-soc.GPIO8	board.A3	board.D8
-soc.GPIO9	board.A2	board.D9
+microcontroller.GPIO0	board.BOOT0	board.BUTTON	board.D0
+microcontroller.GPIO1
+microcontroller.GPIO10
+microcontroller.GPIO11
+microcontroller.GPIO12
+microcontroller.GPIO13
+microcontroller.GPIO14
+microcontroller.GPIO15
+microcontroller.GPIO16	board.A7	board.D16	board.RX
+microcontroller.GPIO17	board.A1	board.D17
+microcontroller.GPIO18	board.A0	board.D18
+microcontroller.GPIO19
+microcontroller.GPIO2
+microcontroller.GPIO20
+microcontroller.GPIO21
+microcontroller.GPIO26
+microcontroller.GPIO27
+microcontroller.GPIO28
+microcontroller.GPIO29
+microcontroller.GPIO3
+microcontroller.GPIO30
+microcontroller.GPIO31
+microcontroller.GPIO32
+microcontroller.GPIO33
+microcontroller.GPIO34
+microcontroller.GPIO35	board.D35	board.MOSI
+microcontroller.GPIO36	board.D36	board.SCK
+microcontroller.GPIO37	board.D37	board.MISO
+microcontroller.GPIO38	board.NEOPIXEL_POWER
+microcontroller.GPIO39	board.NEOPIXEL
+microcontroller.GPIO4
+microcontroller.GPIO40	board.D40	board.SCL1
+microcontroller.GPIO41	board.D41	board.SDA1
+microcontroller.GPIO42
+microcontroller.GPIO43
+microcontroller.GPIO44
+microcontroller.GPIO45
+microcontroller.GPIO46
+microcontroller.GPIO5	board.A6	board.D5	board.TX
+microcontroller.GPIO6	board.A5	board.D6	board.SCL
+microcontroller.GPIO7	board.A4	board.D7	board.SDA
+microcontroller.GPIO8	board.A3	board.D8
+microcontroller.GPIO9	board.A2	board.D9
 }
 help('modules') {
 __future__        digitalio         os                touchio
