@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 #
 # hinv - hardware inventory
-# Inspired by the 'hinv' command on Silicon Graphics' IRIX.
+# Inspired by the 'hinv' command from Silicon Graphics' IRIX.
 
 
 import board
@@ -11,7 +11,7 @@ import os
 import sys
 import microcontroller as soc
 
-__version__ = "0.0.1.0"
+__version__ = "0.0.3.0"
 __repo__    = "todo"
 
 # functions #################################################################
@@ -49,6 +49,7 @@ def FsInfo(statvfs_info):
     return (KBfull, KBfree)
 
 def GenerateResults(out):
+    out.write("hinv version : {}\n".format(__version__))
     out.write("board.board_id : {}\n".format(board.board_id))
     out.write("uid : {}\n".format(Hexify(soc.cpu.uid)))
 
