@@ -81,7 +81,6 @@ def GenerateResults(out):
         out.write("\n")
 
     out.write("\n")
-    out.write("dir(microcontroller.pin) :\n{}\n\n".format(dir(soc.pin)))
     out.write("dir(board) :\n{}\n\n".format(dir(board)))
 
     try:
