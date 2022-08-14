@@ -61,9 +61,9 @@ def GenerateResults(out):
     except:
         pass
 
+    sys_mpy = sys.implementation.mpy
     out.write("sys.implementation : {} MPY_VERSION={:d} flags=0x{:02x}\n".format(
-        sys.implementation, sys.implementation[2] & 0xff,
-        (sys.implementation[2] >> 8) & 0xff))
+        sys.implementation, sys_mpy & 0xff, (sys_mpy >> 8) & 0xff))
 
     out.write("sys.path : {}\n".format(sys.path))
     out.write("sys.platform : {}\n".format(sys.platform))
