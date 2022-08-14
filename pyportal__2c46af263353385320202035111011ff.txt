@@ -1,3 +1,4 @@
+hinv version : 0.0.3.0
 board.board_id : pyportal
 uid : 2c46af263353385320202035111011ff
 sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
@@ -5,65 +6,62 @@ sys.path : ['', '/', '.frozen', '/lib']
 sys.platform : MicroChip SAMD51
 sys.version : 3.4.0
 os.uname() : (sysname='samd51', nodename='samd51', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit PyPortal with samd51j20')
-os.statvfs('/') : (1024, 1024, 8155, 8143, 8143, 0, 0, 0, 0, 255) 8338.4KB of 8350.7KB (99.9%) free
+os.statvfs('/') : (1024, 1024, 8155, 8140, 8140, 0, 0, 0, 0, 255) 8335.4KB of 8350.7KB (99.8%) free
 len(nvm) : 8192
-
-dir(microcontroller.pin) :
-['__class__', 'PA00', 'PA01', 'PA02', 'PA03', 'PA04', 'PA05', 'PA06', 'PA07', 'PA08', 'PA09', 'PA10', 'PA11', 'PA12', 'PA13', 'PA14', 'PA15', 'PA16', 'PA17', 'PA18', 'PA19', 'PA20', 'PA21', 'PA22', 'PA23', 'PA27', 'PA30', 'PA31', 'PB00', 'PB01', 'PB02', 'PB03', 'PB04', 'PB05', 'PB06', 'PB07', 'PB08', 'PB09', 'PB10', 'PB11', 'PB12', 'PB13', 'PB14', 'PB15', 'PB16', 'PB17', 'PB22', 'PB23', 'PB30', 'PB31']
 
 dir(board) :
 ['__class__', '__name__', 'A0', 'A1', 'A2', 'A4', 'AUDIO_OUT', 'D13', 'D3', 'D4', 'DISPLAY', 'ESP_BUSY', 'ESP_CS', 'ESP_GPIO0', 'ESP_RESET', 'ESP_RTS', 'ESP_RX', 'ESP_TX', 'I2C', 'L', 'LCD_DATA0', 'LCD_DATA1', 'LCD_DATA2', 'LCD_DATA3', 'LCD_DATA4', 'LCD_DATA5', 'LCD_DATA6', 'LCD_DATA7', 'LED', 'LIGHT', 'MISO', 'MOSI', 'NEOPIXEL', 'SCK', 'SCL', 'SDA', 'SD_CARD_DETECT', 'SD_CS', 'SPEAKER', 'SPEAKER_ENABLE', 'SPI', 'STEMMA_I2C', 'TFT_BACKLIGHT', 'TFT_CS', 'TFT_DC', 'TFT_RD', 'TFT_RESET', 'TFT_RS', 'TFT_TE', 'TFT_WR', 'TOUCH_XL', 'TOUCH_XR', 'TOUCH_YD', 'TOUCH_YU', 'board_id']
 
 PinMap() {
-soc.PA00	board.TFT_RESET
-soc.PA01	board.SD_CARD_DETECT
-soc.PA02	board.A0	board.AUDIO_OUT	board.SPEAKER
-soc.PA03
-soc.PA04	board.A1	board.D3
-soc.PA05	board.A4	board.D4
-soc.PA06	board.TOUCH_YU
-soc.PA07	board.A2	board.LIGHT
-soc.PA08
-soc.PA09
-soc.PA10
-soc.PA11
-soc.PA12	board.MOSI
-soc.PA13	board.SCK
-soc.PA14	board.MISO
-soc.PA15	board.ESP_RTS
-soc.PA16	board.LCD_DATA0
-soc.PA17	board.LCD_DATA1
-soc.PA18	board.LCD_DATA2
-soc.PA19	board.LCD_DATA3
-soc.PA20	board.LCD_DATA4
-soc.PA21	board.LCD_DATA5
-soc.PA22	board.LCD_DATA6
-soc.PA23	board.LCD_DATA7
-soc.PA27	board.SPEAKER_ENABLE
-soc.PA30
-soc.PA31
-soc.PB00	board.TOUCH_YD
-soc.PB01	board.TOUCH_XL
-soc.PB02	board.SDA
-soc.PB03	board.SCL
-soc.PB04	board.TFT_RD
-soc.PB05	board.TFT_RS
-soc.PB06	board.TFT_CS
-soc.PB07	board.TFT_TE
-soc.PB08	board.TOUCH_XR
-soc.PB09	board.TFT_DC	board.TFT_WR
-soc.PB10
-soc.PB11
-soc.PB12	board.ESP_TX
-soc.PB13	board.ESP_RX
-soc.PB14	board.ESP_CS
-soc.PB15	board.ESP_GPIO0
-soc.PB16	board.ESP_BUSY
-soc.PB17	board.ESP_RESET
-soc.PB22	board.NEOPIXEL
-soc.PB23	board.D13	board.L	board.LED
-soc.PB30	board.SD_CS
-soc.PB31	board.TFT_BACKLIGHT
+microcontroller.PA00	board.TFT_RESET
+microcontroller.PA01	board.SD_CARD_DETECT
+microcontroller.PA02	board.A0	board.AUDIO_OUT	board.SPEAKER
+microcontroller.PA03
+microcontroller.PA04	board.A1	board.D3
+microcontroller.PA05	board.A4	board.D4
+microcontroller.PA06	board.TOUCH_YU
+microcontroller.PA07	board.A2	board.LIGHT
+microcontroller.PA08
+microcontroller.PA09
+microcontroller.PA10
+microcontroller.PA11
+microcontroller.PA12	board.MOSI
+microcontroller.PA13	board.SCK
+microcontroller.PA14	board.MISO
+microcontroller.PA15	board.ESP_RTS
+microcontroller.PA16	board.LCD_DATA0
+microcontroller.PA17	board.LCD_DATA1
+microcontroller.PA18	board.LCD_DATA2
+microcontroller.PA19	board.LCD_DATA3
+microcontroller.PA20	board.LCD_DATA4
+microcontroller.PA21	board.LCD_DATA5
+microcontroller.PA22	board.LCD_DATA6
+microcontroller.PA23	board.LCD_DATA7
+microcontroller.PA27	board.SPEAKER_ENABLE
+microcontroller.PA30
+microcontroller.PA31
+microcontroller.PB00	board.TOUCH_YD
+microcontroller.PB01	board.TOUCH_XL
+microcontroller.PB02	board.SDA
+microcontroller.PB03	board.SCL
+microcontroller.PB04	board.TFT_RD
+microcontroller.PB05	board.TFT_RS
+microcontroller.PB06	board.TFT_CS
+microcontroller.PB07	board.TFT_TE
+microcontroller.PB08	board.TOUCH_XR
+microcontroller.PB09	board.TFT_DC	board.TFT_WR
+microcontroller.PB10
+microcontroller.PB11
+microcontroller.PB12	board.ESP_TX
+microcontroller.PB13	board.ESP_RX
+microcontroller.PB14	board.ESP_CS
+microcontroller.PB15	board.ESP_GPIO0
+microcontroller.PB16	board.ESP_BUSY
+microcontroller.PB17	board.ESP_RESET
+microcontroller.PB22	board.NEOPIXEL
+microcontroller.PB23	board.D13	board.L	board.LED
+microcontroller.PB30	board.SD_CS
+microcontroller.PB31	board.TFT_BACKLIGHT
 }
 help('modules') {
 __future__        alarm             i2cperipheral     struct
