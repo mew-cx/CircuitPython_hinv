@@ -1,0 +1,2 @@
+py/persistentcode.c:        || MPY_FEATURE_DECODE_FLAGS(header[2]) != MPY_FEATURE_FLAGS
+py/persistentcode.h:#define MPY_FEATURE_DECODE_FLAGS(feat) ((feat) & 3)

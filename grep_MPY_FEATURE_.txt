@@ -1,0 +1,28 @@
+py/persistentcode.c:#define MPY_FEATURE_ARCH_DYNAMIC mp_dynamic_compiler.native_arch
+py/persistentcode.c:#define MPY_FEATURE_ARCH_DYNAMIC MPY_FEATURE_ARCH
+py/persistentcode.c:        || MPY_FEATURE_DECODE_FLAGS(header[2]) != MPY_FEATURE_FLAGS
+py/persistentcode.c:    if (MPY_FEATURE_DECODE_ARCH(header[2]) != MP_NATIVE_ARCH_NONE) {
+py/persistentcode.c:        byte arch = MPY_FEATURE_DECODE_ARCH(header[2]);
+py/persistentcode.c:        if (!MPY_FEATURE_ARCH_TEST(arch)) {
+py/persistentcode.c:        MPY_FEATURE_ENCODE_FLAGS(MPY_FEATURE_FLAGS_DYNAMIC),
+py/persistentcode.c:        header[2] |= MPY_FEATURE_ENCODE_ARCH(MPY_FEATURE_ARCH_DYNAMIC);
+py/persistentcode.h:#define MPY_FEATURE_ENCODE_FLAGS(flags) (flags)
+py/persistentcode.h:#define MPY_FEATURE_DECODE_FLAGS(feat) ((feat) & 3)
+py/persistentcode.h:#define MPY_FEATURE_ENCODE_ARCH(arch) ((arch) << 2)
+py/persistentcode.h:#define MPY_FEATURE_DECODE_ARCH(feat) ((feat) >> 2)
+py/persistentcode.h:#define MPY_FEATURE_FLAGS ( \
+py/persistentcode.h:#define MPY_FEATURE_FLAGS_DYNAMIC ( \
+py/persistentcode.h:    #define MPY_FEATURE_ARCH (MP_NATIVE_ARCH_X86)
+py/persistentcode.h:    #define MPY_FEATURE_ARCH (MP_NATIVE_ARCH_X64)
+py/persistentcode.h:            #define MPY_FEATURE_ARCH (MP_NATIVE_ARCH_ARMV7EMDP)
+py/persistentcode.h:            #define MPY_FEATURE_ARCH (MP_NATIVE_ARCH_ARMV7EMSP)
+py/persistentcode.h:            #define MPY_FEATURE_ARCH (MP_NATIVE_ARCH_ARMV7EM)
+py/persistentcode.h:        #define MPY_FEATURE_ARCH (MP_NATIVE_ARCH_ARMV7M)
+py/persistentcode.h:    #define MPY_FEATURE_ARCH_TEST(x) (MP_NATIVE_ARCH_ARMV6M <= (x) && (x) <= MPY_FEATURE_ARCH)
+py/persistentcode.h:    #define MPY_FEATURE_ARCH (MP_NATIVE_ARCH_ARMV6)
+py/persistentcode.h:    #define MPY_FEATURE_ARCH (MP_NATIVE_ARCH_XTENSA)
+py/persistentcode.h:    #define MPY_FEATURE_ARCH (MP_NATIVE_ARCH_XTENSAWIN)
+py/persistentcode.h:    #define MPY_FEATURE_ARCH (MP_NATIVE_ARCH_NONE)
+py/persistentcode.h:#ifndef MPY_FEATURE_ARCH_TEST
+py/persistentcode.h:#define MPY_FEATURE_ARCH_TEST(x) ((x) == MPY_FEATURE_ARCH)
+py/persistentcode.h:    | (MPY_FEATURE_ENCODE_FLAGS(MPY_FEATURE_FLAGS) | MPY_FEATURE_ENCODE_ARCH(MPY_FEATURE_ARCH)) << 8)

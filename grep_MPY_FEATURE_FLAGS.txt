@@ -1,0 +1,5 @@
+py/persistentcode.c:        || MPY_FEATURE_DECODE_FLAGS(header[2]) != MPY_FEATURE_FLAGS
+py/persistentcode.c:        MPY_FEATURE_ENCODE_FLAGS(MPY_FEATURE_FLAGS_DYNAMIC),
+py/persistentcode.h:#define MPY_FEATURE_FLAGS ( \
+py/persistentcode.h:#define MPY_FEATURE_FLAGS_DYNAMIC ( \
+py/persistentcode.h:    | (MPY_FEATURE_ENCODE_FLAGS(MPY_FEATURE_FLAGS) | MPY_FEATURE_ENCODE_ARCH(MPY_FEATURE_ARCH)) << 8)
