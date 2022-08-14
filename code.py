@@ -96,7 +96,8 @@ def GenerateResults(out):
     out.write("}\n")
 
     out.write("help('modules') {\n")
-    help('modules')     # TODO how to redirect to output handle?
+    help('modules')
+    out.write("# TODO how to redirect help('modules') to output filehandle?\n")
     out.write("}\n")
 
 def main():
