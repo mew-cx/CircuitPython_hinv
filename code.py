@@ -26,10 +26,10 @@ def PinMap():
     https://github.com/adafruit/Adafruit_Learning_System_Guides/tree/main/CircuitPython_Essentials/Pin_Map_Script
     """
     pinlist = []
-    for spin in dir(soc.pin):
-        pin_attr = getattr(soc.pin, spin)
+    for mpin in dir(soc.pin):
+        pin_attr = getattr(soc.pin, mpin)
         if isinstance(pin_attr, soc.Pin):
-            pins = ["soc.{}".format(spin)]
+            pins = ["microcontroller.{}".format(mpin)]
             for bpin in dir(board):
                 if getattr(board, bpin) is pin_attr:
                     pins.append("board.{}".format(bpin))
