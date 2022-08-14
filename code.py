@@ -1,5 +1,10 @@
-# sysinfo.py http://mew.cx/  2022-07-24
-# SPDX TODO
+# SPDX-FileCopyrightText: 2022 Michael Weiblen http://mew.cx/
+#
+# SPDX-License-Identifier: MIT
+#
+# hinv - hardware inventory
+# Inspired by the 'hinv' command on Silicon Graphics' IRIX.
+
 
 import board
 import os
