@@ -1,3 +1,4 @@
+hinv version : 0.0.3.0
 board.board_id : adafruit_qtpy_rp2040
 uid : df60bca003802232
 len(cpus) : 2 (df60bca003802232 df60bca003802232)
@@ -6,46 +7,43 @@ sys.path : ['', '/', '/lib']
 sys.platform : RP2040
 sys.version : 3.4.0
 os.uname() : (sysname='rp2040', nodename='rp2040', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit QT Py RP2040 with rp2040')
-os.statvfs('/') : (1024, 1024, 7137, 7126, 7126, 0, 0, 0, 0, 255) 7297.0KB of 7308.3KB (99.8%) free
+os.statvfs('/') : (1024, 1024, 7137, 7122, 7122, 0, 0, 0, 0, 255) 7292.9KB of 7308.3KB (99.8%) free
 len(nvm) : 4096
-
-dir(microcontroller.pin) :
-['__class__', 'GPIO0', 'GPIO1', 'GPIO10', 'GPIO11', 'GPIO12', 'GPIO13', 'GPIO14', 'GPIO15', 'GPIO16', 'GPIO17', 'GPIO18', 'GPIO19', 'GPIO2', 'GPIO20', 'GPIO21', 'GPIO22', 'GPIO23', 'GPIO24', 'GPIO25', 'GPIO26', 'GPIO27', 'GPIO28', 'GPIO29', 'GPIO3', 'GPIO4', 'GPIO5', 'GPIO6', 'GPIO7', 'GPIO8', 'GPIO9']
 
 dir(board) :
 ['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'BUTTON', 'D0', 'D1', 'D10', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'I2C', 'MISO', 'MOSI', 'NEOPIXEL', 'NEOPIXEL_POWER', 'RX', 'SCK', 'SCL', 'SCL1', 'SDA', 'SDA1', 'SPI', 'STEMMA_I2C', 'TX', 'UART', 'board_id']
 
 PinMap() {
-soc.GPIO0
-soc.GPIO1
-soc.GPIO10
-soc.GPIO11	board.NEOPIXEL_POWER
-soc.GPIO12	board.NEOPIXEL
-soc.GPIO13
-soc.GPIO14
-soc.GPIO15
-soc.GPIO16
-soc.GPIO17
-soc.GPIO18
-soc.GPIO19
-soc.GPIO2
-soc.GPIO20	board.D6	board.TX
-soc.GPIO21	board.BUTTON
-soc.GPIO22	board.SDA1
-soc.GPIO23	board.SCL1
-soc.GPIO24	board.D4	board.SDA
-soc.GPIO25	board.D5	board.SCL
-soc.GPIO26	board.A3	board.D3
-soc.GPIO27	board.A2	board.D2
-soc.GPIO28	board.A1	board.D1
-soc.GPIO29	board.A0	board.D0
-soc.GPIO3	board.D10	board.MOSI
-soc.GPIO4	board.D9	board.MISO
-soc.GPIO5	board.D7	board.RX
-soc.GPIO6	board.D8	board.SCK
-soc.GPIO7
-soc.GPIO8
-soc.GPIO9
+microcontroller.GPIO0
+microcontroller.GPIO1
+microcontroller.GPIO10
+microcontroller.GPIO11	board.NEOPIXEL_POWER
+microcontroller.GPIO12	board.NEOPIXEL
+microcontroller.GPIO13
+microcontroller.GPIO14
+microcontroller.GPIO15
+microcontroller.GPIO16
+microcontroller.GPIO17
+microcontroller.GPIO18
+microcontroller.GPIO19
+microcontroller.GPIO2
+microcontroller.GPIO20	board.D6	board.TX
+microcontroller.GPIO21	board.BUTTON
+microcontroller.GPIO22	board.SDA1
+microcontroller.GPIO23	board.SCL1
+microcontroller.GPIO24	board.D4	board.SDA
+microcontroller.GPIO25	board.D5	board.SCL
+microcontroller.GPIO26	board.A3	board.D3
+microcontroller.GPIO27	board.A2	board.D2
+microcontroller.GPIO28	board.A1	board.D1
+microcontroller.GPIO29	board.A0	board.D0
+microcontroller.GPIO3	board.D10	board.MOSI
+microcontroller.GPIO4	board.D9	board.MISO
+microcontroller.GPIO5	board.D7	board.RX
+microcontroller.GPIO6	board.D8	board.SCK
+microcontroller.GPIO7
+microcontroller.GPIO8
+microcontroller.GPIO9
 }
 help('modules') {
 __future__        board             neopixel_write    terminalio
