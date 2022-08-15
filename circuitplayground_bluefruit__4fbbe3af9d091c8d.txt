@@ -1,3 +1,4 @@
+hinv version : 0.0.3.0
 board.board_id : circuitplayground_bluefruit
 uid : 4fbbe3af9d091c8d
 sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
@@ -5,64 +6,61 @@ sys.path : ['', '/', '/lib']
 sys.platform : nRF52840
 sys.version : 3.4.0
 os.uname() : (sysname='nrf52', nodename='nrf52', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit Circuit Playground Bluefruit with nRF52840')
-os.statvfs('/') : (1024, 1024, 2024, 2012, 2012, 0, 0, 0, 0, 255) 2060.3KB of 2072.6KB (99.4%) free
+os.statvfs('/') : (1024, 1024, 2024, 2000, 2000, 0, 0, 0, 0, 255) 2048.0KB of 2072.6KB (98.8%) free
 len(nvm) : 8192
-
-dir(microcontroller.pin) :
-['__class__', 'P0_00', 'P0_01', 'P0_02', 'P0_03', 'P0_04', 'P0_05', 'P0_06', 'P0_07', 'P0_08', 'P0_09', 'P0_10', 'P0_11', 'P0_12', 'P0_13', 'P0_14', 'P0_15', 'P0_16', 'P0_17', 'P0_18', 'P0_19', 'P0_20', 'P0_21', 'P0_22', 'P0_23', 'P0_24', 'P0_25', 'P0_26', 'P0_27', 'P0_28', 'P0_29', 'P0_30', 'P0_31', 'P1_00', 'P1_01', 'P1_02', 'P1_03', 'P1_04', 'P1_05', 'P1_06', 'P1_07', 'P1_08', 'P1_09', 'P1_10', 'P1_11', 'P1_12', 'P1_13', 'P1_14', 'P1_15']
 
 dir(board) :
 ['__class__', '__name__', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A8', 'A9', 'ACCELEROMETER_INTERRUPT', 'ACCELEROMETER_SCL', 'ACCELEROMETER_SDA', 'AUDIO', 'BUTTON_A', 'BUTTON_B', 'D0', 'D1', 'D10', 'D12', 'D13', 'D2', 'D3', 'D35', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'I2C', 'L', 'LED', 'LIGHT', 'MICROPHONE_CLOCK', 'MICROPHONE_DATA', 'MISO', 'MOSI', 'NEOPIXEL', 'POWER_SWITCH', 'RX', 'SCK', 'SCL', 'SDA', 'SLIDE_SWITCH', 'SPEAKER', 'SPEAKER_ENABLE', 'SPI', 'TEMPERATURE', 'TX', 'UART', 'board_id']
 
 PinMap() {
-soc.P0_00
-soc.P0_01
-soc.P0_02	board.A1	board.D6	board.SCK
-soc.P0_03	board.A3	board.D10	board.MOSI
-soc.P0_04	board.A4	board.D3	board.SCL
-soc.P0_05	board.A5	board.D2	board.SDA
-soc.P0_06	board.D35	board.POWER_SWITCH
-soc.P0_07
-soc.P0_08
-soc.P0_09
-soc.P0_10
-soc.P0_11
-soc.P0_12
-soc.P0_13	board.D8	board.NEOPIXEL
-soc.P0_14	board.D1	board.TX
-soc.P0_15
-soc.P0_16	board.MICROPHONE_DATA
-soc.P0_17	board.MICROPHONE_CLOCK
-soc.P0_18
-soc.P0_19
-soc.P0_20
-soc.P0_21
-soc.P0_22
-soc.P0_23
-soc.P0_24
-soc.P0_25
-soc.P0_26	board.AUDIO	board.D12	board.SPEAKER
-soc.P0_27
-soc.P0_28	board.A8	board.LIGHT
-soc.P0_29	board.A2	board.D9	board.MISO
-soc.P0_30	board.A6	board.D0	board.RX
-soc.P0_31	board.A9	board.TEMPERATURE
-soc.P1_00
-soc.P1_01
-soc.P1_02	board.BUTTON_A	board.D4
-soc.P1_03
-soc.P1_04	board.SPEAKER_ENABLE
-soc.P1_05
-soc.P1_06	board.D7	board.SLIDE_SWITCH
-soc.P1_07
-soc.P1_08
-soc.P1_09
-soc.P1_10	board.ACCELEROMETER_SDA
-soc.P1_11
-soc.P1_12	board.ACCELEROMETER_SCL
-soc.P1_13	board.ACCELEROMETER_INTERRUPT
-soc.P1_14	board.D13	board.L	board.LED
-soc.P1_15	board.BUTTON_B	board.D5
+microcontroller.P0_00
+microcontroller.P0_01
+microcontroller.P0_02	board.A1	board.D6	board.SCK
+microcontroller.P0_03	board.A3	board.D10	board.MOSI
+microcontroller.P0_04	board.A4	board.D3	board.SCL
+microcontroller.P0_05	board.A5	board.D2	board.SDA
+microcontroller.P0_06	board.D35	board.POWER_SWITCH
+microcontroller.P0_07
+microcontroller.P0_08
+microcontroller.P0_09
+microcontroller.P0_10
+microcontroller.P0_11
+microcontroller.P0_12
+microcontroller.P0_13	board.D8	board.NEOPIXEL
+microcontroller.P0_14	board.D1	board.TX
+microcontroller.P0_15
+microcontroller.P0_16	board.MICROPHONE_DATA
+microcontroller.P0_17	board.MICROPHONE_CLOCK
+microcontroller.P0_18
+microcontroller.P0_19
+microcontroller.P0_20
+microcontroller.P0_21
+microcontroller.P0_22
+microcontroller.P0_23
+microcontroller.P0_24
+microcontroller.P0_25
+microcontroller.P0_26	board.AUDIO	board.D12	board.SPEAKER
+microcontroller.P0_27
+microcontroller.P0_28	board.A8	board.LIGHT
+microcontroller.P0_29	board.A2	board.D9	board.MISO
+microcontroller.P0_30	board.A6	board.D0	board.RX
+microcontroller.P0_31	board.A9	board.TEMPERATURE
+microcontroller.P1_00
+microcontroller.P1_01
+microcontroller.P1_02	board.BUTTON_A	board.D4
+microcontroller.P1_03
+microcontroller.P1_04	board.SPEAKER_ENABLE
+microcontroller.P1_05
+microcontroller.P1_06	board.D7	board.SLIDE_SWITCH
+microcontroller.P1_07
+microcontroller.P1_08
+microcontroller.P1_09
+microcontroller.P1_10	board.ACCELEROMETER_SDA
+microcontroller.P1_11
+microcontroller.P1_12	board.ACCELEROMETER_SCL
+microcontroller.P1_13	board.ACCELEROMETER_INTERRUPT
+microcontroller.P1_14	board.D13	board.L	board.LED
+microcontroller.P1_15	board.BUTTON_B	board.D5
 }
 help('modules') {
 __future__        board             onewireio         touchio
