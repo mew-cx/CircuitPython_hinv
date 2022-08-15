@@ -1,65 +1,52 @@
+hinv version : 0.0.3.0
 board.board_id : itsybitsy_m0_express
 uid : baa5bce43132505120202043222214ff
-sys.implementation : (name='circuitpython', version=(7, 2, 5), mpy=517)
-sys.modules : {}
-sys.path : ['', '/', '.frozen', '/lib']
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.path : ['', '/', '/lib']
 sys.platform : Atmel SAMD21
 sys.version : 3.4.0
-sys.version_info : (3, 4, 0)
-os.uname() : (sysname='samd21', nodename='samd21', release='7.2.5', version='7.2.5 on 2022-04-06', machine='Adafruit ItsyBitsy M0 Express with samd21g18')
-os.statvfs(/) : (1024, 1024, 2024, 2005, 2005, 0, 0, 0, 0, 255)
-os.stat(/code.py) : (32768, 0, 0, 0, 0, 0, 3505, 1658856088, 1658856088, 1658856088)
-os.sep : /
-
-dir(microcontroller.pin) :
-['__class__', 'PA00', 'PA01', 'PA02', 'PA03', 'PA04', 'PA05', 'PA06', 'PA07', 'PA08', 'PA09', 'PA10', 'PA11', 'PA12', 'PA14', 'PA15', 'PA16', 'PA17', 'PA18', 'PA19', 'PA20', 'PA21', 'PA22', 'PA23', 'PA27', 'PA30', 'PA31', 'PB02', 'PB03', 'PB08', 'PB09', 'PB10', 'PB11', 'PB22', 'PB23']
+os.uname() : (sysname='samd21', nodename='samd21', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit ItsyBitsy M0 Express with samd21g18')
+os.statvfs('/') : (1024, 1024, 2024, 2008, 2008, 0, 0, 0, 0, 255) 2056.2KB of 2072.6KB (99.2%) free
+len(nvm) : 256
 
 dir(board) :
 ['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'APA102_MOSI', 'APA102_SCK', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'DOTSTAR_CLOCK', 'DOTSTAR_DATA', 'I2C', 'L', 'LED', 'MISO', 'MOSI', 'RX', 'SCK', 'SCL', 'SDA', 'SPI', 'TX', 'UART', 'board_id']
 
-dir(microcontroller) :
-['__class__', '__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
-
-dir(storage) :
-['__class__', '__name__', 'VfsFat', 'disable_usb_drive', 'enable_usb_drive', 'erase_filesystem', 'getmount', 'mount', 'remount', 'umount']
-
-dir(os) :
-['__class__', '__name__', 'remove', 'sep', 'chdir', 'getcwd', 'listdir', 'mkdir', 'rename', 'rmdir', 'stat', 'statvfs', 'sync', 'uname', 'unlink', 'urandom']
-
-dir(sys) :
-['__class__', '__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
-
-dir(supervisor) :
-['__class__', '__name__', 'RunReason', 'disable_autoreload', 'disable_ble_workflow', 'enable_autoreload', 'get_previous_traceback', 'reload', 'reset_terminal', 'runtime', 'set_next_code_file', 'set_next_stack_limit', 'set_rgb_status_brightness', 'ticks_ms']
-
 PinMap() {
-PA00	board.APA102_SCK	board.DOTSTAR_CLOCK
-PA01	board.APA102_MOSI	board.DOTSTAR_DATA
-PA02	board.A0
-PA04	board.A3
-PA05	board.A4
-PA06	board.D8
-PA07	board.D9
-PA08	board.D4
-PA09	board.D3
-PA10	board.D1	board.TX
-PA11	board.D0	board.RX
-PA12	board.MISO
-PA14	board.D2
-PA15	board.D5
-PA16	board.D11
-PA17	board.D13	board.L	board.LED
-PA18	board.D10
-PA19	board.D12
-PA20	board.D6
-PA21	board.D7
-PA22	board.SDA
-PA23	board.SCL
-PB02	board.A5
-PB08	board.A1
-PB09	board.A2
-PB10	board.MOSI
-PB11	board.SCK
+microcontroller.PA00	board.APA102_SCK	board.DOTSTAR_CLOCK
+microcontroller.PA01	board.APA102_MOSI	board.DOTSTAR_DATA
+microcontroller.PA02	board.A0
+microcontroller.PA03
+microcontroller.PA04	board.A3
+microcontroller.PA05	board.A4
+microcontroller.PA06	board.D8
+microcontroller.PA07	board.D9
+microcontroller.PA08	board.D4
+microcontroller.PA09	board.D3
+microcontroller.PA10	board.D1	board.TX
+microcontroller.PA11	board.D0	board.RX
+microcontroller.PA12	board.MISO
+microcontroller.PA14	board.D2
+microcontroller.PA15	board.D5
+microcontroller.PA16	board.D11
+microcontroller.PA17	board.D13	board.L	board.LED
+microcontroller.PA18	board.D10
+microcontroller.PA19	board.D12
+microcontroller.PA20	board.D6
+microcontroller.PA21	board.D7
+microcontroller.PA22	board.SDA
+microcontroller.PA23	board.SCL
+microcontroller.PA27
+microcontroller.PA30
+microcontroller.PA31
+microcontroller.PB02	board.A5
+microcontroller.PB03
+microcontroller.PB08	board.A1
+microcontroller.PB09	board.A2
+microcontroller.PB10	board.MOSI
+microcontroller.PB11	board.SCK
+microcontroller.PB22
+microcontroller.PB23
 }
 help('modules') {
 __future__        busio             neopixel_write    struct
