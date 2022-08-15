@@ -2,12 +2,12 @@ hinv version : 0.0.3.0
 board.board_id : adafruit_kb2040
 uid : df609c80675d1335
 len(cpus) : 2 (df609c80675d1335 df609c80675d1335)
-sys.implementation : (name='circuitpython', version=(7, 2, 5), mpy=517) MPY_VERSION=5 flags=0x02
-sys.path : ['', '/', '.frozen', '/lib']
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.path : ['', '/', '/lib']
 sys.platform : RP2040
 sys.version : 3.4.0
-os.uname() : (sysname='rp2040', nodename='rp2040', release='7.2.5', version='7.2.5 on 2022-04-06', machine='Adafruit KB2040 with rp2040')
-os.statvfs('/') : (1024, 1024, 7137, 7124, 7124, 0, 0, 0, 0, 255) 7295.0KB of 7308.3KB (99.8%) free
+os.uname() : (sysname='rp2040', nodename='rp2040', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit KB2040 with rp2040')
+os.statvfs('/') : (1024, 1024, 7137, 7121, 7121, 0, 0, 0, 0, 255) 7291.9KB of 7308.3KB (99.8%) free
 len(nvm) : 4096
 
 dir(board) :
@@ -46,5 +46,27 @@ microcontroller.GPIO8	board.D8
 microcontroller.GPIO9	board.D9
 }
 help('modules') {
-# TODO how to redirect help('modules') to output filehandle?
+__future__        board             neopixel_write    terminalio
+__main__          builtins          onewireio         time
+_asyncio          busio             os                touchio
+_bleio            collections       paralleldisplay   traceback
+adafruit_bus_device                 countio           pulseio           ulab
+adafruit_bus_device.i2c_device      digitalio         pwmio             ulab
+adafruit_bus_device.spi_device      displayio         qrio              ulab.fft
+adafruit_pixelbuf errno             rainbowio         ulab.linalg
+aesio             floppyio          random            ulab.numpy
+alarm             fontio            re                ulab.scipy
+analogio          framebufferio     rgbmatrix         ulab.scipy.linalg
+array             gc                rotaryio          ulab.scipy.optimize
+atexit            getpass           rp2pio            ulab.scipy.signal
+audiobusio        gifio             rtc               ulab.scipy.special
+audiocore         imagecapture      sdcardio          ulab.utils
+audiomixer        io                select            usb_cdc
+audiomp3          json              sharpdisplay      usb_hid
+audiopwmio        keypad            storage           usb_midi
+binascii          math              struct            uselect
+bitbangio         microcontroller   supervisor        vectorio
+bitmaptools       micropython       synthio           watchdog
+bitops            msgpack           sys               zlib
+Plus any modules on the filesystem
 }
