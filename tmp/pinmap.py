@@ -5,21 +5,23 @@ def PinMap():
     pinlist = []
     for mpin in dir(soc.pin):
 
-        pin_attr = getattr(soc.pin, mpin)
-        print("\tgetattr(", soc.pin, ",", mpin, ") =", pin_attr)
-        x = isinstance(pin_attr, soc.Pin)
-        print("\tisinstance(", pin_attr, ",", soc.Pin, ") =", x)
+        mpin_attr = getattr(soc.pin, mpin)
+        print("\tsoc.pin.", mpin, "=", mpin_attr)
 
-        if x:
+        isinst_Pin = isinstance(mpin_attr, soc.Pin)
+        print("\tisinstance(", mpin_attr, ",", soc.Pin, ") =", isinst_Pin)
+
+        if isinst_Pin:
             pins = ["microcontroller.{}".format(mpin)]
             for bpin in dir(board):
 
-                y = getattr(board, bpin)
-                print("\t\tgetattr(", board, ",", bpin, ") =", y)
-                z = y is pin_attr
-                print("\t\t", y, "is", pin_attr, "=", z)
+                bpin_attr = getattr(board, bpin)
+                print("\t\tboard.", bpin, "=", bpin_attr)
 
-                if z:
+                isinst_mpin_attr = bpin_attr is mpin_attr
+                print("\t\t", bpin_attr, "is", mpin_attr, "=", isinst_mpin_attr)
+
+                if isinst_mpin_attr:
                     pins.append("board.{}".format(bpin))
             pinlist.append("\t".join(pins))
     return sorted(pinlist)
