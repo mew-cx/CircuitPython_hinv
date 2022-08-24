@@ -4,15 +4,22 @@
 #
 # hinv - hardware inventory
 # Inspired by the 'hinv' command from Silicon Graphics' IRIX.
+#
+# TODO
+# soc.cpu.frequency
+# available ram   gc.mem_alloc() + gc.mem_free()
+# pin capabilities
+# micropython.mem_info() and micropython.mem_info(1)
 
 
 import board
 import os
 import sys
+import gc
 import microcontroller as soc
 
-__version__ = "0.0.3.0"
-__repo__    = "todo"
+__version__ = "0.0.4.0"
+__repo__    = "CircuitPython_hinv"
 
 # functions #################################################################
 
@@ -49,7 +56,7 @@ def FsInfo(statvfs_info):
     return (KBfull, KBfree)
 
 def GenerateResults(out):
-    out.write("hinv version : {}\n".format(__version__))
+    out.write("hinv version : {}\t\trepo : {}\n".format(__version__, __repo__))
     out.write("board.board_id : {}\n".format(board.board_id))
     out.write("uid : {}\n".format(Hexify(soc.cpu.uid)))
 
