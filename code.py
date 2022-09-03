@@ -14,10 +14,9 @@ import sys
 import gc
 import microcontroller as soc
 
-__version__ = "0.0.5.0"
+__version__ = "0.0.5.1"
 __repo__    = "https://github.com/mew-cx/CircuitPython_hinv"
 
-KB = 1000.0
 KiB = 1024.0
 
 # functions #################################################################
@@ -43,17 +42,18 @@ def PinMap():
             pinlist.append("\t".join(pins))
     return sorted(pinlist)
 
-def FsInfo(statvfs_info):
-    """Return filesystem capacity and availability in KB.
+def FsInfo(path="/"):
+    """Return filesystem capacity and availability in KiB.
     https://docs.circuitpython.org/en/latest/shared-bindings/os/#os.statvfs
     """
-    f_bsize, f_frsize, f_blocks, f_bfree, f_bavail, _, _, _, _, _ = statvfs_info
+    x = os.statvfs(path)
+    f_bsize, f_frsize, f_blocks, f_bfree, f_bavail, _, _, _, _, _ = x
     assert(f_bsize == f_frsize)
     assert(f_bfree == f_bavail)
     #assert(f_ffree == f_favail)
-    Kfull = f_blocks * f_frsize / KiB
+    Ktotal = f_blocks * f_frsize / KiB
     Kfree = f_bfree * f_frsize / KiB
-    return (Kfull, Kfree)
+    return (Ktotal, Kfree)
 
 def GenerateResults(out):
     out.write("hinv version : {}\t\trepo : {}\n".format(__version__, __repo__))
@@ -81,10 +81,9 @@ def GenerateResults(out):
     out.write("os.uname() : {}\n".format(os.uname()))
 
     # TODO available ram   gc.mem_alloc() + gc.mem_free()
-    statvfs_info = os.statvfs('/')
-    Kfull, Kfree = FsInfo(statvfs_info)
-    out.write("os.statvfs('/') : {} {:.1f}KB of {:.1f}KB ({:.1f}%) free\n".format(
-        statvfs_info, Kfree, Kfull, Kfree / Kfull * 100.0))
+    Ktotal, Kfree = FsInfo()
+    out.write("storage : {:.1f}KiB free of {:.1f}KiB total ({:.1f}%)\n".format(
+        Kfree, Ktotal, Kfree / Ktotal * 100.0))
 
     if soc.nvm:
         out.write("len(nvm) : {:d}".format(len(soc.nvm)))
