@@ -53,7 +53,7 @@ def FsInfo(path="/"):
     #assert(f_ffree == f_favail)
     total = f_blocks * f_frsize
     free = f_bfree * f_frsize
-    return (Ktotal, Kfree)
+    return (total, free)
 
 def GenerateResults(out):
     out.write("hinv version : {}\t\trepo : {}\n".format(__version__, __repo__))
@@ -80,14 +80,14 @@ def GenerateResults(out):
     out.write("sys.version : {}\n".format(sys.version))
     out.write("os.uname() : {}\n".format(os.uname()))
 
-    Ktotal = gc.mem_alloc() + gc.mem_free()
-    Kfree = gc.mem_free()
+    total = gc.mem_alloc() + gc.mem_free()
+    free = gc.mem_free()
     out.write("memory : {:.1f}KiB free of {:.1f}KiB total ({:.1f}%)\n".format(
-        Kfree/KiB, Ktotal/KiB, Kfree / Ktotal * 100.0))
+        free/KiB, total/KiB, free / total * 100.0))
 
-    Ktotal, Kfree = FsInfo()
+    total, free = FsInfo()
     out.write("storage : {:.1f}KiB free of {:.1f}KiB total ({:.1f}%)\n".format(
-        Kfree/KiB, Ktotal/KiB, Kfree / Ktotal * 100.0))
+        free/KiB, total/KiB, free / total * 100.0))
 
     if soc.nvm:
         out.write("len(nvm) : {:d}".format(len(soc.nvm)))
