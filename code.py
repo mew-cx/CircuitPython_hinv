@@ -50,7 +50,7 @@ def FsInfo(statvfs_info):
     f_bsize, f_frsize, f_blocks, f_bfree, f_bavail, _, _, _, _, _ = statvfs_info
     assert(f_bsize == f_frsize)
     assert(f_bfree == f_bavail)
-    assert(f_ffree == f_favail)
+    #assert(f_ffree == f_favail)
     Kfull = f_blocks * f_frsize / KiB
     Kfree = f_bfree * f_frsize / KiB
     return (Kfull, Kfree)
@@ -73,7 +73,7 @@ def GenerateResults(out):
 
     sys_mpy = sys.implementation.mpy
     out.write("sys.implementation : {} MPY_VERSION={:d} flags=0x{:02x} arch={:d}\n".format(
-        sys.implementation, sys_mpy & 0xff, (sys_mpy >> 8) & 0xff), (sys_mpy >> 10) & 0xff)
+        sys.implementation, sys_mpy & 0xff, (sys_mpy >> 8) & 0xff, (sys_mpy >> 10) & 0xff))
 
     out.write("sys.path : {}\n".format(sys.path))
     out.write("sys.platform : {}\n".format(sys.platform))
