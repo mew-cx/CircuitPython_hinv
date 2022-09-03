@@ -43,7 +43,7 @@ def PinMap():
     return sorted(pinlist)
 
 def FsInfo(path="/"):
-    """Return filesystem capacity and availability in KiB.
+    """Return filesystem capacity and availability
     https://docs.circuitpython.org/en/latest/shared-bindings/os/#os.statvfs
     """
     x = os.statvfs(path)
@@ -51,8 +51,8 @@ def FsInfo(path="/"):
     assert(f_bsize == f_frsize)
     assert(f_bfree == f_bavail)
     #assert(f_ffree == f_favail)
-    Ktotal = f_blocks * f_frsize / KiB
-    Kfree = f_bfree * f_frsize / KiB
+    total = f_blocks * f_frsize
+    free = f_bfree * f_frsize
     return (Ktotal, Kfree)
 
 def GenerateResults(out):
@@ -80,10 +80,14 @@ def GenerateResults(out):
     out.write("sys.version : {}\n".format(sys.version))
     out.write("os.uname() : {}\n".format(os.uname()))
 
-    # TODO available ram   gc.mem_alloc() + gc.mem_free()
+    Ktotal = gc.mem_alloc() + gc.mem_free()
+    Kfree = gc.mem_free()
+    out.write("memory : {:.1f}KiB free of {:.1f}KiB total ({:.1f}%)\n".format(
+        Kfree/KiB, Ktotal/KiB, Kfree / Ktotal * 100.0))
+
     Ktotal, Kfree = FsInfo()
     out.write("storage : {:.1f}KiB free of {:.1f}KiB total ({:.1f}%)\n".format(
-        Kfree, Ktotal, Kfree / Ktotal * 100.0))
+        Kfree/KiB, Ktotal/KiB, Kfree / Ktotal * 100.0))
 
     if soc.nvm:
         out.write("len(nvm) : {:d}".format(len(soc.nvm)))
