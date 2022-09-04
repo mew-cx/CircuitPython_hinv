@@ -1,12 +1,13 @@
-hinv version : 0.0.3.0
+hinv version : 0.0.5.1		repo : https://github.com/mew-cx/CircuitPython_hinv
 board.board_id : circuitplayground_bluefruit
 uid : 4fbbe3af9d091c8d
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
 sys.path : ['', '/', '/lib']
 sys.platform : nRF52840
 sys.version : 3.4.0
 os.uname() : (sysname='nrf52', nodename='nrf52', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit Circuit Playground Bluefruit with nRF52840')
-os.statvfs('/') : (1024, 1024, 2024, 2000, 2000, 0, 0, 0, 0, 255) 2048.0KB of 2072.6KB (98.8%) free
+memory : 129.0KiB free of 139.3KiB total (92.6%)
+storage : 2012.0KiB free of 2024.0KiB total (99.4%)
 len(nvm) : 8192
 
 dir(board) :
