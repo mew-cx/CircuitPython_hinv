@@ -1,12 +1,13 @@
-hinv version : 0.0.3.0
+hinv version : 0.0.5.1		repo : https://github.com/mew-cx/CircuitPython_hinv
 board.board_id : pyportal
 uid : 2c46af263353385320202035111011ff
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
 sys.path : ['', '/', '.frozen', '/lib']
 sys.platform : MicroChip SAMD51
 sys.version : 3.4.0
 os.uname() : (sysname='samd51', nodename='samd51', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit PyPortal with samd51j20')
-os.statvfs('/') : (1024, 1024, 8155, 8140, 8140, 0, 0, 0, 0, 255) 8335.4KB of 8350.7KB (99.8%) free
+memory : 201.4KiB free of 212.2KiB total (94.9%)
+storage : 8072.0KiB free of 8155.0KiB total (99.0%)
 len(nvm) : 8192
 
 dir(board) :
