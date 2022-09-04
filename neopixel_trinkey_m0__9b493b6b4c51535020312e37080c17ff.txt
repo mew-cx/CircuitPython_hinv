@@ -1,12 +1,13 @@
-hinv version : 0.0.3.0
+hinv version : 0.0.5.1		repo : https://github.com/mew-cx/CircuitPython_hinv
 board.board_id : neopixel_trinkey_m0
 uid : 9b493b6b4c51535020312e37080c17ff
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
 sys.path : ['', '/', '.frozen', '/lib']
 sys.platform : Atmel SAMD21
 sys.version : 3.4.0
 os.uname() : (sysname='samd21', nodename='samd21', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit NeoPixel Trinkey M0 with samd21e18')
-os.statvfs('/') : (512, 512, 94, 68, 68, 0, 0, 0, 0, 255) 34.8KB of 48.1KB (72.3%) free
+memory : 12.2KiB free of 19.0KiB total (64.2%)
+storage : 32.0KiB free of 47.0KiB total (68.1%)
 len(nvm) : 256
 
 dir(board) :
