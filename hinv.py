@@ -1,21 +1,20 @@
-# SPDX-FileCopyrightText: 2022 Michael Weiblen http://mew.cx/
+# SPDX-FileCopyrightText: 2022-2023 Michael Weiblen http://mew.cx/
 #
 # SPDX-License-Identifier: MIT
-#
+
 # hinv - hardware inventory
 # Inspired by the 'hinv' command from Silicon Graphics' IRIX.
 #
 # TODO micropython.mem_info() and micropython.mem_info(1)
 
+__version__ = "0.0.6.0"
+__repo__    = "https://github.com/mew-cx/CircuitPython_hinv"
 
 import board
 import os
 import sys
 import gc
-import microcontroller as soc
-
-__version__ = "0.0.5.1"
-__repo__    = "https://github.com/mew-cx/CircuitPython_hinv"
+import microcontroller as soc   # == "system on chip"
 
 KiB = 1024.0
 
@@ -43,7 +42,7 @@ def PinMap():
     return sorted(pinlist)
 
 def FsInfo(path="/"):
-    """Return filesystem capacity and availability
+    """Return filesystem capacity and availability in bytes
     https://docs.circuitpython.org/en/latest/shared-bindings/os/#os.statvfs
     """
     x = os.statvfs(path)
@@ -78,6 +77,7 @@ def GenerateResults(out):
     out.write("sys.path : {}\n".format(sys.path))
     out.write("sys.platform : {}\n".format(sys.platform))
     out.write("sys.version : {}\n".format(sys.version))
+    out.write("sys.modules : {}\n".format(sys.modules))
     out.write("os.uname() : {}\n".format(os.uname()))
 
     total = gc.mem_alloc() + gc.mem_free()
@@ -136,8 +136,6 @@ main()
 #os.rename("/boot.py", "/boot.bak")
 #print("os.getcwd", os.getcwd())
 #print("os.stat code.py", os.stat("/code.py"))
-#out.write("sys.version : {}\n".format(sys.version))
-#out.write("sys.modules : {}\n".format(sys.modules))
 #out.write("os.stat(/code.py) : {}\n".format(os.stat("/code.py")))
 #out.write("os.sep : {}\n".format(os.sep))
 
