@@ -1,10 +1,6 @@
 # .gitignore
 
 secrets*
-.Trashes
-.fseventsd/
-.metadata_never_index
-
 boot_out.txt
 .Trashes
 .fseventsd/
