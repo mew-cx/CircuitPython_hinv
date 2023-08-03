@@ -1,12 +1,14 @@
-hinv version : 0.0.3.0
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
 board.board_id : pyruler
 uid : 519883bf393952504b312e3131170bff
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.implementation : (name='circuitpython', version=(8, 2, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
 sys.path : ['', '/', '/lib']
 sys.platform : Atmel SAMD21
 sys.version : 3.4.0
-os.uname() : (sysname='samd21', nodename='samd21', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit PyRuler with samd21e18')
-os.statvfs('/') : (512, 512, 94, 50, 50, 0, 0, 0, 0, 255) 25.6KB of 48.1KB (53.2%) free
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='samd21', nodename='samd21', release='8.2.2', version='8.2.2 on 2023-07-31', machine='Adafruit PyRuler with samd21e18')
+memory : 10.8KiB free of 18.6KiB total (58.1%)
+storage : 17.5KiB free of 47.0KiB total (37.2%)
 len(nvm) : 256
 
 dir(board) :
@@ -31,13 +33,13 @@ microcontroller.PA27	board.LED7
 microcontroller.PA28	board.LED6
 }
 help('modules') {
-__future__        digitalio         rainbowio         time
-__main__          gc                random            touchio
-analogio          math              rotaryio          usb_cdc
-array             microcontroller   rtc               usb_hid
-board             micropython       storage           usb_midi
-builtins          neopixel_write    struct
-busio             os                supervisor
-collections       pwmio             sys
+__future__        digitalio         pwmio             sys
+__main__          gc                rainbowio         time
+analogio          math              random            touchio
+array             microcontroller   rotaryio          usb_cdc
+board             micropython       rtc               usb_hid
+builtins          neopixel_write    storage           usb_midi
+busio             nvm               struct
+collections       os                supervisor
 Plus any modules on the filesystem
 }

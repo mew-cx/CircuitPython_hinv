@@ -1,12 +1,14 @@
-hinv version : 0.0.3.0
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
 board.board_id : pybadge
 uid : afebb2e44354385320202046293003ff
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.implementation : (name='circuitpython', version=(8, 2, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
 sys.path : ['', '/', '.frozen', '/lib']
 sys.platform : MicroChip SAMD51
 sys.version : 3.4.0
-os.uname() : (sysname='samd51', nodename='samd51', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit Pybadge with samd51j19')
-os.statvfs('/') : (1024, 1024, 2024, 2008, 2008, 0, 0, 0, 0, 255) 2056.2KB of 2072.6KB (99.2%) free
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='samd51', nodename='samd51', release='8.2.2', version='8.2.2 on 2023-07-31', machine='Adafruit Pybadge with samd51j19')
+memory : 142.4KiB free of 150.1KiB total (94.8%)
+storage : 2011.0KiB free of 2024.0KiB total (99.4%)
 len(nvm) : 8192
 
 dir(board) :
@@ -64,27 +66,27 @@ microcontroller.PB30	board.BUTTON_OUT
 microcontroller.PB31	board.BUTTON_CLOCK
 }
 help('modules') {
-__future__        builtins          onewireio         touchio
-__main__          busio             os                traceback
-_asyncio          collections       paralleldisplay   ugame
-_bleio            countio           ps2io             ulab
-_stage            digitalio         pulseio           ulab
-adafruit_bus_device                 displayio         pwmio             ulab.fft
-adafruit_bus_device.i2c_device      errno             rainbowio         ulab.linalg
-adafruit_bus_device.spi_device      floppyio          random            ulab.numpy
-adafruit_pixelbuf fontio            re                ulab.scipy
-alarm             frequencyio       rotaryio          ulab.scipy.linalg
-analogio          gamepadshift      rtc               ulab.scipy.optimize
-array             gc                samd              ulab.scipy.signal
-atexit            getpass           sdcardio          ulab.scipy.special
-audiobusio        i2cperipheral     select            ulab.utils
-audiocore         io                stage             usb_cdc
-audioio           json              storage           usb_hid
-audiomixer        keypad            struct            usb_midi
-audiomp3          math              supervisor        uselect
-binascii          microcontroller   synthio           vectorio
-bitbangio         micropython       sys               watchdog
-bitmaptools       msgpack           terminalio        zlib
-board             neopixel_write    time
+__future__        board             neopixel_write    terminalio
+__main__          builtins          nvm               time
+_asyncio          busio             onewireio         touchio
+_bleio            collections       os                traceback
+_pixelmap         countio           paralleldisplay   ugame
+_stage            digitalio         ps2io             ulab
+adafruit_bus_device                 displayio         pulseio           ulab.numpy
+adafruit_bus_device.i2c_device      errno             pwmio             ulab.numpy.fft
+adafruit_bus_device.spi_device      floppyio          rainbowio         ulab.numpy.linalg
+adafruit_pixelbuf fontio            random            ulab.scipy
+alarm             frequencyio       re                ulab.scipy.linalg
+analogio          gc                rotaryio          ulab.scipy.optimize
+array             getpass           rtc               ulab.scipy.signal
+atexit            i2cperipheral     samd              ulab.scipy.special
+audiobusio        i2ctarget         sdcardio          ulab.utils
+audiocore         io                select            usb_cdc
+audioio           json              stage             usb_hid
+audiomixer        keypad            storage           usb_midi
+audiomp3          math              struct            uselect
+binascii          microcontroller   supervisor        vectorio
+bitbangio         micropython       synthio           watchdog
+bitmaptools       msgpack           sys               zlib
 Plus any modules on the filesystem
 }

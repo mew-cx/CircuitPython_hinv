@@ -2,14 +2,14 @@ hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
 board.board_id : adafruit_itsybitsy_rp2040
 uid : df609c80676e3326
 len(cpus) : 2 (df609c80676e3326 df609c80676e3326)
-sys.implementation : (name='circuitpython', version=(8, 1, 0), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
+sys.implementation : (name='circuitpython', version=(8, 2, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
 sys.path : ['', '/', '/lib']
 sys.platform : RP2040
 sys.version : 3.4.0
 sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
-os.uname() : (sysname='rp2040', nodename='rp2040', release='8.1.0', version='8.1.0 on 2023-05-22', machine='Adafruit ItsyBitsy RP2040 with rp2040')
-memory : 185.8KiB free of 194.3KiB total (95.7%)
-storage : 6888.0KiB free of 7137.0KiB total (96.5%)
+os.uname() : (sysname='rp2040', nodename='rp2040', release='8.2.2', version='8.2.2 on 2023-07-31', machine='Adafruit ItsyBitsy RP2040 with rp2040')
+memory : 185.4KiB free of 193.9KiB total (95.6%)
+storage : 6890.0KiB free of 7137.0KiB total (96.5%)
 len(nvm) : 4096
 
 dir(board) :
