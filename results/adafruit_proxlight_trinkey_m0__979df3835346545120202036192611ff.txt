@@ -1,0 +1,38 @@
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
+board.board_id : adafruit_proxlight_trinkey_m0
+uid : 979df3835346545120202036192611ff
+sys.implementation : (name='circuitpython', version=(8, 2, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
+sys.path : ['', '/', '.frozen', '/lib']
+sys.platform : Atmel SAMD21
+sys.version : 3.4.0
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='samd21', nodename='samd21', release='8.2.2', version='8.2.2 on 2023-07-31', machine='Adafruit ProxLight Trinkey M0 with samd21e18')
+memory : 11.1KiB free of 18.9KiB total (58.6%)
+storage : 38.0KiB free of 47.0KiB total (80.9%)
+len(nvm) : 256
+
+dir(board) :
+['__name__', 'I2C', 'INTERRUPT', 'NEOPIXEL', 'SCL', 'SDA', 'TOUCH1', 'TOUCH2', 'board_id']
+
+PinMap() {
+microcontroller.PA00	board.INTERRUPT
+microcontroller.PA03	board.TOUCH2
+microcontroller.PA07	board.TOUCH1
+microcontroller.PA15	board.NEOPIXEL
+microcontroller.PA16	board.SDA
+microcontroller.PA17	board.SCL
+microcontroller.PA22
+microcontroller.PA23
+}
+help('modules') {
+__future__        array             micropython       supervisor
+__main__          board             neopixel          sys
+adafruit_apds9960/__init__          builtins          neopixel_write    time
+adafruit_apds9960/apds9960          busio             nvm               touchio
+adafruit_apds9960/colorutility      collections       os                usb_cdc
+adafruit_bus_device                 digitalio         rainbowio         usb_hid
+adafruit_bus_device.i2c_device      gc                random            usb_midi
+adafruit_bus_device.spi_device      math              storage
+adafruit_pixelbuf microcontroller   struct
+Plus any modules on the filesystem
+}
