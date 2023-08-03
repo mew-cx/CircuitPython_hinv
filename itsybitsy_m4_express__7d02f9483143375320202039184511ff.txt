@@ -1,12 +1,14 @@
-hinv version : 0.0.3.0
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
 board.board_id : itsybitsy_m4_express
 uid : 7d02f9483143375320202039184511ff
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.implementation : (name='circuitpython', version=(8, 2, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
 sys.path : ['', '/', '/lib']
 sys.platform : MicroChip SAMD51
 sys.version : 3.4.0
-os.uname() : (sysname='samd51', nodename='samd51', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit ItsyBitsy M4 Express with samd51g19')
-os.statvfs('/') : (1024, 1024, 2024, 2009, 2009, 0, 0, 0, 0, 255) 2057.2KB of 2072.6KB (99.3%) free
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='samd51', nodename='samd51', release='8.2.2', version='8.2.2 on 2023-07-31', machine='Adafruit ItsyBitsy M4 Express with samd51g19')
+memory : 142.4KiB free of 150.3KiB total (94.8%)
+storage : 2000.0KiB free of 2024.0KiB total (98.8%)
 len(nvm) : 8192
 
 dir(board) :
@@ -50,27 +52,28 @@ microcontroller.PB22	board.D3
 microcontroller.PB23	board.MISO
 }
 help('modules') {
-__future__        busio             onewireio         time
-__main__          collections       os                touchio
-_asyncio          countio           paralleldisplay   traceback
-_bleio            digitalio         ps2io             ulab
-adafruit_bus_device                 displayio         pulseio           ulab
-adafruit_bus_device.i2c_device      errno             pwmio             ulab.fft
-adafruit_bus_device.spi_device      floppyio          rainbowio         ulab.linalg
-adafruit_pixelbuf fontio            random            ulab.numpy
-aesio             framebufferio     re                ulab.scipy
-alarm             frequencyio       rgbmatrix         ulab.scipy.linalg
-analogio          gc                rotaryio          ulab.scipy.optimize
-array             getpass           rtc               ulab.scipy.signal
-atexit            gifio             samd              ulab.scipy.special
-audiocore         i2cperipheral     sdcardio          ulab.utils
-audioio           io                select            usb_cdc
-audiomixer        json              sharpdisplay      usb_hid
-audiomp3          keypad            storage           usb_midi
-binascii          math              struct            uselect
-bitbangio         microcontroller   supervisor        vectorio
-bitmaptools       micropython       synthio           watchdog
-board             msgpack           sys               zlib
+__future__        busio             nvm               time
+__main__          collections       onewireio         touchio
+_asyncio          countio           os                traceback
+_bleio            digitalio         paralleldisplay   ulab
+_pixelmap         displayio         ps2io             ulab.numpy
+adafruit_bus_device                 errno             pulseio           ulab.numpy.fft
+adafruit_bus_device.i2c_device      floppyio          pwmio             ulab.numpy.linalg
+adafruit_bus_device.spi_device      fontio            rainbowio         ulab.scipy
+adafruit_pixelbuf framebufferio     random            ulab.scipy.linalg
+aesio             frequencyio       re                ulab.scipy.optimize
+alarm             gc                rgbmatrix         ulab.scipy.signal
+analogio          getpass           rotaryio          ulab.scipy.special
+array             gifio             rtc               ulab.utils
+atexit            i2cperipheral     samd              usb_cdc
+audiocore         i2ctarget         sdcardio          usb_hid
+audioio           io                select            usb_midi
+audiomixer        json              sharpdisplay      uselect
+audiomp3          keypad            storage           vectorio
+binascii          math              struct            watchdog
+bitbangio         microcontroller   supervisor        zlib
+bitmaptools       micropython       synthio
+board             msgpack           sys
 builtins          neopixel_write    terminalio
 Plus any modules on the filesystem
 }

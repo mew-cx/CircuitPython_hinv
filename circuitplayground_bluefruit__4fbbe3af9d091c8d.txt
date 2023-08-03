@@ -1,13 +1,14 @@
-hinv version : 0.0.5.1		repo : https://github.com/mew-cx/CircuitPython_hinv
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
 board.board_id : circuitplayground_bluefruit
 uid : 4fbbe3af9d091c8d
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
+sys.implementation : (name='circuitpython', version=(8, 2, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
 sys.path : ['', '/', '/lib']
 sys.platform : nRF52840
 sys.version : 3.4.0
-os.uname() : (sysname='nrf52', nodename='nrf52', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit Circuit Playground Bluefruit with nRF52840')
-memory : 129.0KiB free of 139.3KiB total (92.6%)
-storage : 2012.0KiB free of 2024.0KiB total (99.4%)
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='nrf52', nodename='nrf52', release='8.2.2', version='8.2.2 on 2023-07-31', machine='Adafruit Circuit Playground Bluefruit with nRF52840')
+memory : 131.3KiB free of 138.6KiB total (94.8%)
+storage : 2000.0KiB free of 2024.0KiB total (98.8%)
 len(nvm) : 8192
 
 dir(board) :
@@ -64,26 +65,27 @@ microcontroller.P1_14	board.D13	board.L	board.LED
 microcontroller.P1_15	board.BUTTON_B	board.D5
 }
 help('modules') {
-__future__        board             onewireio         touchio
-__main__          builtins          os                traceback
-_asyncio          busio             paralleldisplay   ulab
-_bleio            collections       pulseio           ulab
-adafruit_bus_device                 countio           pwmio             ulab.fft
-adafruit_bus_device.i2c_device      digitalio         rainbowio         ulab.linalg
-adafruit_bus_device.spi_device      displayio         random            ulab.numpy
-adafruit_pixelbuf errno             re                ulab.scipy
-aesio             fontio            rgbmatrix         ulab.scipy.linalg
-alarm             framebufferio     rotaryio          ulab.scipy.optimize
-analogio          gc                rtc               ulab.scipy.signal
-array             getpass           sdcardio          ulab.scipy.special
-atexit            gifio             select            ulab.utils
-audiobusio        io                sharpdisplay      usb_cdc
-audiocore         json              storage           usb_hid
-audiomixer        keypad            struct            usb_midi
-audiomp3          math              supervisor        uselect
-audiopwmio        microcontroller   synthio           vectorio
-binascii          micropython       sys               watchdog
-bitbangio         msgpack           terminalio        zlib
+__future__        board             nvm               touchio
+__main__          builtins          onewireio         traceback
+_asyncio          busio             os                ulab
+_bleio            collections       paralleldisplay   ulab.numpy
+_pixelmap         countio           pulseio           ulab.numpy.fft
+adafruit_bus_device                 digitalio         pwmio             ulab.numpy.linalg
+adafruit_bus_device.i2c_device      displayio         rainbowio         ulab.scipy
+adafruit_bus_device.spi_device      errno             random            ulab.scipy.linalg
+adafruit_pixelbuf fontio            re                ulab.scipy.optimize
+aesio             framebufferio     rgbmatrix         ulab.scipy.signal
+alarm             gc                rotaryio          ulab.scipy.special
+analogio          getpass           rtc               ulab.utils
+array             gifio             sdcardio          usb_cdc
+atexit            io                select            usb_hid
+audiobusio        json              sharpdisplay      usb_midi
+audiocore         keypad            storage           uselect
+audiomixer        math              struct            vectorio
+audiomp3          memorymap         supervisor        watchdog
+audiopwmio        microcontroller   synthio           zlib
+binascii          micropython       sys
+bitbangio         msgpack           terminalio
 bitmaptools       neopixel_write    time
 Plus any modules on the filesystem
 }

@@ -1,17 +1,19 @@
-hinv version : 0.0.3.0
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
 board.board_id : raspberry_pi_pico
 uid : e66038b7138e2738
 len(cpus) : 2 (e66038b7138e2738 e66038b7138e2738)
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.implementation : (name='circuitpython', version=(8, 2, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
 sys.path : ['', '/', '/lib']
 sys.platform : RP2040
 sys.version : 3.4.0
-os.uname() : (sysname='rp2040', nodename='rp2040', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Raspberry Pi Pico with rp2040')
-os.statvfs('/') : (512, 512, 2008, 1988, 1988, 0, 0, 0, 0, 255) 1017.9KB of 1028.1KB (99.0%) free
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='rp2040', nodename='rp2040', release='8.2.2', version='8.2.2 on 2023-08-01', machine='Raspberry Pi Pico with rp2040')
+memory : 181.7KiB free of 190.2KiB total (95.5%)
+storage : 656.0KiB free of 1004.0KiB total (65.3%)
 len(nvm) : 4096
 
 dir(board) :
-['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'GP0', 'GP1', 'GP10', 'GP11', 'GP12', 'GP13', 'GP14', 'GP15', 'GP16', 'GP17', 'GP18', 'GP19', 'GP2', 'GP20', 'GP21', 'GP22', 'GP23', 'GP24', 'GP25', 'GP26', 'GP26_A0', 'GP27', 'GP27_A1', 'GP28', 'GP28_A2', 'GP3', 'GP4', 'GP5', 'GP6', 'GP7', 'GP8', 'GP9', 'LED', 'SMPS_MODE', 'VBUS_SENSE', 'VOLTAGE_MONITOR', 'board_id']
+['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'GP0', 'GP1', 'GP10', 'GP11', 'GP12', 'GP13', 'GP14', 'GP15', 'GP16', 'GP17', 'GP18', 'GP19', 'GP2', 'GP20', 'GP21', 'GP22', 'GP23', 'GP24', 'GP25', 'GP26', 'GP26_A0', 'GP27', 'GP27_A1', 'GP28', 'GP28_A2', 'GP3', 'GP4', 'GP5', 'GP6', 'GP7', 'GP8', 'GP9', 'LED', 'SMPS_MODE', 'STEMMA_I2C', 'VBUS_SENSE', 'VOLTAGE_MONITOR', 'board_id']
 
 PinMap() {
 microcontroller.GPIO0	board.GP0
@@ -46,28 +48,29 @@ microcontroller.GPIO8	board.GP8
 microcontroller.GPIO9	board.GP9
 }
 help('modules') {
-__future__        board             onewireio         touchio
-__main__          builtins          os                traceback
-_asyncio          busio             paralleldisplay   ulab
-_bleio            collections       pulseio           ulab
-_eve              countio           pwmio             ulab.fft
-adafruit_bus_device                 digitalio         qrio              ulab.linalg
-adafruit_bus_device.i2c_device      displayio         rainbowio         ulab.numpy
-adafruit_bus_device.spi_device      errno             random            ulab.scipy
-adafruit_pixelbuf floppyio          re                ulab.scipy.linalg
-aesio             fontio            rgbmatrix         ulab.scipy.optimize
-alarm             framebufferio     rotaryio          ulab.scipy.signal
-analogio          gc                rp2pio            ulab.scipy.special
-array             getpass           rtc               ulab.utils
-atexit            gifio             sdcardio          usb_cdc
-audiobusio        imagecapture      select            usb_hid
-audiocore         io                sharpdisplay      usb_midi
-audiomixer        json              storage           uselect
-audiomp3          keypad            struct            vectorio
-audiopwmio        math              supervisor        watchdog
-binascii          microcontroller   synthio           zlib
-bitbangio         micropython       sys
-bitmaptools       msgpack           terminalio
-bitops            neopixel_write    time
+__future__        bitops            msgpack           sys
+__main__          board             neopixel_write    terminalio
+_asyncio          builtins          nvm               time
+_bleio            busio             onewireio         touchio
+_eve              collections       os                traceback
+_pixelmap         countio           paralleldisplay   ulab
+adafruit_bus_device                 digitalio         picodvi           ulab.numpy
+adafruit_bus_device.i2c_device      displayio         pulseio           ulab.numpy.fft
+adafruit_bus_device.spi_device      errno             pwmio             ulab.numpy.linalg
+adafruit_pixelbuf floppyio          qrio              ulab.scipy
+aesio             fontio            rainbowio         ulab.scipy.linalg
+alarm             framebufferio     random            ulab.scipy.optimize
+analogbufio       gc                re                ulab.scipy.signal
+analogio          getpass           rgbmatrix         ulab.scipy.special
+array             gifio             rotaryio          ulab.utils
+atexit            i2cperipheral     rp2pio            usb_cdc
+audiobusio        i2ctarget         rtc               usb_hid
+audiocore         imagecapture      sdcardio          usb_midi
+audiomixer        io                select            uselect
+audiomp3          json              sharpdisplay      vectorio
+audiopwmio        keypad            storage           watchdog
+binascii          math              struct            zlib
+bitbangio         microcontroller   supervisor
+bitmaptools       micropython       synthio
 Plus any modules on the filesystem
 }

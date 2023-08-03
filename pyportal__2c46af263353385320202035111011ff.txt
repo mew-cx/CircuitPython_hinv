@@ -1,13 +1,14 @@
-hinv version : 0.0.5.1		repo : https://github.com/mew-cx/CircuitPython_hinv
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
 board.board_id : pyportal
 uid : 2c46af263353385320202035111011ff
-sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
+sys.implementation : (name='circuitpython', version=(8, 2, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
 sys.path : ['', '/', '.frozen', '/lib']
 sys.platform : MicroChip SAMD51
 sys.version : 3.4.0
-os.uname() : (sysname='samd51', nodename='samd51', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit PyPortal with samd51j20')
-memory : 201.4KiB free of 212.2KiB total (94.9%)
-storage : 8072.0KiB free of 8155.0KiB total (99.0%)
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='samd51', nodename='samd51', release='8.2.2', version='8.2.2 on 2023-07-31', machine='Adafruit PyPortal with samd51j20')
+memory : 204.1KiB free of 211.9KiB total (96.3%)
+storage : 8133.0KiB free of 8155.0KiB total (99.7%)
 len(nvm) : 8192
 
 dir(board) :
@@ -65,32 +66,33 @@ microcontroller.PB30	board.SD_CS
 microcontroller.PB31	board.TFT_BACKLIGHT
 }
 help('modules') {
-__future__        alarm             i2cperipheral     struct
+__future__        alarm             i2ctarget         struct
 __main__          analogio          io                supervisor
 _asyncio          array             json              synthio
 _bleio            atexit            keypad            sys
-adafruit_bus_device                 audiobusio        math              terminalio
-adafruit_bus_device.i2c_device      audiocore         microcontroller   time
-adafruit_bus_device.spi_device      audioio           micropython       touchio
-adafruit_display_text/__init__      audiomixer        msgpack           traceback
-adafruit_display_text/bitmap_label  audiomp3          neopixel          ulab
-adafruit_display_text/label         binascii          neopixel_write    ulab
-adafruit_display_text/scrolling_label                 bitbangio         onewireio         ulab.fft
-adafruit_esp32spi/PWMOut            bitmaptools       os                ulab.linalg
-adafruit_esp32spi/__init__          board             paralleldisplay   ulab.numpy
-adafruit_esp32spi/adafruit_esp32spi builtins          ps2io             ulab.scipy
-adafruit_esp32spi/adafruit_esp32spi_socket            busio             pulseio           ulab.scipy.linalg
-adafruit_esp32spi/adafruit_esp32spi_wifimanager       collections       pwmio             ulab.scipy.optimize
-adafruit_esp32spi/adafruit_esp32spi_wsgiserver        countio           rainbowio         ulab.scipy.signal
-adafruit_esp32spi/digitalio         digitalio         random            ulab.scipy.special
-adafruit_fakerequests               displayio         re                ulab.utils
-adafruit_pixelbuf errno             rgbmatrix         usb_cdc
-adafruit_portalbase/__init__        floppyio          rotaryio          usb_hid
-adafruit_portalbase/graphics        fontio            rtc               usb_midi
-adafruit_portalbase/network         framebufferio     samd              uselect
-adafruit_portalbase/wifi_coprocessor                  frequencyio       sdcardio          vectorio
-adafruit_portalbase/wifi_esp32s2    gc                select            watchdog
-adafruit_requests getpass           sharpdisplay      zlib
-aesio             gifio             storage
+_pixelmap         audiobusio        math              terminalio
+adafruit_bus_device                 audiocore         microcontroller   time
+adafruit_bus_device.i2c_device      audioio           micropython       touchio
+adafruit_bus_device.spi_device      audiomixer        msgpack           traceback
+adafruit_display_text/__init__      audiomp3          neopixel          ulab
+adafruit_display_text/bitmap_label  binascii          neopixel_write    ulab.numpy
+adafruit_display_text/label         bitbangio         nvm               ulab.numpy.fft
+adafruit_display_text/scrolling_label                 bitmaptools       onewireio         ulab.numpy.linalg
+adafruit_esp32spi/PWMOut            board             os                ulab.scipy
+adafruit_esp32spi/__init__          builtins          paralleldisplay   ulab.scipy.linalg
+adafruit_esp32spi/adafruit_esp32spi busio             ps2io             ulab.scipy.optimize
+adafruit_esp32spi/adafruit_esp32spi_socket            collections       pulseio           ulab.scipy.signal
+adafruit_esp32spi/adafruit_esp32spi_wifimanager       countio           pwmio             ulab.scipy.special
+adafruit_esp32spi/adafruit_esp32spi_wsgiserver        digitalio         rainbowio         ulab.utils
+adafruit_esp32spi/digitalio         displayio         random            usb_cdc
+adafruit_fakerequests               errno             re                usb_hid
+adafruit_pixelbuf floppyio          rgbmatrix         usb_midi
+adafruit_portalbase/__init__        fontio            rotaryio          uselect
+adafruit_portalbase/graphics        framebufferio     rtc               vectorio
+adafruit_portalbase/network         frequencyio       samd              watchdog
+adafruit_portalbase/wifi_coprocessor                  gc                sdcardio          zlib
+adafruit_portalbase/wifi_esp32s2    getpass           select
+adafruit_requests gifio             sharpdisplay
+aesio             i2cperipheral     storage
 Plus any modules on the filesystem
 }
