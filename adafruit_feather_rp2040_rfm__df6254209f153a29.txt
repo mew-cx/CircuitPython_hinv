@@ -1,0 +1,75 @@
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
+board.board_id : adafruit_feather_rp2040_rfm
+uid : df6254209f153a29
+len(cpus) : 2 (df6254209f153a29 df6254209f153a29)
+sys.implementation : (name='circuitpython', version=(8, 2, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
+sys.path : ['', '/', '/lib']
+sys.platform : RP2040
+sys.version : 3.4.0
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='rp2040', nodename='rp2040', release='8.2.2', version='8.2.2 on 2023-07-31', machine='Adafruit Feather RP2040 RFM with rp2040')
+memory : 185.5KiB free of 194.0KiB total (95.6%)
+storage : 7123.0KiB free of 7137.0KiB total (99.8%)
+len(nvm) : 4096
+
+dir(board) :
+['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'BOOT', 'BUTTON', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D24', 'D25', 'D4', 'D5', 'D6', 'D7', 'D9', 'I2C', 'LED', 'MISO', 'MOSI', 'NEOPIXEL', 'RFM_CS', 'RFM_IO0', 'RFM_IO1', 'RFM_IO2', 'RFM_IO3', 'RFM_IO4', 'RFM_IO5', 'RFM_RST', 'RX', 'SCK', 'SCL', 'SDA', 'SPI', 'STEMMA_I2C', 'TX', 'UART', 'board_id']
+
+PinMap() {
+microcontroller.GPIO0	board.D1	board.TX
+microcontroller.GPIO1	board.D0	board.RX
+microcontroller.GPIO10	board.D10
+microcontroller.GPIO11	board.D11
+microcontroller.GPIO12	board.D12
+microcontroller.GPIO13	board.D13	board.LED
+microcontroller.GPIO14	board.SCK
+microcontroller.GPIO15	board.MOSI
+microcontroller.GPIO16	board.RFM_CS
+microcontroller.GPIO17	board.RFM_RST
+microcontroller.GPIO18	board.RFM_IO5
+microcontroller.GPIO19	board.RFM_IO3
+microcontroller.GPIO2	board.SDA
+microcontroller.GPIO20	board.RFM_IO4
+microcontroller.GPIO21	board.RFM_IO0
+microcontroller.GPIO22	board.RFM_IO1
+microcontroller.GPIO23	board.RFM_IO2
+microcontroller.GPIO24	board.D24
+microcontroller.GPIO25	board.D25
+microcontroller.GPIO26	board.A0
+microcontroller.GPIO27	board.A1
+microcontroller.GPIO28	board.A2
+microcontroller.GPIO29	board.A3
+microcontroller.GPIO3	board.SCL
+microcontroller.GPIO4	board.D4	board.NEOPIXEL
+microcontroller.GPIO5	board.D5
+microcontroller.GPIO6	board.D6
+microcontroller.GPIO7	board.BOOT	board.BUTTON	board.D7
+microcontroller.GPIO8	board.MISO
+microcontroller.GPIO9	board.D9
+}
+help('modules') {
+__future__        bitops            micropython       synthio
+__main__          board             msgpack           sys
+_asyncio          builtins          neopixel_write    terminalio
+_bleio            busio             nvm               time
+_pixelmap         collections       onewireio         touchio
+adafruit_bus_device                 countio           os                traceback
+adafruit_bus_device.i2c_device      digitalio         paralleldisplay   ulab
+adafruit_bus_device.spi_device      displayio         pulseio           ulab.numpy
+adafruit_pixelbuf errno             pwmio             ulab.numpy.fft
+aesio             floppyio          qrio              ulab.numpy.linalg
+alarm             fontio            rainbowio         ulab.scipy
+analogbufio       framebufferio     random            ulab.scipy.linalg
+analogio          gc                re                ulab.scipy.optimize
+array             getpass           rgbmatrix         ulab.scipy.signal
+atexit            gifio             rotaryio          ulab.scipy.special
+audiobusio        i2cperipheral     rp2pio            ulab.utils
+audiocore         i2ctarget         rtc               usb_cdc
+audiomixer        imagecapture      sdcardio          usb_hid
+audiomp3          io                select            usb_midi
+audiopwmio        json              sharpdisplay      uselect
+binascii          keypad            storage           vectorio
+bitbangio         math              struct            watchdog
+bitmaptools       microcontroller   supervisor        zlib
+Plus any modules on the filesystem
+}
