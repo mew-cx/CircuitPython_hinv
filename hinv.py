@@ -118,6 +118,8 @@ def GenerateResults(out):
     help('modules')
     out.write("}\n")
 
+#############################################################################
+
 def main():
     try:
         # if flash is writable, send results to file then reboot
