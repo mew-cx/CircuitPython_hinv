@@ -14,7 +14,7 @@ import board
 import os
 import sys
 import gc
-import microcontroller as soc   # == "system on chip"
+import microcontroller as uc
 
 KiB = 1024.0
 
@@ -31,9 +31,9 @@ def PinMap():
     # why is microprocessor mapped to board, rather than viceversa?
     # TODO pin capabilities
     pinlist = []
-    for mpin in dir(soc.pin):
-        pin_attr = getattr(soc.pin, mpin)
-        if isinstance(pin_attr, soc.Pin):
+    for mpin in dir(uc.pin):
+        pin_attr = getattr(uc.pin, mpin)
+        if isinstance(pin_attr, uc.Pin):
             pins = ["microcontroller.{}".format(mpin)]
             for bpin in dir(board):
                 if getattr(board, bpin) is pin_attr:
@@ -59,12 +59,12 @@ def GenerateResults(out):
 
     out.write("hinv version : {}\t\trepo : {}\n".format(__version__, __repo__))
     out.write("board.board_id : {}\n".format(board.board_id))
-    out.write("uid : {}\n".format(AsciiHex(soc.cpu.uid)))
+    out.write("uid : {}\n".format(AsciiHex(uc.cpu.uid)))
 
     # TODO num_cpus
-    # TODO soc.cpu.frequency
+    # TODO uc.cpu.frequency
     try:
-        cpus = soc.cpus
+        cpus = uc.cpus
         assert(cpus[0].uid == cpus[1].uid)
         out.write("len(cpus) : {:d} (".format(len(cpus)))
         out.write(" ".join("{}".format(AsciiHex(cpu.uid)) for cpu in cpus))
@@ -94,9 +94,9 @@ def GenerateResults(out):
     out.write("storage : {:.1f}KiB free of {:.1f}KiB total ({:.1f}%)\n".format(
         free/KiB, total/KiB, free / total * 100.0))
 
-    if soc.nvm:
-        out.write("len(nvm) : {:d}".format(len(soc.nvm)))
-        #out.write(" ({})\n".format(AsciiHex(soc.nvm)))
+    if uc.nvm:
+        out.write("len(nvm) : {:d}".format(len(uc.nvm)))
+        #out.write(" ({})\n".format(AsciiHex(uc.nvm)))
         out.write("\n")
 
     out.write("\n")
@@ -123,11 +123,11 @@ def GenerateResults(out):
 def main():
     try:
         # if flash is writable, send results to file then reboot
-        filename = "{}__{}.txt".format(board.board_id, AsciiHex(soc.cpu.uid))
+        filename = "{}__{}.txt".format(board.board_id, AsciiHex(uc.cpu.uid))
         with open(filename, "w") as fh:
             GenerateResults(fh)
         os.sync()
-        soc.reset()
+        uc.reset()
     except:
         # if flash is read-only, send results to stdout
         GenerateResults(sys.stdout)
