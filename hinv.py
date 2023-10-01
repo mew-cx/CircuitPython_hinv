@@ -143,4 +143,4 @@ main()
 #out.write("os.stat(/code.py) : {}\n".format(os.stat("/code.py")))
 #out.write("os.sep : {}\n".format(os.sep))
 
-# eof
+# vim: set sw=4 ts=8 et ic ai:
