@@ -1,0 +1,119 @@
+v1.10-11229-gef3ec93c8
+commit ef3ec93c8bc3785dd210335aac458e873813bd1b
+Author: Jeff Epler <jepler@gmail.com>
+Date:   Wed May 5 18:04:41 2021 -0500
+
+    Change the first byte of CircuitPython 'mpy' files to "C"
+    
+    .. and also distinguish CircuitPython better in `mpy-cross --version`
+
+
+
+diff --git a/mpy-cross/main.c b/mpy-cross/main.c
+index d16ebc4a0..466f8e676 100644
+--- a/mpy-cross/main.c
++++ b/mpy-cross/main.c
+@@ -210,8 +210,8 @@ MP_NOINLINE int main_(int argc, char **argv) {
+             if (strcmp(argv[a], "-X") == 0) {
+                 a += 1;
+             } else if (strcmp(argv[a], "--version") == 0) {
+-                printf("MicroPython " MICROPY_GIT_TAG " on " MICROPY_BUILD_DATE
+-                    "; mpy-cross emitting mpy v" MP_STRINGIFY(MPY_VERSION) "\n");
++                printf("CircuitPython " MICROPY_GIT_TAG " on " MICROPY_BUILD_DATE
++                    "; mpy-cross emitting mpy v" MP_STRINGIFY(MPY_VERSION) "-CircuitPython\n");
+                 return 0;
+             } else if (strcmp(argv[a], "-v") == 0) {
+                 mp_verbose_flag++;
+
+
+diff --git a/py/persistentcode.c b/py/persistentcode.c
+index e7423745f..c5d57f614 100644
+--- a/py/persistentcode.c
++++ b/py/persistentcode.c
+@@ -564,7 +564,7 @@ STATIC mp_raw_code_t *load_raw_code(mp_reader_t *reader, qstr_window_t *qw) {
+ mp_raw_code_t *mp_raw_code_load(mp_reader_t *reader) {
+     byte header[4];
+     read_bytes(reader, header, sizeof(header));
+-    if (header[0] != 'M'
++    if (header[0] != 'C'
+         || header[1] != MPY_VERSION
+         || MPY_FEATURE_DECODE_FLAGS(header[2]) != MPY_FEATURE_FLAGS
+         || header[3] > mp_small_int_bits()
+@@ -819,7 +819,7 @@ void mp_raw_code_save(mp_raw_code_t *rc, mp_print_t *print) {
+     //  byte  number of bits in a small int
+     //  uint  size of qstr window
+     byte header[4] = {
+-        'M',
++        'C',
+         MPY_VERSION,
+         MPY_FEATURE_ENCODE_FLAGS(MPY_FEATURE_FLAGS_DYNAMIC),
+         #if MICROPY_DYNAMIC_COMPILER
+
+
+diff --git a/tests/import/mpy_native.py b/tests/import/mpy_native.py
+index 19805bab9..bab5f91d5 100644
+--- a/tests/import/mpy_native.py
++++ b/tests/import/mpy_native.py
+@@ -58,10 +58,10 @@ class UserFS:
+ # these are the test .mpy files
+ user_files = {
+     # bad architecture
+-    "/mod0.mpy": b"M\x05\xff\x00\x10",
++    "/mod0.mpy": b"C\x05\xff\x00\x10",
+     # test loading of viper and asm
+     "/mod1.mpy": (
+-        b"M\x05\x0b\x1f\x20"  # header
++        b"C\x05\x0b\x1f\x20"  # header
+         b"\x20"  # n bytes, bytecode
+         b"\x00\x08\x02m\x02m"  # prelude
+         b"\x51"  # LOAD_CONST_NONE
+@@ -78,7 +78,7 @@ user_files = {
+     ),
+     # test loading viper with truncated data
+     "/mod2.mpy": (
+-        b"M\x05\x0b\x1f\x20"  # header
++        b"C\x05\x0b\x1f\x20"  # header
+         b"\x20"  # n bytes, bytecode
+         b"\x00\x08\x02m\x02m"  # prelude
+         b"\x51"  # LOAD_CONST_NONE
+@@ -88,7 +88,7 @@ user_files = {
+     ),
+     # test loading viper with additional scope flags and relocation
+     "/mod3.mpy": (
+-        b"M\x05\x0b\x1f\x20"  # header
++        b"C\x05\x0b\x1f\x20"  # header
+         b"\x20"  # n bytes, bytecode
+         b"\x00\x08\x02m\x02m"  # prelude
+         b"\x51"  # LOAD_CONST_NONE
+
+
+diff --git a/tools/mpy-tool.py b/tools/mpy-tool.py
+index 90578da72..41224a8a0 100755
+--- a/tools/mpy-tool.py
++++ b/tools/mpy-tool.py
+@@ -767,8 +767,8 @@ def read_raw_code(f, qstr_win):
+ def read_mpy(filename):
+     with open(filename, "rb") as f:
+         header = bytes_cons(f.read(4))
+-        if header[0] != ord("M"):
+-            raise Exception("not a valid .mpy file")
++        if header[0] != ord("C"):
++            raise Exception("not a valid CircuitPython .mpy file")
+         if header[1] != config.MPY_VERSION:
+             raise Exception("incompatible .mpy version")
+         feature_byte = header[2]
+
+
+diff --git a/tools/mpy_ld.py b/tools/mpy_ld.py
+index 4493bb70e..98aadcdf0 100755
+--- a/tools/mpy_ld.py
++++ b/tools/mpy_ld.py
+@@ -909,7 +909,7 @@ def build_mpy(env, entry_offset, fmpy, native_qstr_vals, native_qstr_objs):
+     out.write_bytes(
+         bytearray(
+             [
+-                ord("M"),
++                ord("C"),
+                 MPY_VERSION,
+                 env.arch.mpy_feature,
+                 MP_SMALL_INT_BITS,

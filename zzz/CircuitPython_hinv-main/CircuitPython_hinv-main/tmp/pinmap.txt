@@ -1,0 +1,78 @@
+import board
+import microcontroller as soc
+
+def PinMap():
+    pinlist = []
+    for mpin in dir(soc.pin):
+
+        pin_attr = getattr(soc.pin, mpin)
+        print("\tgetattr(", soc.pin, ",", mpin, ") =", pin_attr)
+        x = isinstance(pin_attr, soc.Pin)
+        print("\tisinstance(", pin_attr, ",", soc.Pin, ") =", x)
+
+        if x:
+            pins = ["microcontroller.{}".format(mpin)]
+            for bpin in dir(board):
+
+                y = getattr(board, bpin)
+                print("\t\tgetattr(", board, ",", bpin, ") =", y)
+                z = y is pin_attr
+                print("\t\t", y, "is", pin_attr, "=", z)
+
+                if z:
+                    pins.append("board.{}".format(bpin))
+            pinlist.append("\t".join(pins))
+    return sorted(pinlist)
+
+print("dir(soc.pin)", dir(soc.pin))
+print("dir(board) ", dir(board))
+for i in PinMap():
+    print(i)
+
+=============================================================================
+
+Adafruit CircuitPython 7.3.2 on 2022-07-20; Adafruit NeoPixel Trinkey M0 with samd21e18
+>>> import pinmap
+dir(soc.pin) ['PA03', 'PA05', 'PA07', 'PA22', 'PA23']
+dir(board)  ['__name__', 'NEOPIXEL', 'TOUCH1', 'TOUCH2', 'board_id']
+        getattr( <module ''> , PA03 ) = board.TOUCH1;			isinstance( board.TOUCH1 , <class 'Pin'> ) = True
+                getattr( <module 'board'> , __name__ ) = board;			board is board.TOUCH1 = False
+                getattr( <module 'board'> , NEOPIXEL ) = board.NEOPIXEL;	board.NEOPIXEL is board.TOUCH1 = False
+                getattr( <module 'board'> , TOUCH1 ) = board.TOUCH1;		board.TOUCH1 is board.TOUCH1 = True
+                getattr( <module 'board'> , TOUCH2 ) = board.TOUCH2;		board.TOUCH2 is board.TOUCH1 = False
+                getattr( <module 'board'> , board_id ) = neopixel_trinkey_m0;	neopixel_trinkey_m0 is board.TOUCH1 = False
+
+        getattr( <module ''> , PA05 ) = board.NEOPIXEL;			isinstance( board.NEOPIXEL , <class 'Pin'> ) = True
+                getattr( <module 'board'> , __name__ ) = board;			board is board.NEOPIXEL = False
+                getattr( <module 'board'> , NEOPIXEL ) = board.NEOPIXEL;	board.NEOPIXEL is board.NEOPIXEL = True
+                getattr( <module 'board'> , TOUCH1 ) = board.TOUCH1;		board.TOUCH1 is board.NEOPIXEL = False
+                getattr( <module 'board'> , TOUCH2 ) = board.TOUCH2;		board.TOUCH2 is board.NEOPIXEL = False
+                getattr( <module 'board'> , board_id ) = neopixel_trinkey_m0;	neopixel_trinkey_m0 is board.NEOPIXEL = False
+
+        getattr( <module ''> , PA07 ) = board.TOUCH2;			isinstance( board.TOUCH2 , <class 'Pin'> ) = True
+                getattr( <module 'board'> , __name__ ) = board;			board is board.TOUCH2 = False
+                getattr( <module 'board'> , NEOPIXEL ) = board.NEOPIXEL;	board.NEOPIXEL is board.TOUCH2 = False
+                getattr( <module 'board'> , TOUCH1 ) = board.TOUCH1;		board.TOUCH1 is board.TOUCH2 = False
+                getattr( <module 'board'> , TOUCH2 ) = board.TOUCH2;		board.TOUCH2 is board.TOUCH2 = True
+                getattr( <module 'board'> , board_id ) = neopixel_trinkey_m0;	neopixel_trinkey_m0 is board.TOUCH2 = False
+
+        getattr( <module ''> , PA22 ) = microcontroller.pin.PA22;	isinstance( microcontroller.pin.PA22 , <class 'Pin'> ) = True
+                getattr( <module 'board'> , __name__ ) = board;			board is microcontroller.pin.PA22 = False
+                getattr( <module 'board'> , NEOPIXEL ) = board.NEOPIXEL;	board.NEOPIXEL is microcontroller.pin.PA22 = False
+                getattr( <module 'board'> , TOUCH1 ) = board.TOUCH1;		board.TOUCH1 is microcontroller.pin.PA22 = False
+                getattr( <module 'board'> , TOUCH2 ) = board.TOUCH2;		board.TOUCH2 is microcontroller.pin.PA22 = False
+                getattr( <module 'board'> , board_id ) = neopixel_trinkey_m0;	neopixel_trinkey_m0 is microcontroller.pin.PA22 = False
+
+        getattr( <module ''> , PA23 ) = microcontroller.pin.PA23;	isinstance( microcontroller.pin.PA23 , <class 'Pin'> ) = True
+                getattr( <module 'board'> , __name__ ) = board;			board is microcontroller.pin.PA23 = False
+                getattr( <module 'board'> , NEOPIXEL ) = board.NEOPIXEL;	board.NEOPIXEL is microcontroller.pin.PA23 = False
+                getattr( <module 'board'> , TOUCH1 ) = board.TOUCH1;		board.TOUCH1 is microcontroller.pin.PA23 = False
+                getattr( <module 'board'> , TOUCH2 ) = board.TOUCH2;		board.TOUCH2 is microcontroller.pin.PA23 = False
+                getattr( <module 'board'> , board_id ) = neopixel_trinkey_m0;	neopixel_trinkey_m0 is microcontroller.pin.PA23 = False
+
+microcontroller.PA03    board.TOUCH1
+microcontroller.PA05    board.NEOPIXEL
+microcontroller.PA07    board.TOUCH2
+microcontroller.PA22
+microcontroller.PA23
+>>>

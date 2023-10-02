@@ -1,0 +1,75 @@
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
+board.board_id : adafruit_qt2040_trinkey
+uid : df6254209f1b3e29
+len(cpus) : 2 (df6254209f1b3e29 df6254209f1b3e29)
+sys.implementation : (name='circuitpython', version=(8, 2, 6), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
+sys.path : ['', '/', '/lib']
+sys.platform : RP2040
+sys.version : 3.4.0
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='rp2040', nodename='rp2040', release='8.2.6', version='8.2.6 on 2023-09-12', machine='Adafruit QT2040 Trinkey with rp2040')
+memory : 183.7KiB free of 194.1KiB total (94.7%)
+storage : 7125.0KiB free of 7137.0KiB total (99.8%)
+len(nvm) : 4096
+
+dir(board) :
+['__class__', '__name__', 'BUTTON', 'I2C', 'NEOPIXEL', 'RX', 'SCL', 'SDA', 'STEMMA_I2C', 'TX', 'UART', 'board_id']
+
+PinMap() {
+microcontroller.GPIO0
+microcontroller.GPIO1
+microcontroller.GPIO10
+microcontroller.GPIO11
+microcontroller.GPIO12	board.BUTTON
+microcontroller.GPIO13
+microcontroller.GPIO14
+microcontroller.GPIO15
+microcontroller.GPIO16	board.SDA	board.TX
+microcontroller.GPIO17	board.RX	board.SCL
+microcontroller.GPIO18
+microcontroller.GPIO19
+microcontroller.GPIO2
+microcontroller.GPIO20
+microcontroller.GPIO21
+microcontroller.GPIO22
+microcontroller.GPIO23
+microcontroller.GPIO24
+microcontroller.GPIO25
+microcontroller.GPIO26
+microcontroller.GPIO27	board.NEOPIXEL
+microcontroller.GPIO28
+microcontroller.GPIO29
+microcontroller.GPIO3
+microcontroller.GPIO4
+microcontroller.GPIO5
+microcontroller.GPIO6
+microcontroller.GPIO7
+microcontroller.GPIO8
+microcontroller.GPIO9
+}
+help('modules') {
+__future__        bitops            micropython       synthio
+__main__          board             msgpack           sys
+_asyncio          builtins          neopixel_write    terminalio
+_bleio            busio             nvm               time
+_pixelmap         collections       onewireio         touchio
+adafruit_bus_device                 countio           os                traceback
+adafruit_bus_device.i2c_device      digitalio         paralleldisplay   ulab
+adafruit_bus_device.spi_device      displayio         pulseio           ulab.numpy
+adafruit_pixelbuf errno             pwmio             ulab.numpy.fft
+aesio             floppyio          qrio              ulab.numpy.linalg
+alarm             fontio            rainbowio         ulab.scipy
+analogbufio       framebufferio     random            ulab.scipy.linalg
+analogio          gc                re                ulab.scipy.optimize
+array             getpass           rgbmatrix         ulab.scipy.signal
+atexit            gifio             rotaryio          ulab.scipy.special
+audiobusio        i2cperipheral     rp2pio            ulab.utils
+audiocore         i2ctarget         rtc               usb_cdc
+audiomixer        imagecapture      sdcardio          usb_hid
+audiomp3          io                select            usb_midi
+audiopwmio        json              sharpdisplay      uselect
+binascii          keypad            storage           vectorio
+bitbangio         math              struct            watchdog
+bitmaptools       microcontroller   supervisor        zlib
+Plus any modules on the filesystem
+}

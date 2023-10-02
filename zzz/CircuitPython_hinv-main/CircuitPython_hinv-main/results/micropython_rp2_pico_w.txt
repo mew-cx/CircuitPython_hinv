@@ -1,0 +1,161 @@
+MPY: soft reboot
+MicroPython v1.19.1 on 2022-07-26; Raspberry Pi Pico W with RP2040
+Type "help()" for more information.
+>>>
+>>> help()
+Welcome to MicroPython!
+
+For online help please visit https://micropython.org/help/.
+
+For access to the hardware use the 'machine' module.  RP2 specific commands
+are in the 'rp2' module.
+
+Quick overview of some objects:
+  machine.Pin(pin) -- get a pin, eg machine.Pin(0)
+  machine.Pin(pin, m, [p]) -- get a pin and configure it for IO mode m, pull mode p
+    methods: init(..), value([v]), high(), low(), irq(handler)
+  machine.ADC(pin) -- make an analog object from a pin
+    methods: read_u16()
+  machine.PWM(pin) -- make a PWM object from a pin
+    methods: deinit(), freq([f]), duty_u16([d]), duty_ns([d])
+  machine.I2C(id) -- create an I2C object (id=0,1)
+    methods: readfrom(addr, buf, stop=True), writeto(addr, buf, stop=True)
+             readfrom_mem(addr, memaddr, arg), writeto_mem(addr, memaddr, arg)
+  machine.SPI(id, baudrate=1000000) -- create an SPI object (id=0,1)
+    methods: read(nbytes, write=0x00), write(buf), write_readinto(wr_buf, rd_buf)
+  machine.Timer(freq, callback) -- create a software timer object
+    eg: machine.Timer(freq=1, callback=lambda t:print(t))
+
+Pins are numbered 0-29, and 26-29 have ADC capabilities
+Pin IO modes are: Pin.IN, Pin.OUT, Pin.ALT
+Pin pull modes are: Pin.PULL_UP, Pin.PULL_DOWN
+
+Useful control commands:
+  CTRL-C -- interrupt a running program
+  CTRL-D -- on a blank line, do a soft reset of the board
+  CTRL-E -- on a blank line, enter paste mode
+
+For further help on a specific object, type help(obj)
+For a list of available modules, type help('modules')
+>>> import machine
+>>> dir(machine)
+['__class__', '__name__', 'ADC', 'I2C', 'I2S', 'PWM', 'PWRON_RESET', 'Pin', 'RTC', 'SPI', 'Signal', 'SoftI2C', 'SoftSPI', 'Timer', 'UART', 'WDT', 'WDT_RESET', 'bitstream', 'bootloader', 'deepsleep', 'disable_irq', 'enable_irq', 'freq', 'idle', 'lightsleep', 'mem16', 'mem32', 'mem8', 'reset', 'reset_cause', 'soft_reset', 'time_pulse_us', 'unique_id']
+>>> dir(machine.Pin)
+['__class__', '__name__', 'value', '__bases__', '__dict__', 'ALT', 'IN', 'IRQ_FALLING', 'IRQ_RISING', 'OPEN_DRAIN', 'OUT', 'PULL_DOWN', 'PULL_UP', 'high', 'init', 'irq', 'low', 'off', 'on', 'toggle']
+>>> import rp2
+>>> dir(rp2)
+['__class__', '__name__', 'const', '__file__', 'Flash', 'PIO', 'StateMachine', 'asm_pio_encode', 'country', 'dht_readinto', 'PIOASMError', 'PIOASMEmit', 'asm_pio', '_pio_funcs']
+>>> machine.unique_id()
+b'\xe6aLw[U\xbd2'
+>>> import sys
+>>> dir(sys)
+['__class__', '__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'print_exception', 'ps1', 'ps2', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
+>>> sys.implementation
+(name='micropython', version=(1, 19, 1), _machine='Raspberry Pi Pico W with RP2040', _mpy=4102)
+>>> import os
+>>> os.statvfs("/")
+(4096, 4096, 212, 210, 210, 0, 0, 0, 0, 255)
+>>> dir(os)
+['__class__', '__name__', 'remove', 'VfsFat', 'VfsLfs2', 'chdir', 'dupterm', 'getcwd', 'ilistdir', 'listdir', 'mkdir', 'mount', 'rename', 'rmdir', 'stat', 'statvfs', 'umount', 'uname', 'unlink', 'urandom']
+>>> help("modules")
+__main__          gc                uasyncio/lock     upip
+_boot             lwip              uasyncio/stream   upip_utarfile
+_boot_fat         math              ubinascii         urandom
+_onewire          micropython       ucollections      ure
+_rp2              neopixel          ucryptolib        urequests
+_thread           network           uctypes           uselect
+_uasyncio         onewire           uerrno            usocket
+_webrepl          rp2               uhashlib          ussl
+builtins          uarray            uheapq            ustruct
+cmath             uasyncio/__init__ uio               usys
+dht               uasyncio/core     ujson             utime
+ds18x20           uasyncio/event    umachine          uwebsocket
+framebuf          uasyncio/funcs    uos               uzlib
+Plus any modules on the filesystem
+>>> help(machine)
+object <module 'umachine'> is of type module
+  __name__ -- umachine
+  unique_id -- <function>
+  soft_reset -- <function>
+  reset -- <function>
+  reset_cause -- <function>
+  bootloader -- <function>
+  freq -- <function>
+  idle -- <function>
+  lightsleep -- <function>
+  deepsleep -- <function>
+  disable_irq -- <function>
+  enable_irq -- <function>
+  bitstream -- <function>
+  time_pulse_us -- <function>
+  mem8 -- <8-bit memory>
+  mem16 -- <16-bit memory>
+  mem32 -- <32-bit memory>
+  ADC -- <class 'ADC'>
+  I2C -- <class 'I2C'>
+  SoftI2C -- <class 'SoftI2C'>
+  I2S -- <class 'I2S'>
+  Pin -- <class 'Pin'>
+  PWM -- <class 'PWM'>
+  RTC -- <class 'RTC'>
+  Signal -- <class 'Signal'>
+  SPI -- <class 'SPI'>
+  SoftSPI -- <class 'SoftSPI'>
+  Timer -- <class 'Timer'>
+  UART -- <class 'UART'>
+  WDT -- <class 'WDT'>
+  PWRON_RESET -- 1
+  WDT_RESET -- 3
+>>> help(sys)
+object <module 'sys'> is of type module
+  __name__ -- sys
+  path -- ['', '.frozen', '/lib']
+  argv -- []
+  version -- 3.4.0; MicroPython v1.19.1 on 2022-07-26
+  version_info -- (3, 4, 0)
+  implementation -- (name='micropython', version=(1, 19, 1), _machine='Raspberry Pi Pico W with RP2040', _mpy=4102)
+  platform -- rp2
+  byteorder -- little
+  maxsize -- 2147483647
+  exit -- <function>
+  stdin -- <io.FileIO 0>
+  stdout -- <io.FileIO 1>
+  stderr -- <io.FileIO 2>
+  modules -- {'rp2': <module 'rp2' from 'rp2.py'>}
+  print_exception -- <function>
+>>> help(rp2)
+object <module 'rp2' from 'rp2.py'> is of type module
+  country -- <function>
+  PIOASMEmit -- <class 'PIOASMEmit'>
+  __file__ -- rp2.py
+  asm_pio -- <function asm_pio at 0x2000a910>
+  const -- <function>
+  PIOASMError -- <class 'PIOASMError'>
+  PIO -- <class 'PIO'>
+  __name__ -- rp2
+  asm_pio_encode -- <function asm_pio_encode at 0x2000a930>
+  StateMachine -- <class 'StateMachine'>
+  Flash -- <class 'Flash'>
+  dht_readinto -- <function>
+  _pio_funcs -- {'in_': None, 'y_dec': 4, 'pin': 6, 'iffull': 64, 'gpio': 0, 'not_osre': 7, 'clear': 64, 'rel': <function <lambda> at 0x2000ade0>, 'wrap': None, 'x_not_y': 5, 'word': None, 'out': None, 'push': None, 'noblock': 1, 'pull': None, 'wrap_target': None, 'x_dec': 2, 'mov': None, 'irq': None, 'set': None, 'y': 2, 'x': 1, 'null': 3, 'pc': 5, 'invert': <function <lambda> at 0x2000adc0>, 'pins': 0, 'not_x': 1, 'not_y': 3, 'ifempty': 64, 'isr': 6, 'pindirs': 4, 'exec': 8, 'label': None, 'status': 5, 'nop': None, 'osr': 7, 'block': 33, 'reverse': <function <lambda> at 0x2000add0>, 'jmp': None, 'wait': None}
+>>> sys.version
+'3.4.0; MicroPython v1.19.1 on 2022-07-26'
+>>> sys.version_info
+(3, 4, 0)
+>>> sys.modules
+{'rp2': <module 'rp2' from 'rp2.py'>}
+>>> sys.byteorder
+'little'
+>>> sys.maxsize
+2147483647
+>>> sys.path
+['', '.frozen', '/lib']
+>>> sys.platform
+'rp2'
+>>> sys.implementation
+(name='micropython', version=(1, 19, 1), _machine='Raspberry Pi Pico W with RP2040', _mpy=4102)
+>>> sys.implementation._mpy
+4102
+>>> sys.implementation._machine
+'Raspberry Pi Pico W with RP2040'
+>>>

@@ -1,0 +1,90 @@
+hinv version : 0.0.3.0
+board.board_id : pybadge
+uid : afebb2e44354385320202046293003ff
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.path : ['', '/', '.frozen', '/lib']
+sys.platform : MicroChip SAMD51
+sys.version : 3.4.0
+os.uname() : (sysname='samd51', nodename='samd51', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit Pybadge with samd51j19')
+os.statvfs('/') : (1024, 1024, 2024, 2008, 2008, 0, 0, 0, 0, 255) 2056.2KB of 2072.6KB (99.2%) free
+len(nvm) : 8192
+
+dir(board) :
+['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'ACCELEROMETER_INTERRUPT', 'BUTTON_CLOCK', 'BUTTON_LATCH', 'BUTTON_OUT', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'DISPLAY', 'I2C', 'LED', 'LIGHT', 'MISO', 'MOSI', 'NEOPIXEL', 'RX', 'SCK', 'SCL', 'SDA', 'SPEAKER', 'SPEAKER_ENABLE', 'SPI', 'STEMMA_I2C', 'TFT_CS', 'TFT_DC', 'TFT_LITE', 'TFT_MOSI', 'TFT_RST', 'TFT_SCK', 'TX', 'UART', 'board_id']
+
+PinMap() {
+microcontroller.PA00	board.TFT_RST
+microcontroller.PA01	board.TFT_LITE
+microcontroller.PA02	board.A0	board.SPEAKER
+microcontroller.PA03
+microcontroller.PA04	board.A4
+microcontroller.PA05	board.A1
+microcontroller.PA06	board.A5
+microcontroller.PA07
+microcontroller.PA08
+microcontroller.PA09
+microcontroller.PA10
+microcontroller.PA11
+microcontroller.PA12	board.SDA
+microcontroller.PA13	board.SCL
+microcontroller.PA14	board.D4
+microcontroller.PA15	board.D8	board.NEOPIXEL
+microcontroller.PA16	board.D5
+microcontroller.PA17	board.SCK
+microcontroller.PA18	board.D6
+microcontroller.PA19	board.D9
+microcontroller.PA20	board.D10
+microcontroller.PA21	board.D11
+microcontroller.PA22	board.D12
+microcontroller.PA23	board.D13	board.LED
+microcontroller.PA27	board.SPEAKER_ENABLE
+microcontroller.PA30
+microcontroller.PA31
+microcontroller.PB00	board.BUTTON_LATCH
+microcontroller.PB01	board.A6
+microcontroller.PB02	board.A9	board.D3
+microcontroller.PB03	board.A8	board.D2
+microcontroller.PB04	board.A7	board.LIGHT
+microcontroller.PB05	board.TFT_DC
+microcontroller.PB06
+microcontroller.PB07	board.TFT_CS
+microcontroller.PB08	board.A2
+microcontroller.PB09	board.A3
+microcontroller.PB10
+microcontroller.PB11
+microcontroller.PB12
+microcontroller.PB13	board.TFT_SCK
+microcontroller.PB14	board.ACCELEROMETER_INTERRUPT	board.D7
+microcontroller.PB15	board.TFT_MOSI
+microcontroller.PB16	board.D1	board.TX
+microcontroller.PB17	board.D0	board.RX
+microcontroller.PB22	board.MISO
+microcontroller.PB23	board.MOSI
+microcontroller.PB30	board.BUTTON_OUT
+microcontroller.PB31	board.BUTTON_CLOCK
+}
+help('modules') {
+__future__        builtins          onewireio         touchio
+__main__          busio             os                traceback
+_asyncio          collections       paralleldisplay   ugame
+_bleio            countio           ps2io             ulab
+_stage            digitalio         pulseio           ulab
+adafruit_bus_device                 displayio         pwmio             ulab.fft
+adafruit_bus_device.i2c_device      errno             rainbowio         ulab.linalg
+adafruit_bus_device.spi_device      floppyio          random            ulab.numpy
+adafruit_pixelbuf fontio            re                ulab.scipy
+alarm             frequencyio       rotaryio          ulab.scipy.linalg
+analogio          gamepadshift      rtc               ulab.scipy.optimize
+array             gc                samd              ulab.scipy.signal
+atexit            getpass           sdcardio          ulab.scipy.special
+audiobusio        i2cperipheral     select            ulab.utils
+audiocore         io                stage             usb_cdc
+audioio           json              storage           usb_hid
+audiomixer        keypad            struct            usb_midi
+audiomp3          math              supervisor        uselect
+binascii          microcontroller   synthio           vectorio
+bitbangio         micropython       sys               watchdog
+bitmaptools       msgpack           terminalio        zlib
+board             neopixel_write    time
+Plus any modules on the filesystem
+}

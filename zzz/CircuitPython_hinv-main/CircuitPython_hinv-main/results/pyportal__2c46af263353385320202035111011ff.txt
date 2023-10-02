@@ -1,0 +1,96 @@
+hinv version : 0.0.5.1		repo : https://github.com/mew-cx/CircuitPython_hinv
+board.board_id : pyportal
+uid : 2c46af263353385320202035111011ff
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
+sys.path : ['', '/', '.frozen', '/lib']
+sys.platform : MicroChip SAMD51
+sys.version : 3.4.0
+os.uname() : (sysname='samd51', nodename='samd51', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit PyPortal with samd51j20')
+memory : 201.4KiB free of 212.2KiB total (94.9%)
+storage : 8072.0KiB free of 8155.0KiB total (99.0%)
+len(nvm) : 8192
+
+dir(board) :
+['__class__', '__name__', 'A0', 'A1', 'A2', 'A4', 'AUDIO_OUT', 'D13', 'D3', 'D4', 'DISPLAY', 'ESP_BUSY', 'ESP_CS', 'ESP_GPIO0', 'ESP_RESET', 'ESP_RTS', 'ESP_RX', 'ESP_TX', 'I2C', 'L', 'LCD_DATA0', 'LCD_DATA1', 'LCD_DATA2', 'LCD_DATA3', 'LCD_DATA4', 'LCD_DATA5', 'LCD_DATA6', 'LCD_DATA7', 'LED', 'LIGHT', 'MISO', 'MOSI', 'NEOPIXEL', 'SCK', 'SCL', 'SDA', 'SD_CARD_DETECT', 'SD_CS', 'SPEAKER', 'SPEAKER_ENABLE', 'SPI', 'STEMMA_I2C', 'TFT_BACKLIGHT', 'TFT_CS', 'TFT_DC', 'TFT_RD', 'TFT_RESET', 'TFT_RS', 'TFT_TE', 'TFT_WR', 'TOUCH_XL', 'TOUCH_XR', 'TOUCH_YD', 'TOUCH_YU', 'board_id']
+
+PinMap() {
+microcontroller.PA00	board.TFT_RESET
+microcontroller.PA01	board.SD_CARD_DETECT
+microcontroller.PA02	board.A0	board.AUDIO_OUT	board.SPEAKER
+microcontroller.PA03
+microcontroller.PA04	board.A1	board.D3
+microcontroller.PA05	board.A4	board.D4
+microcontroller.PA06	board.TOUCH_YU
+microcontroller.PA07	board.A2	board.LIGHT
+microcontroller.PA08
+microcontroller.PA09
+microcontroller.PA10
+microcontroller.PA11
+microcontroller.PA12	board.MOSI
+microcontroller.PA13	board.SCK
+microcontroller.PA14	board.MISO
+microcontroller.PA15	board.ESP_RTS
+microcontroller.PA16	board.LCD_DATA0
+microcontroller.PA17	board.LCD_DATA1
+microcontroller.PA18	board.LCD_DATA2
+microcontroller.PA19	board.LCD_DATA3
+microcontroller.PA20	board.LCD_DATA4
+microcontroller.PA21	board.LCD_DATA5
+microcontroller.PA22	board.LCD_DATA6
+microcontroller.PA23	board.LCD_DATA7
+microcontroller.PA27	board.SPEAKER_ENABLE
+microcontroller.PA30
+microcontroller.PA31
+microcontroller.PB00	board.TOUCH_YD
+microcontroller.PB01	board.TOUCH_XL
+microcontroller.PB02	board.SDA
+microcontroller.PB03	board.SCL
+microcontroller.PB04	board.TFT_RD
+microcontroller.PB05	board.TFT_RS
+microcontroller.PB06	board.TFT_CS
+microcontroller.PB07	board.TFT_TE
+microcontroller.PB08	board.TOUCH_XR
+microcontroller.PB09	board.TFT_DC	board.TFT_WR
+microcontroller.PB10
+microcontroller.PB11
+microcontroller.PB12	board.ESP_TX
+microcontroller.PB13	board.ESP_RX
+microcontroller.PB14	board.ESP_CS
+microcontroller.PB15	board.ESP_GPIO0
+microcontroller.PB16	board.ESP_BUSY
+microcontroller.PB17	board.ESP_RESET
+microcontroller.PB22	board.NEOPIXEL
+microcontroller.PB23	board.D13	board.L	board.LED
+microcontroller.PB30	board.SD_CS
+microcontroller.PB31	board.TFT_BACKLIGHT
+}
+help('modules') {
+__future__        alarm             i2cperipheral     struct
+__main__          analogio          io                supervisor
+_asyncio          array             json              synthio
+_bleio            atexit            keypad            sys
+adafruit_bus_device                 audiobusio        math              terminalio
+adafruit_bus_device.i2c_device      audiocore         microcontroller   time
+adafruit_bus_device.spi_device      audioio           micropython       touchio
+adafruit_display_text/__init__      audiomixer        msgpack           traceback
+adafruit_display_text/bitmap_label  audiomp3          neopixel          ulab
+adafruit_display_text/label         binascii          neopixel_write    ulab
+adafruit_display_text/scrolling_label                 bitbangio         onewireio         ulab.fft
+adafruit_esp32spi/PWMOut            bitmaptools       os                ulab.linalg
+adafruit_esp32spi/__init__          board             paralleldisplay   ulab.numpy
+adafruit_esp32spi/adafruit_esp32spi builtins          ps2io             ulab.scipy
+adafruit_esp32spi/adafruit_esp32spi_socket            busio             pulseio           ulab.scipy.linalg
+adafruit_esp32spi/adafruit_esp32spi_wifimanager       collections       pwmio             ulab.scipy.optimize
+adafruit_esp32spi/adafruit_esp32spi_wsgiserver        countio           rainbowio         ulab.scipy.signal
+adafruit_esp32spi/digitalio         digitalio         random            ulab.scipy.special
+adafruit_fakerequests               displayio         re                ulab.utils
+adafruit_pixelbuf errno             rgbmatrix         usb_cdc
+adafruit_portalbase/__init__        floppyio          rotaryio          usb_hid
+adafruit_portalbase/graphics        fontio            rtc               usb_midi
+adafruit_portalbase/network         framebufferio     samd              uselect
+adafruit_portalbase/wifi_coprocessor                  frequencyio       sdcardio          vectorio
+adafruit_portalbase/wifi_esp32s2    gc                select            watchdog
+adafruit_requests getpass           sharpdisplay      zlib
+aesio             gifio             storage
+Plus any modules on the filesystem
+}

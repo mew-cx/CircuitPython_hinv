@@ -1,0 +1,63 @@
+hinv version : 0.0.3.0
+board.board_id : itsybitsy_m0_express
+uid : baa5bce43132505120202043222214ff
+sys.implementation : (name='circuitpython', version=(7, 3, 2), mpy=517) MPY_VERSION=5 flags=0x02
+sys.path : ['', '/', '/lib']
+sys.platform : Atmel SAMD21
+sys.version : 3.4.0
+os.uname() : (sysname='samd21', nodename='samd21', release='7.3.2', version='7.3.2 on 2022-07-20', machine='Adafruit ItsyBitsy M0 Express with samd21g18')
+os.statvfs('/') : (1024, 1024, 2024, 2008, 2008, 0, 0, 0, 0, 255) 2056.2KB of 2072.6KB (99.2%) free
+len(nvm) : 256
+
+dir(board) :
+['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'APA102_MOSI', 'APA102_SCK', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'DOTSTAR_CLOCK', 'DOTSTAR_DATA', 'I2C', 'L', 'LED', 'MISO', 'MOSI', 'RX', 'SCK', 'SCL', 'SDA', 'SPI', 'TX', 'UART', 'board_id']
+
+PinMap() {
+microcontroller.PA00	board.APA102_SCK	board.DOTSTAR_CLOCK
+microcontroller.PA01	board.APA102_MOSI	board.DOTSTAR_DATA
+microcontroller.PA02	board.A0
+microcontroller.PA03
+microcontroller.PA04	board.A3
+microcontroller.PA05	board.A4
+microcontroller.PA06	board.D8
+microcontroller.PA07	board.D9
+microcontroller.PA08	board.D4
+microcontroller.PA09	board.D3
+microcontroller.PA10	board.D1	board.TX
+microcontroller.PA11	board.D0	board.RX
+microcontroller.PA12	board.MISO
+microcontroller.PA14	board.D2
+microcontroller.PA15	board.D5
+microcontroller.PA16	board.D11
+microcontroller.PA17	board.D13	board.L	board.LED
+microcontroller.PA18	board.D10
+microcontroller.PA19	board.D12
+microcontroller.PA20	board.D6
+microcontroller.PA21	board.D7
+microcontroller.PA22	board.SDA
+microcontroller.PA23	board.SCL
+microcontroller.PA27
+microcontroller.PA30
+microcontroller.PA31
+microcontroller.PB02	board.A5
+microcontroller.PB03
+microcontroller.PB08	board.A1
+microcontroller.PB09	board.A2
+microcontroller.PB10	board.MOSI
+microcontroller.PB11	board.SCK
+microcontroller.PB22
+microcontroller.PB23
+}
+help('modules') {
+__future__        busio             neopixel_write    struct
+__main__          collections       onewireio         supervisor
+adafruit_pixelbuf digitalio         os                sys
+analogio          displayio         paralleldisplay   terminalio
+array             errno             pwmio             time
+audiobusio        fontio            rainbowio         touchio
+audiocore         gc                random            traceback
+audioio           math              rotaryio          usb_cdc
+board             microcontroller   rtc               usb_hid
+builtins          micropython       storage           usb_midi
+Plus any modules on the filesystem
+}

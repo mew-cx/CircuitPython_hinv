@@ -1,0 +1,196 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2023.10.01 22:58:19 =~=~=~=~=~=~=~=~=~=~=~=
+]0;🐍REPL | 8.2.6\os.listdir()
+['.fseventsd', '.metadata_never_index', '.Trashes', 'settings.toml', 'code.py', 'lib', 'boot_out.txt', 'hinv.py', 'System Volume Information']
+>>> import hinv
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
+board.board_id : adafruit_qt2040_trinkey
+uid : df6254209f1b3e29
+len(cpus) : 2 (df6254209f1b3e29 df6254209f1b3e29)
+sys.implementation : (name='circuitpython', version=(8, 2, 6), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
+sys.path : ['', '/', '/lib']
+sys.platform : RP2040
+sys.version : 3.4.0
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='rp2040', nodename='rp2040', release='8.2.6', version='8.2.6 on 2023-09-12', machine='Adafruit QT2040 Trinkey with rp2040')
+memory : 183.7KiB free of 194.1KiB total (94.7%)
+storage : 7125.0KiB free of 7137.0KiB total (99.8%)
+len(nvm) : 4096
+
+dir(board) :
+['__class__', '__name__', 'BUTTON', 'I2C', 'NEOPIXEL', 'RX', 'SCL', 'SDA', 'STEMMA_I2C', 'TX', 'UART', 'board_id']
+
+PinMap() {
+microcontroller.GPIO0
+microcontroller.GPIO1
+microcontroller.GPIO10
+microcontroller.GPIO11
+microcontroller.GPIO12	board.BUTTON
+microcontroller.GPIO13
+microcontroller.GPIO14
+microcontroller.GPIO15
+microcontroller.GPIO16	board.SDA	board.TX
+microcontroller.GPIO17	board.RX	board.SCL
+microcontroller.GPIO18
+microcontroller.GPIO19
+microcontroller.GPIO2
+microcontroller.GPIO20
+microcontroller.GPIO21
+microcontroller.GPIO22
+microcontroller.GPIO23
+microcontroller.GPIO24
+microcontroller.GPIO25
+microcontroller.GPIO26
+microcontroller.GPIO27	board.NEOPIXEL
+microcontroller.GPIO28
+microcontroller.GPIO29
+microcontroller.GPIO3
+microcontroller.GPIO4
+microcontroller.GPIO5
+microcontroller.GPIO6
+microcontroller.GPIO7
+microcontroller.GPIO8
+microcontroller.GPIO9
+}
+help('modules') {
+__future__        bitops            micropython       synthio
+__main__          board             msgpack           sys
+_asyncio          builtins          neopixel_write    terminalio
+_bleio            busio             nvm               time
+_pixelmap         collections       onewireio         touchio
+adafruit_bus_device                 countio           os                traceback
+adafruit_bus_device.i2c_device      digitalio         paralleldisplay   ulab
+adafruit_bus_device.spi_device      displayio         pulseio           ulab.numpy
+adafruit_pixelbuf errno             pwmio             ulab.numpy.fft
+aesio             floppyio          qrio              ulab.numpy.linalg
+alarm             fontio            rainbowio         ulab.scipy
+analogbufio       framebufferio     random            ulab.scipy.linalg
+analogio          gc                re                ulab.scipy.optimize
+array             getpass           rgbmatrix         ulab.scipy.signal
+atexit            gifio             rotaryio          ulab.scipy.special
+audiobusio        i2cperipheral     rp2pio            ulab.utils
+audiocore         i2ctarget         rtc               usb_cdc
+audiomixer        imagecapture      sdcardio          usb_hid
+audiomp3          io                select            usb_midi
+audiopwmio        json              sharpdisplay      uselect
+binascii          keypad            storage           vectorio
+bitbangio         math              struct            watchdog
+bitmaptools       microcontroller   supervisor        zlib
+Plus any modules on the filesystem
+# TODO how to redirect help('modules') to output filehandle?
+}
+>>> 
+>>> 
+>>> import rtc
+>>> dir(rid)[K[K[Ktc)
+['__class__', '__name__', 'RTC', 'set_time_source']
+>>> dir(rtc.RTC)
+['__class__', '__name__', '__bases__', '__dict__', 'calibration', 'datetime']
+>>> rtc.RTC.datetime
+<property>
+>>> print(rtc.RTC.datetime)
+<property>
+>>> print(rtc.RTC.datetime)[23D[Krtc.RTC.datetime()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'property' object is not callable
+>>> rtc.RTC.datetime()[18Dprint(rtc.RTC.datetime)[23D[Krtc.RTC.datetime.
+deleter         getter          setter
+>>> rtc.RTC.datetime.getter()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: function takes 2 positional arguments but 1 were given
+>>> import sys
+>>> dir(sys)
+['__class__', '__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
+>>> sys.implementation
+(name='circuitpython', version=(8, 2, 6), mpy=517)
+>>> os.u
+uname           unlink          urandom         utime
+>>> os.un
+uname           unlink
+>>> os.uname()
+(sysname='rp2040', nodename='rp2040', release='8.2.6', version='8.2.6 on 2023-09-12', machine='Adafruit QT2040 Trinkey with rp2040')
+>>> import board
+>>> dir(board)
+['__class__', '__name__', 'BUTTON', 'I2C', 'NEOPIXEL', 'RX', 'SCL', 'SDA', 'STEMMA_I2C', 'TX', 'UART', 'board_id']
+>>> board.bi[Koard_id
+'adafruit_qt2040_trinkey'
+>>> import pulseio
+>>> dir(pulseio)
+['__class__', '__name__', 'PulseIn', 'PulseOut']
+>>> dir(pulseio).)P)ulse)O)ut)
+['__class__', '__enter__', '__exit__', '__name__', 'send', '__bases__', '__dict__', 'deinit']
+>>> help()
+Welcome to Adafruit CircuitPython 8.2.6!
+
+Visit circuitpython.org for more information.
+
+To list built-in modules type `help("modules")`.
+>>> help()")m)o)d)u)l)e)s)")
+__future__        bitops            micropython       synthio
+__main__          board             msgpack           sys
+_asyncio          builtins          neopixel_write    terminalio
+_bleio            busio             nvm               time
+_pixelmap         collections       onewireio         touchio
+adafruit_bus_device                 countio           os                traceback
+adafruit_bus_device.i2c_device      digitalio         paralleldisplay   ulab
+adafruit_bus_device.spi_device      displayio         pulseio           ulab.numpy
+adafruit_pixelbuf errno             pwmio             ulab.numpy.fft
+aesio             floppyio          qrio              ulab.numpy.linalg
+alarm             fontio            rainbowio         ulab.scipy
+analogbufio       framebufferio     random            ulab.scipy.linalg
+analogio          gc                re                ulab.scipy.optimize
+array             getpass           rgbmatrix         ulab.scipy.signal
+atexit            gifio             rotaryio          ulab.scipy.special
+audiobusio        i2cperipheral     rp2pio            ulab.utils
+audiocore         i2ctarget         rtc               usb_cdc
+audiomixer        imagecapture      sdcardio          usb_hid
+audiomp3          io                select            usb_midi
+audiopwmio        json              sharpdisplay      uselect
+binascii          keypad            storage           vectorio
+bitbangio         math              struct            watchdog
+bitmaptools       microcontroller   supervisor        zlib
+Plus any modules on the filesystem
+>>> import micropython
+>>> mi[K[Kdir(micropython)
+['__class__', '__name__', 'const']
+>>> import microcontroller
+>>> dir(microcontroller)
+['__class__', '__name__', 'Pin', 'Processor', 'ResetReason', 'RunMode', 'cpu', 'cpus', 'delay_us', 'disable_interrupts', 'enable_interrupts', 'nvm', 'on_next_reset', 'pin', 'reset', 'watchdog']
+>>> import time
+>>> dir(time)
+['__class__', '__name__', 'localtime', 'mktime', 'monotonic', 'monotonic_ns', 'sleep', 'struct_time', 'time']
+>>> time.localtime
+<function>
+>>> time.localtime()
+struct_time(tm_year=2020, tm_mon=1, tm_mday=1, tm_hour=0, tm_min=29, tm_sec=53, tm_wday=2, tm_yday=1, tm_isdst=-1)
+>>> microcontroller.pin[K[K[Kcpu
+<Processor>
+>>> microcontroller.cpu)dmicrocontroller.cpu)[20Dimicrocontroller.cpu)[20Drmicrocontroller.cpu)[20D(microcontroller.cpu)[20D
+['__class__', 'frequency', 'reset_reason', 'temperature', 'uid', 'voltage']
+>>> dir(microcontroller.cpu)[24D[Kmicrocontroller.cpu.uid
+bytearray(b'\xdfbT \x9f\x1b>)')
+>>> microcontroller.cpu.uid)rmicrocontroller.cpu.uid)[24Demicrocontroller.cpu.uid)[24Dpmicrocontroller.cpu.uid)[24Drmicrocontroller.cpu.uid)[24D(microcontroller.cpu.uid)[24D
+"bytearray(b'\\xdfbT \\x9f\\x1b>)')"
+>>> dir(board)
+['__class__', '__name__', 'BUTTON', 'I2C', 'NEOPIXEL', 'RX', 'SCL', 'SDA', 'STEMMA_I2C', 'TX', 'UART', 'board_id']
+>>> dir [K(os)
+['__class__', '__name__', 'remove', 'sep', 'chdir', 'getcwd', 'getenv', 'listdir', 'mkdir', 'rename', 'rmdir', 'stat', 'statvfs', 'sync', 'uname', 'unlink', 'urandom', 'utime']
+>>> dir(sys)
+['__class__', '__name__', 'argv', 'byteorder', 'exit', 'implementation', 'maxsize', 'modules', 'path', 'platform', 'stderr', 'stdin', 'stdout', 'version', 'version_info']
+>>> import asciibin
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: no module named 'asciibin'
+>>> import binascii
+>>> dir(in[K[Kbinascii)
+['__class__', '__name__', 'a2b_base64', 'b2a_base64', 'crc32', 'hexlify', 'unhexlify']
+>>> hexlify(microcontroller.cpu.i[Kud[Kid)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'hexlify' is not defined
+>>> hexlify(microcontroller.cpu.uid)bhexlify(microcontroller.cpu.uid)[32Dihexlify(microcontroller.cpu.uid)[32Dnhexlify(microcontroller.cpu.uid)[32Dasciihexlify(microcontroller.cpu.uid)[32D.hexlify(microcontroller.cpu.uid)[32D
+b'df6254209f1b3e29'
+>>> binascii.hexlify(microcontroller.cpu.uid))rbinascii.hexlify(microcontroller.cpu.uid))[42Debinascii.hexlify(microcontroller.cpu.uid))[42Dpbinascii.hexlify(microcontroller.cpu.uid))[42Drbinascii.hexlify(microcontroller.cpu.uid))[42D(binascii.hexlify(microcontroller.cpu.uid))[42D
+"b'df6254209f1b3e29'"
+>>> 

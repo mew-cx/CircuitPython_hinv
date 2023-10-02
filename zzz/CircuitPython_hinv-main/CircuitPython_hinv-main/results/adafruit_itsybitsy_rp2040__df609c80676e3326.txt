@@ -1,0 +1,75 @@
+hinv version : 0.0.6.0		repo : https://github.com/mew-cx/CircuitPython_hinv
+board.board_id : adafruit_itsybitsy_rp2040
+uid : df609c80676e3326
+len(cpus) : 2 (df609c80676e3326 df609c80676e3326)
+sys.implementation : (name='circuitpython', version=(8, 1, 0), mpy=517) MPY_VERSION=5 flags=0x02 arch=0
+sys.path : ['', '/', '/lib']
+sys.platform : RP2040
+sys.version : 3.4.0
+sys.modules : {'hinv': <module 'hinv' from 'hinv.py'>}
+os.uname() : (sysname='rp2040', nodename='rp2040', release='8.1.0', version='8.1.0 on 2023-05-22', machine='Adafruit ItsyBitsy RP2040 with rp2040')
+memory : 185.8KiB free of 194.3KiB total (95.7%)
+storage : 6888.0KiB free of 7137.0KiB total (96.5%)
+len(nvm) : 4096
+
+dir(board) :
+['__class__', '__name__', 'A0', 'A1', 'A2', 'A3', 'BUTTON', 'D0', 'D1', 'D10', 'D11', 'D12', 'D13', 'D2', 'D24', 'D25', 'D3', 'D4', 'D5', 'D7', 'D9', 'I2C', 'LED', 'MISO', 'MOSI', 'NEOPIXEL', 'NEOPIXEL_POWER', 'RX', 'SCK', 'SCL', 'SDA', 'SPI', 'TX', 'UART', 'board_id']
+
+PinMap() {
+microcontroller.GPIO0	board.D1	board.TX
+microcontroller.GPIO1	board.D0	board.RX
+microcontroller.GPIO10	board.D12
+microcontroller.GPIO11	board.D13	board.LED
+microcontroller.GPIO12	board.D2
+microcontroller.GPIO13	board.BUTTON
+microcontroller.GPIO14	board.D5
+microcontroller.GPIO15
+microcontroller.GPIO16	board.NEOPIXEL_POWER
+microcontroller.GPIO17	board.NEOPIXEL
+microcontroller.GPIO18	board.SCK
+microcontroller.GPIO19	board.MOSI
+microcontroller.GPIO2	board.SDA
+microcontroller.GPIO20	board.MISO
+microcontroller.GPIO21
+microcontroller.GPIO22
+microcontroller.GPIO23
+microcontroller.GPIO24	board.D24
+microcontroller.GPIO25	board.D25
+microcontroller.GPIO26	board.A0
+microcontroller.GPIO27	board.A1
+microcontroller.GPIO28	board.A2
+microcontroller.GPIO29	board.A3
+microcontroller.GPIO3	board.SCL
+microcontroller.GPIO4	board.D4
+microcontroller.GPIO5	board.D3
+microcontroller.GPIO6	board.D7
+microcontroller.GPIO7	board.D9
+microcontroller.GPIO8	board.D10
+microcontroller.GPIO9	board.D11
+}
+help('modules') {
+__future__        bitops            micropython       synthio
+__main__          board             msgpack           sys
+_asyncio          builtins          neopixel_write    terminalio
+_bleio            busio             nvm               time
+_pixelmap         collections       onewireio         touchio
+adafruit_bus_device                 countio           os                traceback
+adafruit_bus_device.i2c_device      digitalio         paralleldisplay   ulab
+adafruit_bus_device.spi_device      displayio         pulseio           ulab.numpy
+adafruit_pixelbuf errno             pwmio             ulab.numpy.fft
+aesio             floppyio          qrio              ulab.numpy.linalg
+alarm             fontio            rainbowio         ulab.scipy
+analogbufio       framebufferio     random            ulab.scipy.linalg
+analogio          gc                re                ulab.scipy.optimize
+array             getpass           rgbmatrix         ulab.scipy.signal
+atexit            gifio             rotaryio          ulab.scipy.special
+audiobusio        i2cperipheral     rp2pio            ulab.utils
+audiocore         i2ctarget         rtc               usb_cdc
+audiomixer        imagecapture      sdcardio          usb_hid
+audiomp3          io                select            usb_midi
+audiopwmio        json              sharpdisplay      uselect
+binascii          keypad            storage           vectorio
+bitbangio         math              struct            watchdog
+bitmaptools       microcontroller   supervisor        zlib
+Plus any modules on the filesystem
+}
