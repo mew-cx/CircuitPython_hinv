@@ -19,5 +19,6 @@ PRINT
 grep_*txt
 REFRESH.sh.bak
 liblist.txt
+GITREPO.txt
 
 # eof
