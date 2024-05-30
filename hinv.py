@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2022-2023 Michael Weiblen http://mew.cx/
+# SPDX-FileCopyrightText: 2022-2024 Michael Weiblen http://mew.cx/
 #
 # SPDX-License-Identifier: MIT
 
@@ -7,7 +7,7 @@
 #
 # TODO micropython.mem_info() and micropython.mem_info(1)
 
-__version__ = "0.0.6.0"
+__version__ = "0.0.7.0"
 __repo__    = "https://github.com/mew-cx/CircuitPython_hinv"
 
 import board
