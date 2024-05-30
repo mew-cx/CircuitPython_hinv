@@ -55,6 +55,8 @@ def FsInfo(path="/"):
     return (total, free)
 
 def GenerateResults(out):
+    out.write("filename : {}__{}__{}.txt\n\n".format(board.board_id, "0.0.0", AsciiHex(soc.cpu.uid)))
+
     out.write("hinv version : {}\t\trepo : {}\n".format(__version__, __repo__))
     out.write("board.board_id : {}\n".format(board.board_id))
     out.write("uid : {}\n".format(AsciiHex(soc.cpu.uid)))
