@@ -7,8 +7,12 @@
 #
 # TODO micropython.mem_info() and micropython.mem_info(1)
 
-__version__ = "0.0.7.0"
-__repo__    = "https://github.com/mew-cx/CircuitPython_hinv"
+# About this code:
+__version__ = "0.0.8.0"
+__repo__ = "https://github.com/mew-cx/CircuitPython_hinv"
+__impl_name__ = "circuitpython"         # sys.implementation.name
+__impl_version__ = (9, 1, 1)            # sys.implementation.version
+__board_id__ = "*"                      # board.board_id
 
 import board
 import os
