@@ -1,1 +1,1 @@
-All output files now belong in the 'reports' branch.
+All output files now belong in the 'results' branch.
